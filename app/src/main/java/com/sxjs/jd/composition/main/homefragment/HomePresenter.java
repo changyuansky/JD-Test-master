@@ -4,6 +4,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 import com.sxjs.common.CommonConfig;
+import com.sxjs.common.GlobalAppComponent;
 import com.sxjs.common.base.rxjava.ErrorDisposableObserver;
 import com.sxjs.common.bean.HomeBannerImg;
 import com.sxjs.common.bean.HomeWares;
@@ -49,6 +50,7 @@ public class HomePresenter extends BasePresenter {
 
             }
         },update);
+        DataManager dataManager = GlobalAppComponent.getAppComponent().getDataManager();
     }
 
 //获取特价商品
