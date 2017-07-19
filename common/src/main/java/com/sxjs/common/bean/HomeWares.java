@@ -175,37 +175,37 @@ public class HomeWares {
                 this.catId = catId;
             }
 
-            public int getPromotePrice() {
-                return promotePrice;
-            }
+    public int getPromotePrice() {
+        return promotePrice;
+    }
 
-            public void setPromotePrice(int promotePrice) {
-                this.promotePrice = promotePrice;
-            }
+    public void setPromotePrice(int promotePrice) {
+        this.promotePrice = promotePrice;
+    }
 
-            public int getIsPromote() {
-                return isPromote;
-            }
+    public int getIsPromote() {
+        return isPromote;
+    }
 
-            public void setIsPromote(int isPromote) {
-                this.isPromote = isPromote;
-            }
+    public void setIsPromote(int isPromote) {
+        this.isPromote = isPromote;
+    }
 
-            public int getIsHot() {
-                return isHot;
-            }
+    public int getIsHot() {
+        return isHot;
+    }
 
-            public void setIsHot(int isHot) {
-                this.isHot = isHot;
-            }
+    public void setIsHot(int isHot) {
+        this.isHot = isHot;
+    }
 
-            public int getSaleNum() {
-                return saleNum;
-            }
+    public int getSaleNum() {
+        return saleNum;
+    }
 
-            public void setSaleNum(int saleNum) {
-                this.saleNum = saleNum;
-            }
+    public void setSaleNum(int saleNum) {
+        this.saleNum = saleNum;
+    }
         }
     }
 }

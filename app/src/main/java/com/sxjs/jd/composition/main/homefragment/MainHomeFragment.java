@@ -20,7 +20,7 @@ import com.sxjs.common.widget.pulltorefresh.PtrFrameLayout;
 import com.sxjs.common.widget.pulltorefresh.PtrHandler;
 import com.sxjs.jd.R;
 import com.sxjs.common.base.BaseFragment;
-import com.sxjs.jd.entities.HomeIndex;
+
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

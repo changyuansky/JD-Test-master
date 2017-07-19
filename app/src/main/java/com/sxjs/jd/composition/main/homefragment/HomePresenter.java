@@ -24,10 +24,7 @@ public class HomePresenter extends BasePresenter {
     public HomePresenter(DataManager mDataManager, MainHomeFragment view) {
         this.mDataManager = mDataManager;
         this.mHomeView = view;
-
     }
-
-
     boolean logswitch=true;
     public void getHomeBannerImg(boolean update){
         mDataManager.getHomeBannerImg(new DisposableObserver<HomeBannerImg>() {

@@ -2,7 +2,6 @@ package com.sxjs.common.bean;
 
 import com.sxjs.common.base.baseadapter.entity.MultiItemEntity;
 import com.sxjs.common.data.Constant;
-
 import java.util.List;
 
 /**

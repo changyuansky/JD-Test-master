@@ -6,8 +6,8 @@ import android.widget.Toast;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.sxjs.common.base.baseadapter.BaseQuickAdapter;
 import com.sxjs.common.base.baseadapter.BaseViewHolder;
-import com.sxjs.jd.entities.FindsBean;
 import com.sxjs.jd.R;
+import com.sxjs.jd.composition.entities.FindsBean;
 
 /**
  * Created by admin on 2017/3/22.

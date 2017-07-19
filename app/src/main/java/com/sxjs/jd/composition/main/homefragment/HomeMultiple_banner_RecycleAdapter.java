@@ -22,7 +22,7 @@ import com.sxjs.common.data.Constant;
 import com.sxjs.common.widget.autoscrollviewpager.BGABanner;
 import com.sxjs.common.widget.imageview.ExpandImageView;
 import com.sxjs.jd.R;
-import com.sxjs.jd.entities.HomeIndex;
+
 
 
 /**

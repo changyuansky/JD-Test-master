@@ -1,7 +1,6 @@
 package com.sxjs.jd.composition.main.findfragment;
 
 import com.sxjs.common.base.rxjava.ErrorDisposableObserver;
-import com.sxjs.jd.entities.FindsBean;
 import com.sxjs.common.model.DataManager;
 import com.sxjs.jd.composition.BasePresenter;
 

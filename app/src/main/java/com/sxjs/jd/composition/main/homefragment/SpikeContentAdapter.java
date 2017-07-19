@@ -13,7 +13,7 @@ import com.sxjs.common.bean.HomeWares;
 import com.sxjs.common.util.ScreenUtil;
 import com.sxjs.common.widget.imageview.ExpandImageView;
 import com.sxjs.jd.R;
-import com.sxjs.jd.entities.HomeIndex;
+
 
 import java.util.List;
 

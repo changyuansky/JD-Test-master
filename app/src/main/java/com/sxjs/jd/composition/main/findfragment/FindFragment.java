@@ -22,7 +22,7 @@ import com.sxjs.common.widget.pulltorefresh.PtrHandler;
 import com.sxjs.jd.MyApplication;
 import com.sxjs.jd.R;
 import com.sxjs.common.base.BaseFragment;
-import com.sxjs.jd.entities.FindsBean;
+import com.sxjs.jd.composition.entities.FindsBean;
 
 import javax.inject.Inject;
 
@@ -81,12 +81,12 @@ public class FindFragment extends BaseFragment implements PtrHandler, BaseQuickA
 
 
     public void setFindData(FindsBean find) {
-        adapter.addData(find.content);
+        //adapter.addData(find.content);
     }
 
 
     public void setMoreData(FindsBean find) {
-        adapter.getData().addAll(find.content);
+        //adapter.getData().addAll(find.content);
         adapter.loadMoreComplete();
 
     }
