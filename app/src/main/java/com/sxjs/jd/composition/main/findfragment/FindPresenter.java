@@ -1,6 +1,7 @@
 package com.sxjs.jd.composition.main.findfragment;
 
 import com.sxjs.common.base.rxjava.ErrorDisposableObserver;
+import com.sxjs.common.bean.HomeWares;
 import com.sxjs.common.model.DataManager;
 import com.sxjs.jd.composition.BasePresenter;
 
@@ -27,17 +28,17 @@ public class FindPresenter extends BasePresenter {
 
     public void getFindData() {
         //根据自己要求
-//        addDisposabe(mDataManager.getData(new ErrorDisposableObserver<FindsBean>() {
-//            @Override
-//            public void onNext(FindsBean findsBean) {
-//                mFindView.setFindData(findsBean);
-//            }
-//
-//            @Override
-//            public void onComplete() {
-//
-//            }
-//        },FindsBean.class, "find.txt"));
+       mDataManager.getHomeWares(new ErrorDisposableObserver<HomeWares>() {
+           @Override
+           public void onNext(HomeWares homeWares) {
+               mFindView.setMoreData(homeWares.getItems().get(0).getItemList());
+           }
+
+           @Override
+           public void onComplete() {
+
+           }
+       },1,false);
     }
 
 
@@ -45,7 +46,7 @@ public class FindPresenter extends BasePresenter {
 //        addDisposabe(mDataManager.getData(new DisposableObserver<FindsBean>() {
 //            @Override
 //            public void onNext(FindsBean findsBean) {
-//                mFindView.setMoreData(findsBean);
+//               mFindView.setMoreData(findsBean);
 //            }
 //
 //            @Override

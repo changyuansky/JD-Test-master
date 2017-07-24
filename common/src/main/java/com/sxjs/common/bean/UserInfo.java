@@ -1,5 +1,7 @@
 package com.sxjs.common.bean;
 
+import java.util.List;
+
 /**
  * Created by Administrator on 2017/7/17.
  */
@@ -7,73 +9,20 @@ package com.sxjs.common.bean;
 public class UserInfo {
 
     /**
-     * code : null
-     * msg : null
+     * code : 500
+     * msg : 更新失败
      * isOver : null
-     * timstamp : null
+     * timstamp : 1500556505271
      * pageindex : 0
-     * items : null
+     * items : [{"user_id":null,"email":null,"user_name":null,"password":null,"sex":null,"birthday":null,"address_id":null,"reg_time":null,"last_login":null,"last_time":null,"last_ip":null,"salt":null,"alias":null,"qq":null,"mobile_phone":null,"passwd_question":null,"passwd_answer":null,"country":null,"province":null,"city":null,"district":null,"address":null,"status":null,"froms":null,"headimg":null,"vcode":null}]
      */
 
     public String code;
     public String msg;
+    public String isOver;
     public long timstamp;
-    /*
-        * `user_id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
-      `email` varchar(60) NOT NULL DEFAULT '' COMMENT '会员Email',
-      `user_name` varchar(60) NOT NULL DEFAULT '' COMMENT '用户名',
-      `password` varchar(32) NOT NULL DEFAULT '' COMMENT '用户密码',
-      `sex` tinyint(1) unsigned NOT NULL DEFAULT '0' COMMENT '性别 ;  0保密;  1男; 2女',
-      `birthday` date NOT NULL DEFAULT '0000-00-00' COMMENT '出生日期',
-      `address_id` mediumint(8) unsigned NOT NULL DEFAULT '0' COMMENT '收货信息id,表值表user_address',
-      `reg_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT '注册时间',
-      `last_login` datetime NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT '最后一次登录时间',
-      `last_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00' COMMENT '应该是最后一次修改信息时间，该表信息从其他表同步过来考虑',
-      `last_ip` varchar(15) NOT NULL DEFAULT '' COMMENT '最后一次登录IP',
-      `salt` varchar(10) NOT NULL DEFAULT '0' COMMENT '盐',
-      `alias` varchar(60) NOT NULL COMMENT '昵称',
-      `qq` varchar(20) NOT NULL,
-      `mobile_phone` varchar(20) NOT NULL COMMENT '移动电话',
-      `passwd_question` varchar(50) DEFAULT NULL COMMENT '密保问题',
-      `passwd_answer` varchar(255) DEFAULT NULL COMMENT '密保答案',
-      `country` int(11) NOT NULL COMMENT '国家 取region表',
-      `province` int(11) NOT NULL COMMENT '省份取region表',
-      `city` int(11) NOT NULL COMMENT '城市取region表',
-      `district` int(11) NOT NULL COMMENT '区域取region表',
-      `address` varchar(255) NOT NULL DEFAULT '' COMMENT '详细地址',
-      `status` int(11) NOT NULL COMMENT '审核状态 1通过 -1不通过 0审核中',
-      `froms` char(10) NOT NULL DEFAULT 'pc' COMMENT 'pc:电脑,mobile:手机,app:应用',
-      `headimg` varchar(255) NOT NULL COMMENT '头像',
-      PRIMARY KEY (`user_id`),
-      UNIQUE KEY `user_name` (`user_name`),
-      KEY `email` (`email`)
-        * */
-
-        int user_id;
-        int reg_time;
-        int status;
-        int district;
-        int country;
-        int province;
-        int city;
-        int address_id;
-        int sex;
-        String email;
-        String user_name;
-        String password;
-        String birthday;
-        String last_login;
-        String last_time;
-        String last_ip;
-        String salt;
-        String alias;
-        String qq;
-        String mobile_phone;
-        String passwd_question;
-        String address;
-        String froms;
-        String headimg;
-        String vcode;
+    public int pageindex;
+    public List<ItemsBean> items;
 
     public String getCode() {
         return code;
@@ -91,6 +40,14 @@ public class UserInfo {
         this.msg = msg;
     }
 
+    public String getIsOver() {
+        return isOver;
+    }
+
+    public void setIsOver(String isOver) {
+        this.isOver = isOver;
+    }
+
     public long getTimstamp() {
         return timstamp;
     }
@@ -99,76 +56,85 @@ public class UserInfo {
         this.timstamp = timstamp;
     }
 
-    public int getUser_id() {
+    public int getPageindex() {
+        return pageindex;
+    }
+
+    public void setPageindex(int pageindex) {
+        this.pageindex = pageindex;
+    }
+
+    public List<ItemsBean> getItems() {
+        return items;
+    }
+
+    public void setItems(List<ItemsBean> items) {
+        this.items = items;
+    }
+
+    public static class ItemsBean {
+        /**
+         * user_id : null
+         * email : null
+         * user_name : null
+         * password : null
+         * sex : null
+         * birthday : null
+         * address_id : null
+         * reg_time : null
+         * last_login : null
+         * last_time : null
+         * last_ip : null
+         * salt : null
+         * alias : null
+         * qq : null
+         * mobile_phone : null
+         * passwd_question : null
+         * passwd_answer : null
+         * country : null
+         * province : null
+         * city : null
+         * district : null
+         * address : null
+         * status : null
+         * froms : null
+         * headimg : null
+         * vcode : null
+         */
+
+        public String user_id;
+        public String email;
+        public String user_name;
+        public String password;
+        public String sex;
+        public String birthday;
+        public String address_id;
+        public String reg_time;
+        public String last_login;
+        public String last_time;
+        public String last_ip;
+        public String salt;
+        public String alias;
+        public String qq;
+        public String mobile_phone;
+        public String passwd_question;
+        public String passwd_answer;
+        public String country;
+        public String province;
+        public String city;
+        public String district;
+        public String address;
+        public String status;
+        public String froms;
+        public String headimg;
+        public String vcode;
+
+        public String getUser_id() {
             return user_id;
         }
 
-        public void setUser_id(int user_id) {
+        public void setUser_id(String user_id) {
             this.user_id = user_id;
-        }
-
-        public int getReg_time() {
-            return reg_time;
-        }
-
-        public void setReg_time(int reg_time) {
-            this.reg_time = reg_time;
-        }
-
-        public int getStatus() {
-            return status;
-        }
-
-        public void setStatus(int status) {
-            this.status = status;
-        }
-
-        public int getDistrict() {
-            return district;
-        }
-
-        public void setDistrict(int district) {
-            this.district = district;
-        }
-
-        public int getCountry() {
-            return country;
-        }
-
-        public void setCountry(int country) {
-            this.country = country;
-        }
-
-        public int getProvince() {
-            return province;
-        }
-
-        public void setProvince(int province) {
-            this.province = province;
-        }
-
-        public int getCity() {
-            return city;
-        }
-
-        public void setCity(int city) {
-            this.city = city;
-        }
-
-        public int getAddress_id() {
-            return address_id;
-        }
-
-        public void setAddress_id(int address_id) {
-            this.address_id = address_id;
-        }
-
-        public int getSex() {
-            return sex;
-        }
-
-        public void setSex(int sex) {
-            this.sex = sex;
         }
 
         public String getEmail() {
@@ -195,12 +161,36 @@ public class UserInfo {
             this.password = password;
         }
 
+        public String getSex() {
+            return sex;
+        }
+
+        public void setSex(String sex) {
+            this.sex = sex;
+        }
+
         public String getBirthday() {
             return birthday;
         }
 
         public void setBirthday(String birthday) {
             this.birthday = birthday;
+        }
+
+        public String getAddress_id() {
+            return address_id;
+        }
+
+        public void setAddress_id(String address_id) {
+            this.address_id = address_id;
+        }
+
+        public String getReg_time() {
+            return reg_time;
+        }
+
+        public void setReg_time(String reg_time) {
+            this.reg_time = reg_time;
         }
 
         public String getLast_login() {
@@ -267,12 +257,60 @@ public class UserInfo {
             this.passwd_question = passwd_question;
         }
 
+        public String getPasswd_answer() {
+            return passwd_answer;
+        }
+
+        public void setPasswd_answer(String passwd_answer) {
+            this.passwd_answer = passwd_answer;
+        }
+
+        public String getCountry() {
+            return country;
+        }
+
+        public void setCountry(String country) {
+            this.country = country;
+        }
+
+        public String getProvince() {
+            return province;
+        }
+
+        public void setProvince(String province) {
+            this.province = province;
+        }
+
+        public String getCity() {
+            return city;
+        }
+
+        public void setCity(String city) {
+            this.city = city;
+        }
+
+        public String getDistrict() {
+            return district;
+        }
+
+        public void setDistrict(String district) {
+            this.district = district;
+        }
+
         public String getAddress() {
             return address;
         }
 
         public void setAddress(String address) {
             this.address = address;
+        }
+
+        public String getStatus() {
+            return status;
+        }
+
+        public void setStatus(String status) {
+            this.status = status;
         }
 
         public String getFroms() {
@@ -298,4 +336,5 @@ public class UserInfo {
         public void setVcode(String vcode) {
             this.vcode = vcode;
         }
+    }
 }

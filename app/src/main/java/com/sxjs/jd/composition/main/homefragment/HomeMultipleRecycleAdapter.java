@@ -16,6 +16,7 @@ import com.facebook.drawee.view.SimpleDraweeView;
 import com.sxjs.common.base.baseadapter.BaseMultiItemQuickAdapter;
 import com.sxjs.common.base.baseadapter.BaseQuickAdapter;
 import com.sxjs.common.base.baseadapter.BaseViewHolder;
+import com.sxjs.common.bean.HomeBannerImg;
 import com.sxjs.common.bean.HomeWares;
 import com.sxjs.common.widget.autoscrollviewpager.BGABanner;
 import com.sxjs.common.widget.imageview.ExpandImageView;
@@ -30,6 +31,7 @@ public class HomeMultipleRecycleAdapter extends BaseMultiItemQuickAdapter<HomeWa
 
     private CountDownTimer timer;
     private int maxHasLoadPosition;
+
     /**
      * 当前position监听
      */
@@ -46,6 +48,7 @@ public class HomeMultipleRecycleAdapter extends BaseMultiItemQuickAdapter<HomeWa
     public HomeMultipleRecycleAdapter() {
         setSpanSizeLookup(this);
         Log.d("yuan", "进入HomeMultipleRecycleAdapter:适配器");
+        addItemType(Constant.TYPE_TOP_BANNER, R.layout.homerecycle_item_top_banner);
         //特价商品。不分页显示
         addItemType(Constant.TYPE_JD_SPIKE_CONTENT, R.layout.homerecycle_item_spike_content);
        //推荐商品 分页显示
@@ -66,17 +69,21 @@ public class HomeMultipleRecycleAdapter extends BaseMultiItemQuickAdapter<HomeWa
         if (maxHasLoadPosition < position) {
             maxHasLoadPosition = position;
         }
+            //这里的itemType怎么办
+//        if () {
+            //bindIconListData(helper, item, position);
+//            Log.d("yuan", "进入HomeMultipleRecycleAdapter:绑定10个图");
+//        }
         //特价商品
-        if ("goodsindex".equals(item.itemType)) {
-            Log.d("yuan", "进入HomeMultipleRecycleAdapter:convert111111");
+        if ("topBanner".equals(item.itemType)){
+            bindTopBannerData(helper, item, position);
+        }else if ("goods".equals(item.itemType)) {
             bindJDSpikeContentData(helper, item, position);
-        }
-        //
-         else if ("recommended_ware".equals(item.itemType)) {
-            Log.d("yuan", "进入HomeMultipleRecycleAdapter:convert222");
+            Log.d("yuan", "进入HomeMultipleRecycleAdapter:绑定特价商品");
+        }else if ("recommended_ware".equals(item.itemType)) {
+            Log.d("yuan", "进入HomeMultipleRecycleAdapter:绑定推荐商品");
             bindRecommendedWareData(helper, item, position);
         }
-
     }
 
 
@@ -87,7 +94,31 @@ public class HomeMultipleRecycleAdapter extends BaseMultiItemQuickAdapter<HomeWa
     }
 
 
+    /**
+     * 绑定banner数据
+     *
+     * @param helper
+     * @param item
+     * @param position
+     */
+    private void bindTopBannerData(BaseViewHolder helper, final HomeWares.ItemsBean item, int position) {
+        BGABanner banner = helper.getView(R.id.banner);
+        banner.setDelegate(new BGABanner.Delegate<View, HomeWares.ItemsBean.ItemListBean>() {
+            @Override
+            public void onBannerItemClick(BGABanner banner, View itemView, HomeWares.ItemsBean.ItemListBean model, int position) {
+                Toast.makeText(itemView.getContext(), "" +model.getAd_name(), Toast.LENGTH_SHORT).show();
+            }
+        });
+        banner.setAdapter(new BGABanner.Adapter<View, HomeWares.ItemsBean.ItemListBean>() {
+            @Override
+            public void fillBannerItem(BGABanner banner, View itemView, HomeWares.ItemsBean.ItemListBean model, int position) {
+                SimpleDraweeView simpleDraweeView = (SimpleDraweeView) itemView.findViewById(R.id.sdv_item_fresco_content);
+                simpleDraweeView.setImageURI("http://"+Uri.parse(model.getAd_code()));
+            }
+        });
 
+        banner.setData(R.layout.homerecycle_top_banner_content, item.getItemList(), null);
+    }
 
     private void bindJDSpikeContentData(BaseViewHolder helper, HomeWares.ItemsBean item, int position) {
         if (item.getItemList() == null || item.getItemList().size() <= 0) return;
@@ -99,9 +130,10 @@ public class HomeMultipleRecycleAdapter extends BaseMultiItemQuickAdapter<HomeWa
 
     private void bindRecommendedWareData(BaseViewHolder helper, HomeWares.ItemsBean item, int new_position) {
         int position=new_position%10;
-        ((ExpandImageView) helper.getView(R.id.recommended_img)).setImageURI("http://"+item.getItemList().get(position).getGoodsThumb());
-        helper.setText(R.id.recommended_title, item.getItemList().get(position).getGoodsName());
-        helper.setText(R.id.recommended_price, item.getItemList().get(position).getShopPrice()+"");
+        Log.d("yuan", "bindRecommendedWareData:适配器_推荐 数据 "+new_position);
+        ((ExpandImageView) helper.getView(R.id.recommended_img)).setImageURI("http://"+item.getItemList().get(position).getGoods_thumb());
+        helper.setText(R.id.recommended_title, item.getItemList().get(position).getGoods_name());
+        helper.setText(R.id.recommended_price, item.getItemList().get(position).getShop_price()+"");
     }
 
 

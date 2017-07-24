@@ -5,6 +5,7 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.FragmentManager;
 import android.widget.FrameLayout;
 
+import com.sxjs.common.model.DataManager;
 import com.sxjs.common.widget.bottomnavigation.BadgeItem;
 import com.sxjs.common.widget.bottomnavigation.BottomNavigationBar;
 import com.sxjs.common.widget.bottomnavigation.BottomNavigationItem;
@@ -12,6 +13,7 @@ import com.sxjs.jd.R;
 import com.sxjs.common.base.BaseActivity;
 import com.sxjs.jd.composition.main.classificationfragment.ClassificationFragment;
 import com.sxjs.jd.composition.main.findfragment.FindFragment;
+import com.sxjs.jd.composition.main.homefragment.HomePresenter;
 import com.sxjs.jd.composition.main.homefragment.MainHomeFragment;
 
 import javax.inject.Inject;
@@ -32,6 +34,8 @@ public class MainActivity extends BaseActivity implements MainContract.View, Bot
     private ClassificationFragment mClassificationFragment;
     private FragmentManager mFragmentManager;
     private FindFragment mFindFragment;
+    private DataManager mdataManager;
+    HomePresenter mHomePresenter;
 
 
 
@@ -41,7 +45,9 @@ public class MainActivity extends BaseActivity implements MainContract.View, Bot
         setContentView(R.layout.activity_main);
         unbinder = ButterKnife.bind(this);
         mFragmentManager = getSupportFragmentManager();
-        presenter=new MainPresenter(getAppComponent().getDataManager(),this);
+        mdataManager = getAppComponent().getDataManager();
+        presenter=new MainPresenter(mdataManager,this);
+        //mHomePresenter=new HomePresenter(mDataManager,mMainHomeFragment);
         initView();
         initData();
 
@@ -68,11 +74,6 @@ public class MainActivity extends BaseActivity implements MainContract.View, Bot
         mFragmentManager.beginTransaction().show(mMainHomeFragment).hide(mClassificationFragment).hide(mFindFragment)
                 .commitAllowingStateLoss();
 
-        /*DaggerMainActivityComponent.builder()
-                .appComponent(getAppComponent())
-                .mainPresenterModule(new MainPresenterModule(this))
-                .build()
-                .inject(this);*/
         initBottomNavigation();
 
     }
@@ -107,7 +108,8 @@ public class MainActivity extends BaseActivity implements MainContract.View, Bot
 
 
     public void initData() {
-        presenter.getText();
+        //presenter.getText();
+        //mHomePresenter.getBargainGoods(false);
     }
 
     private String text;

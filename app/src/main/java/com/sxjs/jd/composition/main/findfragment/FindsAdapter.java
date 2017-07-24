@@ -6,6 +6,7 @@ import android.widget.Toast;
 import com.facebook.drawee.view.SimpleDraweeView;
 import com.sxjs.common.base.baseadapter.BaseQuickAdapter;
 import com.sxjs.common.base.baseadapter.BaseViewHolder;
+import com.sxjs.common.bean.HomeWares;
 import com.sxjs.jd.R;
 import com.sxjs.jd.composition.entities.FindsBean;
 
@@ -13,7 +14,7 @@ import com.sxjs.jd.composition.entities.FindsBean;
  * Created by admin on 2017/3/22.
  */
 
-public class FindsAdapter extends BaseQuickAdapter<FindsBean.ContentBean,BaseViewHolder> {
+public class FindsAdapter extends BaseQuickAdapter<HomeWares.ItemsBean.ItemListBean,BaseViewHolder> {
 
     public FindsAdapter(int layoutResId) {
         super(layoutResId);
@@ -21,16 +22,16 @@ public class FindsAdapter extends BaseQuickAdapter<FindsBean.ContentBean,BaseVie
 
 
     @Override
-    protected void convert(BaseViewHolder helper, final FindsBean.ContentBean bean ,int position) {
-        helper.setText(R.id.title_text,bean.title);
-        helper.setText(R.id.content_text,bean.summary);
-        helper.setText(R.id.author_name , bean.authorName);
-        helper.setText(R.id.time_text , bean.showTime);
-        helper.setText(R.id.page_view_count , ""+bean.pageView);
+    protected void convert(BaseViewHolder helper, final HomeWares.ItemsBean.ItemListBean bean ,int position) {
+        //helper.setText(R.id.title_text,bean.getGoods_id());
+        helper.setText(R.id.content_text,bean.getGoods_brief());
+         helper.setText(R.id.author_name , bean.getGoods_name());
+        helper.setText(R.id.time_text , bean.getAdd_time());
+        helper.setText(R.id.page_view_count , ""+bean.getGoods_number());
         SimpleDraweeView simpleDraweeView = helper.getView(R.id.content_img);
         SimpleDraweeView authorImg = helper.getView(R.id.author_img);
-        simpleDraweeView.setImageURI(bean.indexImage);
-        authorImg.setImageURI(bean.authorPic);
+        simpleDraweeView.setImageURI("http://"+bean.getGoods_img());
+        authorImg.setImageURI("http://"+bean.getGoods_img());
         helper.addOnClickListener(R.id.find_item_layout);
 
         setOnItemChildClickListener(new OnItemChildClickListener() {
@@ -41,6 +42,4 @@ public class FindsAdapter extends BaseQuickAdapter<FindsBean.ContentBean,BaseVie
             }
         });
     }
-
-
 }

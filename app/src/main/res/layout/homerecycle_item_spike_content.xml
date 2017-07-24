@@ -4,6 +4,14 @@
     android:background="@color/white"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
+    <include layout="@layout/homerecycle_item_icon_list"></include>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:paddingLeft="13dp"
+        android:textSize="16sp"
+        android:text="@string/shopstreetName"/>
     <android.support.v7.widget.RecyclerView
         android:id="@+id/spike_content_view"
         android:layout_width="match_parent"
@@ -28,5 +36,9 @@
         android:layout_height="1dp"
         android:background="@color/lineColor"
         />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="80px"
+        android:src="@mipmap/recommendware_header"/>
 
 </LinearLayout>

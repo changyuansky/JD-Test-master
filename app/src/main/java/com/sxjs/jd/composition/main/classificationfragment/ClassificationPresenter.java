@@ -72,7 +72,7 @@ public class ClassificationPresenter extends BasePresenter {
     //需要根据 “分类页面” 的点击事件进行调用
     //根据   “catId”   得到相应的商品信息
     public void getClassMoreInfo(int catId) {
-        mDataManager.getClassMoreInfo(new DisposableObserver<HomeWares>() {
+        mDataManager.getCatGoodsInfoByCatIdAndPageindex(new DisposableObserver<HomeWares>() {
             @Override
             public void onNext(HomeWares classGoodsInfo) {
 //                if (logswitch){
@@ -94,7 +94,7 @@ public class ClassificationPresenter extends BasePresenter {
             public void onComplete() {
 
             }
-        },catId,false);
+        },catId,1,false);
     }
 
   //获取分类二，三级数据

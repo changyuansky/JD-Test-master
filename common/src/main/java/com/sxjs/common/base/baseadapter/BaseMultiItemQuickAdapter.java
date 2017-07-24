@@ -54,7 +54,6 @@ public abstract class BaseMultiItemQuickAdapter<T extends MultiItemEntity, K ext
     }
 
     private int getLayoutId(int viewType) {
-        Log.d("yuan", "getLayoutId: "+viewType+"返回值"+layouts.get(viewType));
         return layouts.get(viewType);
     }
 

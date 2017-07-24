@@ -5,16 +5,19 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.sxjs.common.base.baseadapter.BaseQuickAdapter;
 import com.sxjs.common.bean.ClassFication;
 import com.sxjs.jd.R;
 import com.sxjs.common.base.BaseFragment;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.inject.Inject;
@@ -71,7 +74,7 @@ public class ClassificationFragment extends BaseFragment implements Classificati
     }
 
     public void initData(){
-        presenter.getTypeOfNameData(false,1);
+        //presenter.getTypeOfNameData(false,1);
     }
 
     @Override
@@ -86,8 +89,13 @@ public class ClassificationFragment extends BaseFragment implements Classificati
      */
     @Override
     public void setTypeOfNameData(final List<ClassFication.ItemsBean> list) {
-        adapter.addData(list);
-        adapter.notifyDataSetChanged();
+            if (!list.isEmpty()) {
+            adapter.addData(list);
+            adapter.notifyDataSetChanged();
+            Log.d("yuan", "ClassificationFragment->setTypeOfNameData: list不空");
+        }else {
+            Log.d("yuan", "ClassificationFragment->setTypeOfNameData: list空的");
+        }
     }
 
     @Override

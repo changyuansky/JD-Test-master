@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 
 import com.sxjs.common.base.baseadapter.BaseQuickAdapter;
 import com.sxjs.common.bean.HomeBannerImg;
@@ -21,6 +22,8 @@ import com.sxjs.common.widget.pulltorefresh.PtrHandler;
 import com.sxjs.jd.R;
 import com.sxjs.common.base.BaseFragment;
 
+
+import java.util.Timer;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -143,7 +146,10 @@ public class MainHomeFragment extends BaseFragment implements JDHeaderView.Refre
         adapter.setEnableLoadMore(true);
         adapter.setListener(this);
         recyclerView.setAdapter(adapter);
-        flag = 0;
+        //mPresenter.getHomeBannerImg(false);
+        mPresenter.getHomeBannerImgAndBargainGoods(false);
+        if (!adapter.getData().isEmpty())
+            mPresenter.getRecommendedWares(false);
     }
 
     /**
@@ -173,21 +179,10 @@ public class MainHomeFragment extends BaseFragment implements JDHeaderView.Refre
      * 下拉后刷新数据
      */
     private void updateData() {
-        // mPresenter.getHomeBannerImg(false);
-       mPresenter.getRecommendedWares(false);
-        //mPresenter.getBargainGoods(false);
-       // mPresenter.getHomeIndexData();
-//        mPtrFrame.postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//                //刷新 推荐商品 和  轮播图 ，特价商品
-//
-//                mPresenter.getRecommendedWares(false);
-//                mPresenter.getBargainGoods(false);
-//                mPresenter.getHomeIndexData();
-//
-//            }
-//        },0);
+        //网络状态发生改变后，下拉刷新失效，及其恢复网络是的自动刷新访问等
+        //放置一个计时器
+        mPresenter.getRecommendedWares(true);
+        Log.d("yuan", "下拉刷新触发");
     }
 
     @Override
@@ -212,67 +207,64 @@ public class MainHomeFragment extends BaseFragment implements JDHeaderView.Refre
     }
 
     boolean logSwitch=false;
-    //给  轮播 设置数据
-    public void setHomeBannerImgData(HomeBannerImg homeBannerImg) {
-        HomeMultiple_banner_RecycleAdapter bannerAdapter = new HomeMultiple_banner_RecycleAdapter();
-        bannerAdapter.setOnLoadMoreListener(this);
-        bannerAdapter.setEnableLoadMore(false);
-        bannerAdapter.setListener(this);
-        recyclerView.setAdapter(bannerAdapter);
-        bannerAdapter.getData().addAll(homeBannerImg.getItems());
-        bannerAdapter.loadMoreEnd();
-        if (logSwitch) Log.d("yuan", "setHomeBannerImgData: 添加轮播数据集合");
-    }
 
     //给特价商品设置数据
-    public void setBargainGoods(HomeWares bargainGoods) {
-        adapter.getData().addAll(bargainGoods.getItems());
-        //adapter.loadMoreComplete();
-        adapter.loadMoreEnd();
+    public void setHomeBannerImgAndBargainGoods(HomeWares hBi_Bg) {
+        adapter.getData().clear();
+        adapter.addData(hBi_Bg.getItems());
+        adapter.loadMoreComplete();
         Log.d("yuan", "setBargainGoods: 添加推荐商品数据集合");
     }
 
     //这个方法是  初次 RecommendedWares 给设置数据
     public void setRecommendedWares(HomeWares recommendedProducts) {
+        if(recommendedProducts == null){
+            mPtrFrame.refreshComplete();
+            return;
+        }
+        adapter.getData().clear();
+        mPresenter.getHomeBannerImgAndBargainGoods(false);
+        adapter.resetMaxHasLoadPosition();
         adapter.getData().addAll(recommendedProducts.getItems());
-        adapter.loadMoreComplete();
+        mPtrFrame.refreshComplete();
     }
 
     //这个方法是   加载更多  时给mainRecyclerview设置数据
     public void setMoreRecommendedWares(HomeWares moreRecommendedProducts) {
-        adapter.getData().addAll(moreRecommendedProducts.getItems());
-        adapter.loadMoreComplete();
+        if (moreRecommendedProducts.getCode().equals("200")) {
+            adapter.getData().addAll(moreRecommendedProducts.getItems());
+            adapter.loadMoreComplete();
+        }else if (moreRecommendedProducts.getCode().equals("-2")){
+            adapter.loadMoreEnd();
+            Toast.makeText(getContext(), "没有更多数据了", Toast.LENGTH_SHORT).show();
+        }
     }
 
-
+    int currentPosition;
     /**
      * 当前recyclerView 的position的回调
      * @param position
      */
     @Override
     public void currentPosition(int position) {
+        currentPosition=position;
         Log.d("yuan", "当前位置是："+position);
     }
 
     @Override
     public void onLoadMoreRequested() {
-        if (adapter.getData().size() >= 15){
+//        if (currentPosition==adapter.getItemCount()) {
+//            Log.d("yuan", "onLoadMoreRequested:加载更多触发");
+//            mPresenter.getMoreRecommendedWares(currentPosition / 10 + 1, false);
+//        }
+        if (adapter.getData().size() >= 240){
             adapter.loadMoreEnd(false);
         }
         else{
-            mPresenter.getMoreRecommendedWares(false);
+            mPresenter.getMoreRecommendedWares(currentPosition/10+2,false);
             Log.d("yuan", "onLoadMoreRequested:加载更多触发");
         }
-//        recyclerView.postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//                if (adapter.getData().size() >= 90){
-//                    adapter.loadMoreEnd(false);
-//                }
-//                else{
-//                    mPresenter.getMoreRecommendedWares(false);
-//                }
-//            }
-//        },0);
     }
+
+
 }

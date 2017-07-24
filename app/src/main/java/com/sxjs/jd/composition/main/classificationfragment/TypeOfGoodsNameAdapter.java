@@ -19,6 +19,6 @@ public class TypeOfGoodsNameAdapter extends BaseQuickAdapter<ClassFication.Items
     @Override
     protected void convert(BaseViewHolder helper, ClassFication.ItemsBean item , int position) {
         //自己根据需要更改数据
-        helper.setText(R.id.goods_type_name,item.getItemList().get(0).getCatName());
+        helper.setText(R.id.goods_type_name,item.getItemList().get(position).getCat_name());
     }
 }

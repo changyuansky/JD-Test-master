@@ -5,12 +5,14 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.sxjs.common.AppComponent;
 import com.sxjs.common.base.baseadapter.BaseQuickAdapter;
+import com.sxjs.common.bean.HomeWares;
 import com.sxjs.common.model.DataManager;
 import com.sxjs.common.model.dao.DataBaseHelper;
 import com.sxjs.common.model.http.HttpHelper;
@@ -23,6 +25,8 @@ import com.sxjs.jd.MyApplication;
 import com.sxjs.jd.R;
 import com.sxjs.common.base.BaseFragment;
 import com.sxjs.jd.composition.entities.FindsBean;
+
+import java.util.List;
 
 import javax.inject.Inject;
 
@@ -58,11 +62,6 @@ public class FindFragment extends BaseFragment implements PtrHandler, BaseQuickA
     }
 
     public void initView() {
-        /*DaggerFindFragmentComponent.builder()
-                .appComponent(getAppComponent())
-                .findPresenterModule(new FindPresenterModule(this))
-                .build()
-                .inject(this);*/
         mPresenter = new FindPresenter(getAppComponent().getDataManager(),this);
         findPullRefreshHeader.setPtrHandler(this);
         findRecyclerview.setLayoutManager(new LinearLayoutManager(mActivity));
@@ -85,8 +84,8 @@ public class FindFragment extends BaseFragment implements PtrHandler, BaseQuickA
     }
 
 
-    public void setMoreData(FindsBean find) {
-        //adapter.getData().addAll(find.content);
+    public void setMoreData(List<HomeWares.ItemsBean.ItemListBean> find) {
+        adapter.getData().addAll(find);
         adapter.loadMoreComplete();
 
     }
@@ -110,6 +109,7 @@ public class FindFragment extends BaseFragment implements PtrHandler, BaseQuickA
                     adapter.loadMoreEnd(false);
                 }
                 else{
+                    Log.d("yuan", "发现->加载更多触发");
                     mPresenter.getMoreFindData();
                 }
             }

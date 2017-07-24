@@ -52,7 +52,7 @@ public class BaseInterceptor<T> implements Interceptor {
         }
         Request request = chain.request();
         if(CommonConfig.DEBUG){
-            Log.d("http_request", "intercept: request header="+request.url() + "/\r body="+request.body() );
+            Log.d("yuan", "http->BaseIntercetor,请求的网址是："+request.url());
         }
         Request.Builder builder = request.newBuilder();
         if (headers != null && headers.size() > 0) {

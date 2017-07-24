@@ -36,7 +36,8 @@
                     android:layout_height="0dp"
                     android:layout_centerHorizontal="true"
                     app:layout_aspectRatio="100%"
-                    app:layout_heightPercent="88%" />
+                    app:layout_heightPercent="88%"
+                    android:background="@mipmap/shope"/>
             </com.sxjs.common.widget.percentlayout.PercentRelativeLayout>
 
             <com.sxjs.common.widget.percentlayout.PercentRelativeLayout
@@ -50,7 +51,8 @@
                     android:layout_height="0dp"
                     android:layout_centerHorizontal="true"
                     app:layout_aspectRatio="100%"
-                    app:layout_heightPercent="88%" />
+                    app:layout_heightPercent="88%"
+                    android:background="@mipmap/shope"/>
             </com.sxjs.common.widget.percentlayout.PercentRelativeLayout>
 
             <com.sxjs.common.widget.percentlayout.PercentRelativeLayout
@@ -64,7 +66,8 @@
                     android:layout_height="0dp"
                     android:layout_centerHorizontal="true"
                     app:layout_aspectRatio="100%"
-                    app:layout_heightPercent="88%" />
+                    app:layout_heightPercent="88%"
+                    android:background="@mipmap/shope"/>
             </com.sxjs.common.widget.percentlayout.PercentRelativeLayout>
 
             <com.sxjs.common.widget.percentlayout.PercentRelativeLayout
@@ -78,7 +81,8 @@
                     android:layout_height="0dp"
                     android:layout_centerHorizontal="true"
                     app:layout_aspectRatio="100%"
-                    app:layout_heightPercent="88%" />
+                    app:layout_heightPercent="88%"
+                    android:background="@mipmap/shope"/>
             </com.sxjs.common.widget.percentlayout.PercentRelativeLayout>
 
             <com.sxjs.common.widget.percentlayout.PercentRelativeLayout
@@ -92,7 +96,8 @@
                     android:layout_height="0dp"
                     android:layout_centerHorizontal="true"
                     app:layout_aspectRatio="100%"
-                    app:layout_heightPercent="88%" />
+                    app:layout_heightPercent="88%"
+                    android:background="@mipmap/shope"/>
             </com.sxjs.common.widget.percentlayout.PercentRelativeLayout>
         </com.sxjs.common.widget.percentlayout.PercentLinearLayout>
 
@@ -109,7 +114,8 @@
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
                 android:includeFontPadding="false"
-                app:layout_heightTextSizePercent="90%" />
+                app:layout_heightTextSizePercent="90%"
+                android:text="@string/icon_list_one_title"/>
 
             <TextView
                 android:id="@+id/icon_list_two_title"
@@ -118,7 +124,8 @@
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
                 android:includeFontPadding="false"
-                app:layout_heightTextSizePercent="90%" />
+                app:layout_heightTextSizePercent="90%"
+                android:text="@string/icon_list_two_title"/>
 
             <TextView
                 android:id="@+id/icon_list_three_title"
@@ -127,7 +134,8 @@
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
                 android:includeFontPadding="false"
-                app:layout_heightTextSizePercent="90%" />
+                app:layout_heightTextSizePercent="90%"
+                android:text="@string/icon_list_three_title"/>
 
             <TextView
                 android:id="@+id/icon_list_four_title"
@@ -136,7 +144,8 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:includeFontPadding="false"
-                app:layout_heightTextSizePercent="90%" />
+                app:layout_heightTextSizePercent="90%"
+                android:text="@string/icon_list_four_title"/>
 
             <TextView
                 android:id="@+id/icon_list_five_title"
@@ -145,7 +154,8 @@
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
                 android:includeFontPadding="false"
-                app:layout_heightTextSizePercent="90%" />
+                app:layout_heightTextSizePercent="90%"
+                android:text="@string/icon_list_five_title"/>
 
         </com.sxjs.common.widget.percentlayout.PercentLinearLayout>
 
@@ -171,7 +181,8 @@
                     android:layout_height="0dp"
                     android:layout_centerHorizontal="true"
                     app:layout_aspectRatio="100%"
-                    app:layout_heightPercent="88%" />
+                    app:layout_heightPercent="88%"
+                    android:background="@mipmap/shope"/>
             </com.sxjs.common.widget.percentlayout.PercentRelativeLayout>
 
             <com.sxjs.common.widget.percentlayout.PercentRelativeLayout
@@ -185,7 +196,8 @@
                     android:layout_height="0dp"
                     android:layout_centerHorizontal="true"
                     app:layout_aspectRatio="100%"
-                    app:layout_heightPercent="88%" />
+                    app:layout_heightPercent="88%"
+                    android:background="@mipmap/shope"/>
             </com.sxjs.common.widget.percentlayout.PercentRelativeLayout>
 
             <com.sxjs.common.widget.percentlayout.PercentRelativeLayout
@@ -199,7 +211,8 @@
                     android:layout_height="0dp"
                     android:layout_centerHorizontal="true"
                     app:layout_aspectRatio="100%"
-                    app:layout_heightPercent="88%" />
+                    app:layout_heightPercent="88%"
+                    android:background="@mipmap/shope"/>
             </com.sxjs.common.widget.percentlayout.PercentRelativeLayout>
 
             <com.sxjs.common.widget.percentlayout.PercentRelativeLayout
@@ -213,7 +226,8 @@
                     android:layout_height="0dp"
                     android:layout_centerHorizontal="true"
                     app:layout_aspectRatio="100%"
-                    app:layout_heightPercent="88%" />
+                    app:layout_heightPercent="88%"
+                    android:background="@mipmap/shope"/>
             </com.sxjs.common.widget.percentlayout.PercentRelativeLayout>
 
             <com.sxjs.common.widget.percentlayout.PercentRelativeLayout
@@ -227,7 +241,8 @@
                     android:layout_height="0dp"
                     android:layout_centerHorizontal="true"
                     app:layout_aspectRatio="100%"
-                    app:layout_heightPercent="88%" />
+                    app:layout_heightPercent="88%"
+                    android:background="@mipmap/shope"/>
             </com.sxjs.common.widget.percentlayout.PercentRelativeLayout>
         </com.sxjs.common.widget.percentlayout.PercentLinearLayout>
 
@@ -245,7 +260,8 @@
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
                 android:includeFontPadding="false"
-                app:layout_heightTextSizePercent="90%" />
+                app:layout_heightTextSizePercent="90%"
+                android:text="@string/icon_list_six_title"/>
 
             <TextView
                 android:id="@+id/icon_list_seven_title"
@@ -254,7 +270,8 @@
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
                 android:includeFontPadding="false"
-                app:layout_heightTextSizePercent="90%" />
+                app:layout_heightTextSizePercent="90%"
+                android:text="@string/icon_list_seven_title"/>
 
             <TextView
                 android:id="@+id/icon_list_eight_title"
@@ -263,7 +280,8 @@
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
                 android:includeFontPadding="false"
-                app:layout_heightTextSizePercent="90%" />
+                app:layout_heightTextSizePercent="90%"
+                android:text="@string/icon_list_eight_title"/>
 
             <TextView
                 android:id="@+id/icon_list_nine_title"
@@ -272,7 +290,8 @@
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
                 android:includeFontPadding="false"
-                app:layout_heightTextSizePercent="90%" />
+                app:layout_heightTextSizePercent="90%"
+                android:text="@string/icon_list_nine_title"/>
 
             <TextView
                 android:id="@+id/icon_list_ten_title"
@@ -281,7 +300,8 @@
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
                 android:includeFontPadding="false"
-                app:layout_heightTextSizePercent="90%" />
+                app:layout_heightTextSizePercent="90%"
+                android:text="@string/icon_list_ten_title"/>
 
         </com.sxjs.common.widget.percentlayout.PercentLinearLayout>
 

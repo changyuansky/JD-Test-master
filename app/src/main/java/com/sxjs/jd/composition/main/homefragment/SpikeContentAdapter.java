@@ -28,9 +28,9 @@ public class SpikeContentAdapter extends BaseQuickAdapter<HomeWares.ItemsBean.It
 
     @Override
     protected void convert(BaseViewHolder helper, HomeWares.ItemsBean.ItemListBean item, int position) {
-        ((ExpandImageView) helper.getView(R.id.spike_ware_img)).setImageURI("http://"+item.getGoodsThumb());
-        helper.setText(R.id.spike_ware_now_price,item.getGoodsName());
-        helper.setText(R.id.spike_ware_old_price,item.getShopPrice()+"");
+        ((ExpandImageView) helper.getView(R.id.spike_ware_img)).setImageURI("http://"+item.getGoods_thumb());
+        helper.setText(R.id.spike_ware_now_price,item.getShop_price()+"");
+        helper.setText(R.id.spike_ware_old_price,item.getGoods_name());
 
     }
 

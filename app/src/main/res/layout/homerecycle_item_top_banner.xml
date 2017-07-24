@@ -7,10 +7,8 @@
 
     <com.sxjs.common.widget.autoscrollviewpager.BGABanner
         android:id="@+id/banner"
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         app:banner_indicatorGravity="bottom|right"
         app:banner_pointContainerBackground="@color/transparent"
         app:banner_pageChangeDuration="3500"
