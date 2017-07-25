@@ -189,8 +189,12 @@ public class DataManager {
         toSubscribe(orderObservable,noPayOrderInfoConsumer);
     }
     //13. 待发货
-
-
+    public void getShipNoOrderInfoByUserIdAndPageindex(DisposableObserver<MyOrderInfo> shipNoOrderInfoConsumer,int userId,int pageindex,boolean update){
+        Observable<MyOrderInfo> orderObservable=cacheProvider.
+                getShipNoOrderInfoByUserIdAndPageindex(getBaseApiService().getShipNoOrderInfoByUserIdAndPageindex(userId,pageindex),
+                        new DynamicKeyGroup(userId,pageindex),new EvictProvider(update));
+        toSubscribe(orderObservable,shipNoOrderInfoConsumer);
+    }
     //14  已完成订单
     public void getHaveFinishedOrderInfoByUserIdAndPageindex(DisposableObserver<MyOrderInfo> haveFinishedOrderInfoConsumer,int userId,int pageindex,boolean update){
         Observable<MyOrderInfo> orderObservable=cacheProvider.
@@ -226,7 +230,13 @@ public class DataManager {
                         new DynamicKey(userId),new EvictProvider(update));
         toSubscribe(goodsByOrderIdObservable,userAddressByUserIdConsumer);
     }
-
+    //19  待收货
+    public void getWaitShipOrderInfoByUserIdAndPageindex(DisposableObserver<MyOrderInfo> waitShipOrderInfoConsumer,int userId,int pageindex,boolean update){
+        Observable<MyOrderInfo> orderObservable=cacheProvider.
+                getWaitShipOrderInfoByUserIdAndPageindex(getBaseApiService().getWaitShipOrderInfoByUserIdAndPageindex(userId,pageindex),
+                        new DynamicKeyGroup(userId,pageindex),new EvictProvider(update));
+        toSubscribe(orderObservable,waitShipOrderInfoConsumer);
+    }
 
 
 

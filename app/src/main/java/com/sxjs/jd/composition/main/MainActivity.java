@@ -24,7 +24,6 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends BaseActivity implements MainContract.View, BottomNavigationBar.OnTabSelectedListener {
 
-    //@Inject
     MainPresenter presenter;
     @BindView(R.id.bottom_navigation_bar)
     BottomNavigationBar bottomNavigationBar;
@@ -35,7 +34,6 @@ public class MainActivity extends BaseActivity implements MainContract.View, Bot
     private FragmentManager mFragmentManager;
     private FindFragment mFindFragment;
     private DataManager mdataManager;
-    HomePresenter mHomePresenter;
 
 
 
@@ -47,10 +45,8 @@ public class MainActivity extends BaseActivity implements MainContract.View, Bot
         mFragmentManager = getSupportFragmentManager();
         mdataManager = getAppComponent().getDataManager();
         presenter=new MainPresenter(mdataManager,this);
-        //mHomePresenter=new HomePresenter(mDataManager,mMainHomeFragment);
         initView();
         initData();
-
     }
 
     public void initView() {

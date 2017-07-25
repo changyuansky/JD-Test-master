@@ -21,6 +21,7 @@ import com.sxjs.common.widget.pulltorefresh.PtrFrameLayout;
 import com.sxjs.common.widget.pulltorefresh.PtrHandler;
 import com.sxjs.jd.R;
 import com.sxjs.common.base.BaseFragment;
+import com.sxjs.jd.composition.main.MainActivity;
 
 
 import java.util.Timer;
@@ -49,6 +50,7 @@ public class MainHomeFragment extends BaseFragment implements JDHeaderView.Refre
     private JDHeaderView mPtrFrame;
     private HomeMultipleRecycleAdapter adapter;
     private int distanceY;
+    private MainActivity activity;
     /**
      * 加载首页样式标记
      */
@@ -66,6 +68,7 @@ public class MainHomeFragment extends BaseFragment implements JDHeaderView.Refre
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         rootView = inflater.inflate(R.layout.fragment_recycle, container, false);
+        activity= (MainActivity) getActivity();
         initBase();
         unbinder = ButterKnife.bind(this, rootView);
         return rootView;
@@ -76,7 +79,7 @@ public class MainHomeFragment extends BaseFragment implements JDHeaderView.Refre
      */
     private void initBase() {
 
-        mPresenter = new HomePresenter(getAppComponent().getDataManager(),this);
+        mPresenter = new HomePresenter(getAppComponent().getDataManager(),this,activity);
 
         initPtrFrame();
         recyclerView = (RecyclerView) this.rootView.findViewById(R.id.recyclerView);
@@ -146,7 +149,6 @@ public class MainHomeFragment extends BaseFragment implements JDHeaderView.Refre
         adapter.setEnableLoadMore(true);
         adapter.setListener(this);
         recyclerView.setAdapter(adapter);
-        //mPresenter.getHomeBannerImg(false);
         mPresenter.getHomeBannerImgAndBargainGoods(false);
         if (!adapter.getData().isEmpty())
             mPresenter.getRecommendedWares(false);
@@ -219,6 +221,8 @@ public class MainHomeFragment extends BaseFragment implements JDHeaderView.Refre
     //这个方法是  初次 RecommendedWares 给设置数据
     public void setRecommendedWares(HomeWares recommendedProducts) {
         if(recommendedProducts == null){
+            //设置空布局
+            adapter.setEmptyView(R.layout.empty);
             mPtrFrame.refreshComplete();
             return;
         }
@@ -261,7 +265,7 @@ public class MainHomeFragment extends BaseFragment implements JDHeaderView.Refre
             adapter.loadMoreEnd(false);
         }
         else{
-            mPresenter.getMoreRecommendedWares(currentPosition/10+2,false);
+            mPresenter.getMoreRecommendedWares(currentPosition/10+1,false);
             Log.d("yuan", "onLoadMoreRequested:加载更多触发");
         }
     }

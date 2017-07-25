@@ -6,6 +6,7 @@ import com.sxjs.common.base.rxjava.ErrorDisposableObserver;
 import com.sxjs.common.bean.HomeWares;
 import com.sxjs.common.model.DataManager;
 import com.sxjs.jd.composition.BasePresenter;
+import com.sxjs.jd.composition.main.MainActivity;
 
 
 /**
@@ -17,17 +18,20 @@ public class HomePresenter extends BasePresenter {
 
     private MainHomeFragment mHomeView;
 
+    private MainActivity mMainView;
 
-    public HomePresenter(DataManager mDataManager, MainHomeFragment view) {
+    public HomePresenter(DataManager mDataManager, MainHomeFragment view, MainActivity mainActivity) {
         this.mDataManager = mDataManager;
         this.mHomeView = view;
+        mMainView=mainActivity;
     }
 
 
-    boolean logswitch=true;
+    boolean logswitch=false;
 
     //获取特价商品和轮播图
     public void getHomeBannerImgAndBargainGoods(boolean update){
+        mMainView.showProgressDialogView();
         mDataManager.getHomeBannerImgAndBargainGoods(new ErrorDisposableObserver<HomeWares>() {
             @Override
             public void onNext(HomeWares homeWares) {
@@ -39,13 +43,17 @@ public class HomePresenter extends BasePresenter {
                     mHomeView.setHomeBannerImgAndBargainGoods(homeWares);
             }
 
+            //如果需要发生Error时操作UI可以重写onError，统一错误操作可以在ErrorDisposableObserver中统一执行
             @Override
             public void onError(Throwable e) {
+                super.onError(e);
+                mMainView.hiddenProgressDialogView();
                 if (logswitch) Log.d("yuan", "HomePresenter---getHomeBannerImgAndBargainGoods错误: "+e.getMessage());
             }
 
             @Override
             public void onComplete() {
+                mMainView.hiddenProgressDialogView();
                 if (logswitch) Log.d("yuan", "HomePresenter---getHomeBannerImgAndBargainGoods到了onComplete（）方法");
             }
         },update);
@@ -66,6 +74,7 @@ public class HomePresenter extends BasePresenter {
 
             @Override
             public void onError(Throwable e) {
+                mHomeView.setRecommendedWares(null);
                 if (logswitch) Log.d("yuan", "HomePresenter---getRecommendedWares错误: "+e.getMessage());
             }
 

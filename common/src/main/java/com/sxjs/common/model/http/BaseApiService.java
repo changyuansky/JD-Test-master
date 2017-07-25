@@ -92,7 +92,8 @@ public interface BaseApiService {
     @GET("PayNoOrderServlet")
     Observable<MyOrderInfo> getNoPayOrderInfoByUserIdAndPageindex(@Query("userId") int userId,@Query("pageindex") int pageindex);
     // 13 . 待发货 http://49.122.47.185:8080/XJD/api/ShipNoOrderServlet?userId=7&pageindex=1
-
+    @GET("ShipNoOrderServlet")
+    Observable<MyOrderInfo> getShipNoOrderInfoByUserIdAndPageindex(@Query("userId") int userId,@Query("pageindex") int pageindex);
     //14 . .已完成(有缓存)  http://49.122.47.185:8080/XJD/api/ShipNoOrderServlet?userId=7&pageindex=1
     @GET("ShipNoOrderServlet")
     Observable<MyOrderInfo> getHaveFinishedOrderInfoByUserIdAndPageindex(@Query("userId") int userId,@Query("pageindex") int pageindex);
@@ -114,6 +115,9 @@ public interface BaseApiService {
     //18. 用户地址(有缓存)http://10.10.140.231:8080/XJD/api/UserAddressServlet?userId=7
     @GET("UserAddressServlet")
     Observable<Address> getUserAddressByUserId(@Query("userId") int userId);
+    //19待收货 （有缓存） http://10.10.140.231:8080/XJD/api/WaitShipServlet?userId=7&pageindex=1
+    @GET("WaitShipServlet")
+    Observable<MyOrderInfo> getWaitShipOrderInfoByUserIdAndPageindex(@Query("userId") int userId,@Query("pageindex") int pageindex);
 }
 
 

@@ -28,7 +28,6 @@ public class MainPresenter extends BasePresenter implements MainContract.Present
 
     }
 
-
     @Override
     public void getText() {
 //        mMainView.showProgressDialogView();

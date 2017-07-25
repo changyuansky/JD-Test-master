@@ -58,17 +58,19 @@ public interface CacheProvider {
     Observable<MyOrderInfo> getOrderInfoByUserIdAndPageindex(Observable<MyOrderInfo> allOrderObservable,
                                                              DynamicKeyGroup userId_pageindex,EvictProvider evictProvider);
     //12 未付款订单
-    @LifeCache(duration = 5, timeUnit = TimeUnit.MINUTES)
+    @LifeCache(duration = 30, timeUnit = TimeUnit.MINUTES)
     Observable<MyOrderInfo> getNoPayOrderInfoByUserIdAndPageindex(Observable<MyOrderInfo> noPayOrderObservable,
                                                                   DynamicKeyGroup userId_pageindex,EvictProvider evictProvider);
     //13. 待发货
-
+    @LifeCache(duration = 2, timeUnit = TimeUnit.DAYS)
+    Observable<MyOrderInfo> getShipNoOrderInfoByUserIdAndPageindex(Observable<MyOrderInfo> shipNoOrderObservable,
+                                                                   DynamicKeyGroup userId_pageindex,EvictProvider evictProvider);
     //14  已完成订单
-    @LifeCache(duration = 5, timeUnit = TimeUnit.MINUTES)
+    @LifeCache(duration = 5, timeUnit = TimeUnit.DAYS)
     Observable<MyOrderInfo> getHaveFinishedOrderInfoByUserIdAndPageindex(Observable<MyOrderInfo> haveFinishedOrderObservable,
                                                                          DynamicKeyGroup userId_pageindex,EvictProvider evictProvider);
     //15.已取消订单
-    @LifeCache(duration = 5, timeUnit = TimeUnit.MINUTES)
+    @LifeCache(duration = 2, timeUnit = TimeUnit.DAYS)
     Observable<MyOrderInfo> getHaveCanceledOrderInfoByUserIdAndPageindex(Observable<MyOrderInfo> haveCanceledOrderObservable,
                                                                          DynamicKeyGroup userId_pageindex,EvictProvider evictProvider);
     //16.订单详情-商品详情，根据orderId查询商品详情
@@ -76,9 +78,15 @@ public interface CacheProvider {
     Observable<OrdergoodsInfo> getOrderInfoByOrderId(Observable<OrdergoodsInfo> orderObservable,
                                                 DynamicKey orderId,EvictProvider evictProvider);
     //17. 搜索
+    @LifeCache(duration = 3, timeUnit = TimeUnit.DAYS)
     Observable<HomeWares> getSearchSevletByKeywordsAndPageindex(Observable<HomeWares> searchObservable,
                                                                 DynamicKeyGroup keywords_pageindex,EvictProvider evictProvider);
     //18 用户地址
+    @LifeCache(duration = 2, timeUnit = TimeUnit.DAYS)
     Observable<Address> getUserAddressByUserId(Observable<Address> addressObservable,
                                                DynamicKey userId,EvictProvider evictProvider);
+    //19  待收货
+    @LifeCache(duration = 2, timeUnit = TimeUnit.DAYS)
+    Observable<MyOrderInfo> getWaitShipOrderInfoByUserIdAndPageindex(Observable<MyOrderInfo> waitShipOrderObservable,
+                                                                     DynamicKeyGroup userId_pageindex,EvictProvider evictProvider);
 }
