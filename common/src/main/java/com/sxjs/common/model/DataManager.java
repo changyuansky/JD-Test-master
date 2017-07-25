@@ -2,6 +2,7 @@ package com.sxjs.common.model;
 
 import android.content.Context;
 
+import com.sxjs.common.bean.Address;
 import com.sxjs.common.bean.ClassFication;
 import com.sxjs.common.bean.HomeWares;
 import com.sxjs.common.bean.MyOrderInfo;
@@ -218,6 +219,16 @@ public class DataManager {
                         new DynamicKeyGroup(keywords,pageindex),new EvictProvider(update));
         toSubscribe(SearchObservable,searchConsumer);
     }
+    //18 用户地址
+    public void getUserAddressByUserId(DisposableObserver<Address> userAddressByUserIdConsumer, int userId, boolean update){
+        Observable<Address> goodsByOrderIdObservable=cacheProvider.
+                getUserAddressByUserId(getBaseApiService().getUserAddressByUserId(userId),
+                        new DynamicKey(userId),new EvictProvider(update));
+        toSubscribe(goodsByOrderIdObservable,userAddressByUserIdConsumer);
+    }
+
+
+
 
      //BaseApiService实例
      private BaseApiService getBaseApiService(){

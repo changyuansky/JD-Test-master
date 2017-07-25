@@ -3,6 +3,7 @@ package com.sxjs.common.cache;
 
 
 
+import com.sxjs.common.bean.Address;
 import com.sxjs.common.bean.ClassFication;
 import com.sxjs.common.bean.HomeWares;
 import com.sxjs.common.bean.MyOrderInfo;
@@ -77,5 +78,7 @@ public interface CacheProvider {
     //17. 搜索
     Observable<HomeWares> getSearchSevletByKeywordsAndPageindex(Observable<HomeWares> searchObservable,
                                                                 DynamicKeyGroup keywords_pageindex,EvictProvider evictProvider);
-
+    //18 用户地址
+    Observable<Address> getUserAddressByUserId(Observable<Address> addressObservable,
+                                               DynamicKey userId,EvictProvider evictProvider);
 }

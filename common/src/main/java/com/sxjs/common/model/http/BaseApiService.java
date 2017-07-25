@@ -18,6 +18,7 @@
 package com.sxjs.common.model.http;
 
 
+import com.sxjs.common.bean.Address;
 import com.sxjs.common.bean.ClassFication;
 import com.sxjs.common.bean.HomeWares;
 import com.sxjs.common.bean.MyOrderInfo;
@@ -51,7 +52,7 @@ public interface BaseApiService {
     @GET("CategoryServlet")
     Observable<ClassFication> getClassFication();
 
-    //4. 7.21新 根据分类catId  pageindex请求相应产品的 详细信息+分页(有缓存)
+    //4.   根据分类catId  pageindex请求相应产品的 详细信息+分页(有缓存)
     // http://49.122.47.185:8080/XJD/api/CatGoodsServlet?catId=14&pageindex=2
     @GET("CatGoodsServlet")
     Observable<HomeWares> getCatGoodsInfoByCatIdAndPageindex(@Query("catId") int catId,@Query("pageindex") int pageindex);
@@ -75,7 +76,7 @@ public interface BaseApiService {
     @POST("VCodeServlet")
     Observable<String> getVcode(@Body RequestBody  mobilePhone);
 
-    //9 7.21新 购物车+分页 (有缓存)  http://49.122.47.185:8080/XJD/api/ShopCarServlet?userId=7&pageindex=1
+    //9   购物车+分页 (有缓存)  http://49.122.47.185:8080/XJD/api/ShopCarServlet?userId=7&pageindex=1
     @GET("ShopCarServlet")
     Observable<ShopCar> getShopCarInfoByuserIdAndPageindex(@Query("userId") int userId,@Query("pageindex") int pageindex);
 
@@ -83,19 +84,19 @@ public interface BaseApiService {
     @GET("GoodsInfoServlet")
     Observable<HomeWares> getGoodsInfoBygoodsId(@Query("goodsId") int goodsId);
 
-    //11 7.21新 全部订单+分页(有缓存)   http://49.122.47.185:8080/XJD/api/OrderInfoServlet?userId=7&pageindex=1
+    //11   全部订单+分页(有缓存)   http://49.122.47.185:8080/XJD/api/OrderInfoServlet?userId=7&pageindex=1
     @GET("OrderInfoServlet")
     Observable<MyOrderInfo> getOrderInfoByUserIdAndPageindex(@Query("userId") int userId,@Query("pageindex") int pageindex);
 
-    //12 7.21新 未付款订单(有缓存)  http://49.122.47.185:8080/XJD/api/PayNoOrderServlet?userId=7&pageindex=1
+    //12   未付款订单(有缓存)  http://49.122.47.185:8080/XJD/api/PayNoOrderServlet?userId=7&pageindex=1
     @GET("PayNoOrderServlet")
     Observable<MyOrderInfo> getNoPayOrderInfoByUserIdAndPageindex(@Query("userId") int userId,@Query("pageindex") int pageindex);
-    // 13 .7.21新 待发货 http://49.122.47.185:8080/XJD/api/ShipNoOrderServlet?userId=7&pageindex=1
+    // 13 . 待发货 http://49.122.47.185:8080/XJD/api/ShipNoOrderServlet?userId=7&pageindex=1
 
-    //14 . 7.21新.已完成(有缓存)  http://49.122.47.185:8080/XJD/api/ShipNoOrderServlet?userId=7&pageindex=1
+    //14 . .已完成(有缓存)  http://49.122.47.185:8080/XJD/api/ShipNoOrderServlet?userId=7&pageindex=1
     @GET("ShipNoOrderServlet")
     Observable<MyOrderInfo> getHaveFinishedOrderInfoByUserIdAndPageindex(@Query("userId") int userId,@Query("pageindex") int pageindex);
-    //15.7.21新 已取消(有缓存)  http://49.122.47.185:8080/XJD/api/OrderCancelServlet?userId=7&pageindex=1
+    //15. 已取消(有缓存)  http://49.122.47.185:8080/XJD/api/OrderCancelServlet?userId=7&pageindex=1
     @GET("OrderCancelServlet")
     Observable<MyOrderInfo> getHaveCanceledOrderInfoByUserIdAndPageindex(@Query("userId") int userId,@Query("pageindex") int pageindex);
 
@@ -110,6 +111,9 @@ public interface BaseApiService {
     //15. 用户信息编辑  http://49.122.47.185:8080/XJD/api/UserInfoUpdateServlet
     //待完成
 
+    //18. 用户地址(有缓存)http://10.10.140.231:8080/XJD/api/UserAddressServlet?userId=7
+    @GET("UserAddressServlet")
+    Observable<Address> getUserAddressByUserId(@Query("userId") int userId);
 }
 
 
