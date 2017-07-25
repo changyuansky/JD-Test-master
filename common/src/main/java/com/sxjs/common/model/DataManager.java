@@ -2,6 +2,7 @@ package com.sxjs.common.model;
 
 import android.content.Context;
 
+import com.google.gson.Gson;
 import com.sxjs.common.bean.Address;
 import com.sxjs.common.bean.ClassFication;
 import com.sxjs.common.bean.HomeWares;
@@ -133,7 +134,12 @@ public class DataManager {
         toSubscribe(classGoodsInfoObservable,classGoodsInfoConsumer);
     }
      //5.注册后获得用户信息
-    public void getRegistUserInfo(final DisposableObserver<UserInfo> userInfoConsumer, RequestBody registUserInfo){
+    public void getRegistUserInfo(final DisposableObserver<UserInfo> userInfoConsumer,String mobile_phone ,String passwd, String vcode,RequestBody registUserInfo){
+//        UserInfo userInfo =new UserInfo();//RequestBody registUserInfo
+//        userInfo.getItems().get(0).setMobile_phone(mobile_phone);
+//        userInfo.getItems().get(0).setPassword(passwd);
+//        userInfo.getItems().get(0).setVcode(vcode);
+//        String registUserInfo = new Gson().toJson(userInfo);
         Observable<UserInfo> registuserInfoObservable=getBaseApiService().postRegistUserInfo(registUserInfo);
         toSubscribe(registuserInfoObservable,userInfoConsumer);
     }
