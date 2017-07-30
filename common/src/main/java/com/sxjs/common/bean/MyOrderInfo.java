@@ -12,9 +12,9 @@ public class MyOrderInfo {
      * code : 200
      * msg : 访问成功
      * isOver : 1
-     * timstamp : 1500717217490
+     * timstamp : 1501231784363
      * pageindex : 1
-     * items : [{"itemType":"orderInfo","module":"orderInfo","itemList":[{"orderInfos":[{"order_id":188,"order_sn":"2017072189456","user_id":7,"order_status":1,"shipping_status":0,"pay_status":0,"consignee":"11","country":"1","province":"2","city":"52","district":"500","address":"1","zipcode":"","tel":"-","mobile":"11111111111","email":"","best_time":"仅工作日送货","postscript":"","pay_id":1,"pay_name":"支付宝","goods_amount":11303,"money_paid":0,"order_amount":11303,"add_time":1500628719000,"pay_time":1500628719000,"confirm_time":1500628719000,"shipping_time":1500628719000,"shipping_time_end":1500628719000,"to_buyer":"","pay_note":"","supplier_id":0,"froms":"pc","supplierName":"商城自营"},{"order_id":187,"order_sn":"2017071794191","user_id":7,"order_status":1,"shipping_status":0,"pay_status":0,"consignee":"11","country":"1","province":"2","city":"52","district":"500","address":"1","zipcode":"","tel":"-","mobile":"11111111111","email":"","best_time":"仅工作日送货","postscript":"","pay_id":1,"pay_name":"支付宝","goods_amount":5162,"money_paid":0,"order_amount":5162,"add_time":1500281249000,"pay_time":1500281249000,"confirm_time":1500281249000,"shipping_time":1500281249000,"shipping_time_end":1500281249000,"to_buyer":"","pay_note":"","supplier_id":0,"froms":"pc","supplierName":"商城自营"},{"order_id":186,"order_sn":"2017071794390","user_id":7,"order_status":1,"shipping_status":0,"pay_status":0,"consignee":"11","country":"1","province":"2","city":"52","district":"500","address":"1","zipcode":"","tel":"-","mobile":"11111111111","email":"","best_time":"仅工作日送货","postscript":"","pay_id":1,"pay_name":"支付宝","goods_amount":4888,"money_paid":0,"order_amount":4888,"add_time":1500279275000,"pay_time":1500279275000,"confirm_time":1500279275000,"shipping_time":1500279275000,"shipping_time_end":1500279275000,"to_buyer":"","pay_note":"","supplier_id":0,"froms":"pc","supplierName":"商城自营"},{"order_id":185,"order_sn":"2017071347558","user_id":7,"order_status":1,"shipping_status":0,"pay_status":0,"consignee":"11","country":"1","province":"2","city":"52","district":"500","address":"1","zipcode":"","tel":"-","mobile":"11111111111","email":"","best_time":"仅工作日送货","postscript":"","pay_id":1,"pay_name":"支付宝","goods_amount":133,"money_paid":0,"order_amount":133,"add_time":1499919922000,"pay_time":1499919922000,"confirm_time":1499919922000,"shipping_time":1499919922000,"shipping_time_end":1499919922000,"to_buyer":"","pay_note":"","supplier_id":0,"froms":"pc","supplierName":"商城自营"},{"order_id":184,"order_sn":"2017071127428","user_id":7,"order_status":1,"shipping_status":0,"pay_status":0,"consignee":"11","country":"1","province":"2","city":"52","district":"500","address":"1","zipcode":"","tel":"-","mobile":"11111111111","email":"","best_time":"仅工作日送货","postscript":"","pay_id":1,"pay_name":"支付宝","goods_amount":997,"money_paid":0,"order_amount":997,"add_time":1499775560000,"pay_time":1499775560000,"confirm_time":1499775560000,"shipping_time":1499775560000,"shipping_time_end":1499775560000,"to_buyer":"","pay_note":"","supplier_id":0,"froms":"pc","supplierName":"商城自营"}],"orderGoods":[{"rec_id":231,"order_id":184,"goods_id":110,"goods_name":"养生壶玻璃加厚分体保温电煎药壶全自动花茶壶隔水炖正品","goods_sn":"ECS000110","goods_number":2,"market_price":403,"goods_price":336,"product_id":0,"goods_attr":"","comment_state":0,"is_back":0,"costPrice":0,"cost_price":336,"promote_price":"0.00","goods_img":"49.122.47.185:8080/XJD/data/images/201507/thumb_img/110_thumb_G_1437523812526.jpg"},{"rec_id":232,"order_id":184,"goods_id":114,"goods_name":"米酒机酸奶机全自动家用不锈钢正品包邮","goods_sn":"ECS000114","goods_number":2,"market_price":106,"goods_price":89,"product_id":0,"goods_attr":"","comment_state":0,"is_back":0,"costPrice":0,"cost_price":89,"promote_price":"0.00","goods_img":"49.122.47.185:8080/XJD/data/images/201507/thumb_img/114_thumb_G_1437524086723.jpg"},{"rec_id":233,"order_id":184,"goods_id":183,"goods_name":"幻响（i-mu）百变羊 创意指环扣 手机支架 双指环 360度旋转 防止手机滑落 金属材质 强力粘胶","goods_sn":"ECS000183","goods_number":1,"market_price":22,"goods_price":19,"product_id":0,"goods_attr":"","comment_state":0,"is_back":0,"costPrice":0,"cost_price":19,"promote_price":"0.00","goods_img":"49.122.47.185:8080/XJD/data/images/201507/thumb_img/183_thumb_G_1437532716802.jpg"},{"rec_id":234,"order_id":184,"goods_id":185,"goods_name":"赛鲸 常青藤懒人手机支架 床上床头支架 万向调节 太空蓝","goods_sn":"ECS000185","goods_number":1,"market_price":32,"goods_price":29,"product_id":0,"goods_attr":"","comment_state":0,"is_back":0,"costPrice":0,"cost_price":29,"promote_price":"0.00","goods_img":"49.122.47.185:8080/XJD/data/images/201507/thumb_img/185_thumb_G_1437532813329.jpg"},{"rec_id":235,"order_id":184,"goods_id":201,"goods_name":"X-Vibe3.0 酷丸第三代共振音箱 智能互动音响 创意迷你胶囊便携式共振音响 黑+橙线 现货","goods_sn":"ECS000201","goods_number":1,"market_price":115,"goods_price":98,"product_id":0,"goods_attr":"","comment_state":0,"is_back":0,"costPrice":0,"cost_price":98,"promote_price":"0.00","goods_img":"49.122.47.185:8080/XJD/data/images/201507/thumb_img/201_thumb_G_1437534649147.jpg"}]}]}]
+     * items : [{"itemType":"orderInfo","module":"orderInfo","itemList":[{"orderInfos":[{"orderId":204,"orderSn":"2017072593962","userId":7,"orderStatus":1,"shippingStatus":0,"payStatus":0,"consignee":"11","country":1,"province":6,"city":79,"district":718,"address":"1","zipcode":"","tel":"-","mobile":"11111111111","email":"","bestTime":"仅工作日送货","postscript":"","payId":1,"payName":"支付宝","goodsAmount":99,"moneyPaid":0,"orderAmount":99,"addTime":1500956195000,"payTime":1500956195000,"confirmTime":1500956195000,"shippingTime":1500956195000,"shippingTimeEnd":1500956195000,"toBuyer":"","payNote":"","supplierId":0,"froms":"pc","supplierName":"商城自营"},{"orderId":203,"orderSn":"2017072583074","userId":7,"orderStatus":1,"shippingStatus":0,"payStatus":0,"consignee":"11","country":1,"province":6,"city":79,"district":718,"address":"1","zipcode":"","tel":"-","mobile":"11111111111","email":"","bestTime":"仅工作日送货","postscript":"","payId":1,"payName":"支付宝","goodsAmount":99,"moneyPaid":0,"orderAmount":99,"addTime":1500952103000,"payTime":1500952103000,"confirmTime":1500952103000,"shippingTime":1500952103000,"shippingTimeEnd":1500952103000,"toBuyer":"","payNote":"","supplierId":0,"froms":"pc","supplierName":"商城自营"},{"orderId":202,"orderSn":"2017072578145","userId":7,"orderStatus":1,"shippingStatus":0,"payStatus":0,"consignee":"11","country":1,"province":6,"city":79,"district":718,"address":"1","zipcode":"","tel":"-","mobile":"11111111111","email":"","bestTime":"仅工作日送货","postscript":"","payId":1,"payName":"支付宝","goodsAmount":99,"moneyPaid":0,"orderAmount":99,"addTime":1500951980000,"payTime":1500951980000,"confirmTime":1500951980000,"shippingTime":1500951980000,"shippingTimeEnd":1500951980000,"toBuyer":"","payNote":"","supplierId":0,"froms":"pc","supplierName":"商城自营"},{"orderId":201,"orderSn":"201707252394","userId":7,"orderStatus":1,"shippingStatus":0,"payStatus":0,"consignee":"11","country":1,"province":6,"city":79,"district":718,"address":"1","zipcode":"","tel":"-","mobile":"11111111111","email":"","bestTime":"仅工作日送货","postscript":"","payId":1,"payName":"支付宝","goodsAmount":99,"moneyPaid":0,"orderAmount":99,"addTime":1500950840000,"payTime":1500950840000,"confirmTime":1500950840000,"shippingTime":1500950840000,"shippingTimeEnd":1500950840000,"toBuyer":"","payNote":"","supplierId":0,"froms":"pc","supplierName":"商城自营"},{"orderId":200,"orderSn":"2017072587348","userId":7,"orderStatus":1,"shippingStatus":0,"payStatus":0,"consignee":"11","country":1,"province":6,"city":79,"district":718,"address":"1","zipcode":"","tel":"-","mobile":"11111111111","email":"","bestTime":"仅工作日送货","postscript":"","payId":1,"payName":"支付宝","goodsAmount":99,"moneyPaid":0,"orderAmount":99,"addTime":1500950445000,"payTime":1500950445000,"confirmTime":1500950445000,"shippingTime":1500950445000,"shippingTimeEnd":1500950445000,"toBuyer":"","payNote":"","supplierId":0,"froms":"pc","supplierName":"商城自营"},{"orderId":199,"orderSn":"201707253913","userId":7,"orderStatus":1,"shippingStatus":0,"payStatus":0,"consignee":"11","country":1,"province":6,"city":79,"district":718,"address":"1","zipcode":"","tel":"-","mobile":"11111111111","email":"","bestTime":"仅工作日送货","postscript":"","payId":1,"payName":"支付宝","goodsAmount":198,"moneyPaid":0,"orderAmount":198,"addTime":1500950279000,"payTime":1500950279000,"confirmTime":1500950279000,"shippingTime":1500950279000,"shippingTimeEnd":1500950279000,"toBuyer":"","payNote":"","supplierId":0,"froms":"pc","supplierName":"商城自营"},{"orderId":198,"orderSn":"2017072555001","userId":7,"orderStatus":1,"shippingStatus":0,"payStatus":0,"consignee":"11","country":1,"province":6,"city":79,"district":718,"address":"1","zipcode":"","tel":"-","mobile":"11111111111","email":"","bestTime":"仅工作日送货","postscript":"","payId":1,"payName":"支付宝","goodsAmount":198,"moneyPaid":0,"orderAmount":198,"addTime":1500949665000,"payTime":1500949665000,"confirmTime":1500949665000,"shippingTime":1500949665000,"shippingTimeEnd":1500949665000,"toBuyer":"","payNote":"","supplierId":0,"froms":"pc","supplierName":"商城自营"},{"orderId":197,"orderSn":"2017072546500","userId":7,"orderStatus":1,"shippingStatus":0,"payStatus":0,"consignee":"11","country":1,"province":6,"city":79,"district":718,"address":"1","zipcode":"","tel":"-","mobile":"11111111111","email":"","bestTime":"仅工作日送货","postscript":"","payId":1,"payName":"支付宝","goodsAmount":198,"moneyPaid":0,"orderAmount":198,"addTime":1500949528000,"payTime":1500949528000,"confirmTime":1500949528000,"shippingTime":1500949528000,"shippingTimeEnd":1500949528000,"toBuyer":"","payNote":"","supplierId":0,"froms":"pc","supplierName":"商城自营"},{"orderId":196,"orderSn":"2017072555982","userId":7,"orderStatus":1,"shippingStatus":0,"payStatus":0,"consignee":"11","country":1,"province":6,"city":79,"district":718,"address":"1","zipcode":"","tel":"-","mobile":"11111111111","email":"","bestTime":"仅工作日送货","postscript":"","payId":1,"payName":"支付宝","goodsAmount":198,"moneyPaid":0,"orderAmount":198,"addTime":1500949404000,"payTime":1500949404000,"confirmTime":1500949404000,"shippingTime":1500949404000,"shippingTimeEnd":1500949404000,"toBuyer":"","payNote":"","supplierId":0,"froms":"pc","supplierName":"商城自营"},{"orderId":195,"orderSn":"2017072468857","userId":7,"orderStatus":1,"shippingStatus":0,"payStatus":0,"consignee":"11","country":1,"province":6,"city":79,"district":718,"address":"1","zipcode":"","tel":"-","mobile":"11111111111","email":"","bestTime":"仅工作日送货","postscript":"","payId":1,"payName":"支付宝","goodsAmount":99,"moneyPaid":0,"orderAmount":99,"addTime":1500886910000,"payTime":1500886910000,"confirmTime":1500886910000,"shippingTime":1500886910000,"shippingTimeEnd":1500886910000,"toBuyer":"","payNote":"","supplierId":0,"froms":"pc","supplierName":"商城自营"}],"orderGoods":[{"recId":249,"orderId":195,"goodsId":114,"goodsName":"米酒机酸奶机全自动家用不锈钢正品包邮","goodsSn":"ECS000114","goodsNumber":1,"marketPrice":106.8,"goodsPrice":99,"productId":0,"goodsAttrId":"","commentState":0,"isBack":0,"costPrice":99,"promotePrice":99,"goodsAttr":"","goodsImg":"10.10.140.231:81/shop/data/images/201507/thumb_img/114_thumb_G_1437524086723.jpg"}]}]}]
      */
 
     public String code;
@@ -76,12 +76,36 @@ public class MyOrderInfo {
         /**
          * itemType : orderInfo
          * module : orderInfo
-         * itemList : [{"orderInfos":[{"order_id":188,"order_sn":"2017072189456","user_id":7,"order_status":1,"shipping_status":0,"pay_status":0,"consignee":"11","country":"1","province":"2","city":"52","district":"500","address":"1","zipcode":"","tel":"-","mobile":"11111111111","email":"","best_time":"仅工作日送货","postscript":"","pay_id":1,"pay_name":"支付宝","goods_amount":11303,"money_paid":0,"order_amount":11303,"add_time":1500628719000,"pay_time":1500628719000,"confirm_time":1500628719000,"shipping_time":1500628719000,"shipping_time_end":1500628719000,"to_buyer":"","pay_note":"","supplier_id":0,"froms":"pc","supplierName":"商城自营"},{"order_id":187,"order_sn":"2017071794191","user_id":7,"order_status":1,"shipping_status":0,"pay_status":0,"consignee":"11","country":"1","province":"2","city":"52","district":"500","address":"1","zipcode":"","tel":"-","mobile":"11111111111","email":"","best_time":"仅工作日送货","postscript":"","pay_id":1,"pay_name":"支付宝","goods_amount":5162,"money_paid":0,"order_amount":5162,"add_time":1500281249000,"pay_time":1500281249000,"confirm_time":1500281249000,"shipping_time":1500281249000,"shipping_time_end":1500281249000,"to_buyer":"","pay_note":"","supplier_id":0,"froms":"pc","supplierName":"商城自营"},{"order_id":186,"order_sn":"2017071794390","user_id":7,"order_status":1,"shipping_status":0,"pay_status":0,"consignee":"11","country":"1","province":"2","city":"52","district":"500","address":"1","zipcode":"","tel":"-","mobile":"11111111111","email":"","best_time":"仅工作日送货","postscript":"","pay_id":1,"pay_name":"支付宝","goods_amount":4888,"money_paid":0,"order_amount":4888,"add_time":1500279275000,"pay_time":1500279275000,"confirm_time":1500279275000,"shipping_time":1500279275000,"shipping_time_end":1500279275000,"to_buyer":"","pay_note":"","supplier_id":0,"froms":"pc","supplierName":"商城自营"},{"order_id":185,"order_sn":"2017071347558","user_id":7,"order_status":1,"shipping_status":0,"pay_status":0,"consignee":"11","country":"1","province":"2","city":"52","district":"500","address":"1","zipcode":"","tel":"-","mobile":"11111111111","email":"","best_time":"仅工作日送货","postscript":"","pay_id":1,"pay_name":"支付宝","goods_amount":133,"money_paid":0,"order_amount":133,"add_time":1499919922000,"pay_time":1499919922000,"confirm_time":1499919922000,"shipping_time":1499919922000,"shipping_time_end":1499919922000,"to_buyer":"","pay_note":"","supplier_id":0,"froms":"pc","supplierName":"商城自营"},{"order_id":184,"order_sn":"2017071127428","user_id":7,"order_status":1,"shipping_status":0,"pay_status":0,"consignee":"11","country":"1","province":"2","city":"52","district":"500","address":"1","zipcode":"","tel":"-","mobile":"11111111111","email":"","best_time":"仅工作日送货","postscript":"","pay_id":1,"pay_name":"支付宝","goods_amount":997,"money_paid":0,"order_amount":997,"add_time":1499775560000,"pay_time":1499775560000,"confirm_time":1499775560000,"shipping_time":1499775560000,"shipping_time_end":1499775560000,"to_buyer":"","pay_note":"","supplier_id":0,"froms":"pc","supplierName":"商城自营"}],"orderGoods":[{"rec_id":231,"order_id":184,"goods_id":110,"goods_name":"养生壶玻璃加厚分体保温电煎药壶全自动花茶壶隔水炖正品","goods_sn":"ECS000110","goods_number":2,"market_price":403,"goods_price":336,"product_id":0,"goods_attr":"","comment_state":0,"is_back":0,"costPrice":0,"cost_price":336,"promote_price":"0.00","goods_img":"49.122.47.185:8080/XJD/data/images/201507/thumb_img/110_thumb_G_1437523812526.jpg"},{"rec_id":232,"order_id":184,"goods_id":114,"goods_name":"米酒机酸奶机全自动家用不锈钢正品包邮","goods_sn":"ECS000114","goods_number":2,"market_price":106,"goods_price":89,"product_id":0,"goods_attr":"","comment_state":0,"is_back":0,"costPrice":0,"cost_price":89,"promote_price":"0.00","goods_img":"49.122.47.185:8080/XJD/data/images/201507/thumb_img/114_thumb_G_1437524086723.jpg"},{"rec_id":233,"order_id":184,"goods_id":183,"goods_name":"幻响（i-mu）百变羊 创意指环扣 手机支架 双指环 360度旋转 防止手机滑落 金属材质 强力粘胶","goods_sn":"ECS000183","goods_number":1,"market_price":22,"goods_price":19,"product_id":0,"goods_attr":"","comment_state":0,"is_back":0,"costPrice":0,"cost_price":19,"promote_price":"0.00","goods_img":"49.122.47.185:8080/XJD/data/images/201507/thumb_img/183_thumb_G_1437532716802.jpg"},{"rec_id":234,"order_id":184,"goods_id":185,"goods_name":"赛鲸 常青藤懒人手机支架 床上床头支架 万向调节 太空蓝","goods_sn":"ECS000185","goods_number":1,"market_price":32,"goods_price":29,"product_id":0,"goods_attr":"","comment_state":0,"is_back":0,"costPrice":0,"cost_price":29,"promote_price":"0.00","goods_img":"49.122.47.185:8080/XJD/data/images/201507/thumb_img/185_thumb_G_1437532813329.jpg"},{"rec_id":235,"order_id":184,"goods_id":201,"goods_name":"X-Vibe3.0 酷丸第三代共振音箱 智能互动音响 创意迷你胶囊便携式共振音响 黑+橙线 现货","goods_sn":"ECS000201","goods_number":1,"market_price":115,"goods_price":98,"product_id":0,"goods_attr":"","comment_state":0,"is_back":0,"costPrice":0,"cost_price":98,"promote_price":"0.00","goods_img":"49.122.47.185:8080/XJD/data/images/201507/thumb_img/201_thumb_G_1437534649147.jpg"}]}]
+         * itemList : [{"orderInfos":[{"orderId":204,"orderSn":"2017072593962","userId":7,"orderStatus":1,"shippingStatus":0,"payStatus":0,"consignee":"11","country":1,"province":6,"city":79,"district":718,"address":"1","zipcode":"","tel":"-","mobile":"11111111111","email":"","bestTime":"仅工作日送货","postscript":"","payId":1,"payName":"支付宝","goodsAmount":99,"moneyPaid":0,"orderAmount":99,"addTime":1500956195000,"payTime":1500956195000,"confirmTime":1500956195000,"shippingTime":1500956195000,"shippingTimeEnd":1500956195000,"toBuyer":"","payNote":"","supplierId":0,"froms":"pc","supplierName":"商城自营"},{"orderId":203,"orderSn":"2017072583074","userId":7,"orderStatus":1,"shippingStatus":0,"payStatus":0,"consignee":"11","country":1,"province":6,"city":79,"district":718,"address":"1","zipcode":"","tel":"-","mobile":"11111111111","email":"","bestTime":"仅工作日送货","postscript":"","payId":1,"payName":"支付宝","goodsAmount":99,"moneyPaid":0,"orderAmount":99,"addTime":1500952103000,"payTime":1500952103000,"confirmTime":1500952103000,"shippingTime":1500952103000,"shippingTimeEnd":1500952103000,"toBuyer":"","payNote":"","supplierId":0,"froms":"pc","supplierName":"商城自营"},{"orderId":202,"orderSn":"2017072578145","userId":7,"orderStatus":1,"shippingStatus":0,"payStatus":0,"consignee":"11","country":1,"province":6,"city":79,"district":718,"address":"1","zipcode":"","tel":"-","mobile":"11111111111","email":"","bestTime":"仅工作日送货","postscript":"","payId":1,"payName":"支付宝","goodsAmount":99,"moneyPaid":0,"orderAmount":99,"addTime":1500951980000,"payTime":1500951980000,"confirmTime":1500951980000,"shippingTime":1500951980000,"shippingTimeEnd":1500951980000,"toBuyer":"","payNote":"","supplierId":0,"froms":"pc","supplierName":"商城自营"},{"orderId":201,"orderSn":"201707252394","userId":7,"orderStatus":1,"shippingStatus":0,"payStatus":0,"consignee":"11","country":1,"province":6,"city":79,"district":718,"address":"1","zipcode":"","tel":"-","mobile":"11111111111","email":"","bestTime":"仅工作日送货","postscript":"","payId":1,"payName":"支付宝","goodsAmount":99,"moneyPaid":0,"orderAmount":99,"addTime":1500950840000,"payTime":1500950840000,"confirmTime":1500950840000,"shippingTime":1500950840000,"shippingTimeEnd":1500950840000,"toBuyer":"","payNote":"","supplierId":0,"froms":"pc","supplierName":"商城自营"},{"orderId":200,"orderSn":"2017072587348","userId":7,"orderStatus":1,"shippingStatus":0,"payStatus":0,"consignee":"11","country":1,"province":6,"city":79,"district":718,"address":"1","zipcode":"","tel":"-","mobile":"11111111111","email":"","bestTime":"仅工作日送货","postscript":"","payId":1,"payName":"支付宝","goodsAmount":99,"moneyPaid":0,"orderAmount":99,"addTime":1500950445000,"payTime":1500950445000,"confirmTime":1500950445000,"shippingTime":1500950445000,"shippingTimeEnd":1500950445000,"toBuyer":"","payNote":"","supplierId":0,"froms":"pc","supplierName":"商城自营"},{"orderId":199,"orderSn":"201707253913","userId":7,"orderStatus":1,"shippingStatus":0,"payStatus":0,"consignee":"11","country":1,"province":6,"city":79,"district":718,"address":"1","zipcode":"","tel":"-","mobile":"11111111111","email":"","bestTime":"仅工作日送货","postscript":"","payId":1,"payName":"支付宝","goodsAmount":198,"moneyPaid":0,"orderAmount":198,"addTime":1500950279000,"payTime":1500950279000,"confirmTime":1500950279000,"shippingTime":1500950279000,"shippingTimeEnd":1500950279000,"toBuyer":"","payNote":"","supplierId":0,"froms":"pc","supplierName":"商城自营"},{"orderId":198,"orderSn":"2017072555001","userId":7,"orderStatus":1,"shippingStatus":0,"payStatus":0,"consignee":"11","country":1,"province":6,"city":79,"district":718,"address":"1","zipcode":"","tel":"-","mobile":"11111111111","email":"","bestTime":"仅工作日送货","postscript":"","payId":1,"payName":"支付宝","goodsAmount":198,"moneyPaid":0,"orderAmount":198,"addTime":1500949665000,"payTime":1500949665000,"confirmTime":1500949665000,"shippingTime":1500949665000,"shippingTimeEnd":1500949665000,"toBuyer":"","payNote":"","supplierId":0,"froms":"pc","supplierName":"商城自营"},{"orderId":197,"orderSn":"2017072546500","userId":7,"orderStatus":1,"shippingStatus":0,"payStatus":0,"consignee":"11","country":1,"province":6,"city":79,"district":718,"address":"1","zipcode":"","tel":"-","mobile":"11111111111","email":"","bestTime":"仅工作日送货","postscript":"","payId":1,"payName":"支付宝","goodsAmount":198,"moneyPaid":0,"orderAmount":198,"addTime":1500949528000,"payTime":1500949528000,"confirmTime":1500949528000,"shippingTime":1500949528000,"shippingTimeEnd":1500949528000,"toBuyer":"","payNote":"","supplierId":0,"froms":"pc","supplierName":"商城自营"},{"orderId":196,"orderSn":"2017072555982","userId":7,"orderStatus":1,"shippingStatus":0,"payStatus":0,"consignee":"11","country":1,"province":6,"city":79,"district":718,"address":"1","zipcode":"","tel":"-","mobile":"11111111111","email":"","bestTime":"仅工作日送货","postscript":"","payId":1,"payName":"支付宝","goodsAmount":198,"moneyPaid":0,"orderAmount":198,"addTime":1500949404000,"payTime":1500949404000,"confirmTime":1500949404000,"shippingTime":1500949404000,"shippingTimeEnd":1500949404000,"toBuyer":"","payNote":"","supplierId":0,"froms":"pc","supplierName":"商城自营"},{"orderId":195,"orderSn":"2017072468857","userId":7,"orderStatus":1,"shippingStatus":0,"payStatus":0,"consignee":"11","country":1,"province":6,"city":79,"district":718,"address":"1","zipcode":"","tel":"-","mobile":"11111111111","email":"","bestTime":"仅工作日送货","postscript":"","payId":1,"payName":"支付宝","goodsAmount":99,"moneyPaid":0,"orderAmount":99,"addTime":1500886910000,"payTime":1500886910000,"confirmTime":1500886910000,"shippingTime":1500886910000,"shippingTimeEnd":1500886910000,"toBuyer":"","payNote":"","supplierId":0,"froms":"pc","supplierName":"商城自营"}],"orderGoods":[{"recId":249,"orderId":195,"goodsId":114,"goodsName":"米酒机酸奶机全自动家用不锈钢正品包邮","goodsSn":"ECS000114","goodsNumber":1,"marketPrice":106.8,"goodsPrice":99,"productId":0,"goodsAttrId":"","commentState":0,"isBack":0,"costPrice":99,"promotePrice":99,"goodsAttr":"","goodsImg":"10.10.140.231:81/shop/data/images/201507/thumb_img/114_thumb_G_1437524086723.jpg"}]}]
          */
 
         public String itemType;
         public String module;
         public List<ItemListBean> itemList;
+
+        public String getItemType() {
+            return itemType;
+        }
+
+        public void setItemType(String itemType) {
+            this.itemType = itemType;
+        }
+
+        public String getModule() {
+            return module;
+        }
+
+        public void setModule(String module) {
+            this.module = module;
+        }
+
+        public List<ItemListBean> getItemList() {
+            return itemList;
+        }
+
+        public void setItemList(List<ItemListBean> itemList) {
+            this.itemList = itemList;
+        }
 
         public static class ItemListBean {
             public List<OrderInfosBean> orderInfos;
@@ -105,121 +129,121 @@ public class MyOrderInfo {
 
             public static class OrderInfosBean {
                 /**
-                 * order_id : 188
-                 * order_sn : 2017072189456
-                 * user_id : 7
-                 * order_status : 1
-                 * shipping_status : 0
-                 * pay_status : 0
+                 * orderId : 204
+                 * orderSn : 2017072593962
+                 * userId : 7
+                 * orderStatus : 1
+                 * shippingStatus : 0
+                 * payStatus : 0
                  * consignee : 11
                  * country : 1
-                 * province : 2
-                 * city : 52
-                 * district : 500
+                 * province : 6
+                 * city : 79
+                 * district : 718
                  * address : 1
                  * zipcode :
                  * tel : -
                  * mobile : 11111111111
                  * email :
-                 * best_time : 仅工作日送货
+                 * bestTime : 仅工作日送货
                  * postscript :
-                 * pay_id : 1
-                 * pay_name : 支付宝
-                 * goods_amount : 11303
-                 * money_paid : 0
-                 * order_amount : 11303
-                 * add_time : 1500628719000
-                 * pay_time : 1500628719000
-                 * confirm_time : 1500628719000
-                 * shipping_time : 1500628719000
-                 * shipping_time_end : 1500628719000
-                 * to_buyer :
-                 * pay_note :
-                 * supplier_id : 0
+                 * payId : 1
+                 * payName : 支付宝
+                 * goodsAmount : 99
+                 * moneyPaid : 0
+                 * orderAmount : 99
+                 * addTime : 1500956195000
+                 * payTime : 1500956195000
+                 * confirmTime : 1500956195000
+                 * shippingTime : 1500956195000
+                 * shippingTimeEnd : 1500956195000
+                 * toBuyer :
+                 * payNote :
+                 * supplierId : 0
                  * froms : pc
                  * supplierName : 商城自营
                  */
 
-                public int order_id;
-                public String order_sn;
-                public int user_id;
-                public int order_status;
-                public int shipping_status;
-                public int pay_status;
+                public int orderId;
+                public String orderSn;
+                public int userId;
+                public int orderStatus;
+                public int shippingStatus;
+                public int payStatus;
                 public String consignee;
-                public String country;
-                public String province;
-                public String city;
-                public String district;
+                public int country;
+                public int province;
+                public int city;
+                public int district;
                 public String address;
                 public String zipcode;
                 public String tel;
                 public String mobile;
                 public String email;
-                public String best_time;
+                public String bestTime;
                 public String postscript;
-                public int pay_id;
-                public String pay_name;
-                public int goods_amount;
-                public int money_paid;
-                public int order_amount;
-                public long add_time;
-                public long pay_time;
-                public long confirm_time;
-                public long shipping_time;
-                public long shipping_time_end;
-                public String to_buyer;
-                public String pay_note;
-                public int supplier_id;
+                public int payId;
+                public String payName;
+                public int goodsAmount;
+                public int moneyPaid;
+                public int orderAmount;
+                public long addTime;
+                public long payTime;
+                public long confirmTime;
+                public long shippingTime;
+                public long shippingTimeEnd;
+                public String toBuyer;
+                public String payNote;
+                public int supplierId;
                 public String froms;
                 public String supplierName;
 
-                public int getOrder_id() {
-                    return order_id;
+                public int getOrderId() {
+                    return orderId;
                 }
 
-                public void setOrder_id(int order_id) {
-                    this.order_id = order_id;
+                public void setOrderId(int orderId) {
+                    this.orderId = orderId;
                 }
 
-                public String getOrder_sn() {
-                    return order_sn;
+                public String getOrderSn() {
+                    return orderSn;
                 }
 
-                public void setOrder_sn(String order_sn) {
-                    this.order_sn = order_sn;
+                public void setOrderSn(String orderSn) {
+                    this.orderSn = orderSn;
                 }
 
-                public int getUser_id() {
-                    return user_id;
+                public int getUserId() {
+                    return userId;
                 }
 
-                public void setUser_id(int user_id) {
-                    this.user_id = user_id;
+                public void setUserId(int userId) {
+                    this.userId = userId;
                 }
 
-                public int getOrder_status() {
-                    return order_status;
+                public int getOrderStatus() {
+                    return orderStatus;
                 }
 
-                public void setOrder_status(int order_status) {
-                    this.order_status = order_status;
+                public void setOrderStatus(int orderStatus) {
+                    this.orderStatus = orderStatus;
                 }
 
-                public int getShipping_status() {
-                    return shipping_status;
+                public int getShippingStatus() {
+                    return shippingStatus;
                 }
 
-                public void setShipping_status(int shipping_status) {
-                    this.shipping_status = shipping_status;
+                public void setShippingStatus(int shippingStatus) {
+                    this.shippingStatus = shippingStatus;
                 }
 
-                public int getPay_status() {
-                    return pay_status;
+                public int getPayStatus() {
+                    return payStatus;
                 }
 
-                public void setPay_status(int pay_status) {
-                    this.pay_status = pay_status;
+                public void setPayStatus(int payStatus) {
+                    this.payStatus = payStatus;
                 }
 
                 public String getConsignee() {
@@ -230,35 +254,35 @@ public class MyOrderInfo {
                     this.consignee = consignee;
                 }
 
-                public String getCountry() {
+                public int getCountry() {
                     return country;
                 }
 
-                public void setCountry(String country) {
+                public void setCountry(int country) {
                     this.country = country;
                 }
 
-                public String getProvince() {
+                public int getProvince() {
                     return province;
                 }
 
-                public void setProvince(String province) {
+                public void setProvince(int province) {
                     this.province = province;
                 }
 
-                public String getCity() {
+                public int getCity() {
                     return city;
                 }
 
-                public void setCity(String city) {
+                public void setCity(int city) {
                     this.city = city;
                 }
 
-                public String getDistrict() {
+                public int getDistrict() {
                     return district;
                 }
 
-                public void setDistrict(String district) {
+                public void setDistrict(int district) {
                     this.district = district;
                 }
 
@@ -302,12 +326,12 @@ public class MyOrderInfo {
                     this.email = email;
                 }
 
-                public String getBest_time() {
-                    return best_time;
+                public String getBestTime() {
+                    return bestTime;
                 }
 
-                public void setBest_time(String best_time) {
-                    this.best_time = best_time;
+                public void setBestTime(String bestTime) {
+                    this.bestTime = bestTime;
                 }
 
                 public String getPostscript() {
@@ -318,108 +342,108 @@ public class MyOrderInfo {
                     this.postscript = postscript;
                 }
 
-                public int getPay_id() {
-                    return pay_id;
+                public int getPayId() {
+                    return payId;
                 }
 
-                public void setPay_id(int pay_id) {
-                    this.pay_id = pay_id;
+                public void setPayId(int payId) {
+                    this.payId = payId;
                 }
 
-                public String getPay_name() {
-                    return pay_name;
+                public String getPayName() {
+                    return payName;
                 }
 
-                public void setPay_name(String pay_name) {
-                    this.pay_name = pay_name;
+                public void setPayName(String payName) {
+                    this.payName = payName;
                 }
 
-                public int getGoods_amount() {
-                    return goods_amount;
+                public int getGoodsAmount() {
+                    return goodsAmount;
                 }
 
-                public void setGoods_amount(int goods_amount) {
-                    this.goods_amount = goods_amount;
+                public void setGoodsAmount(int goodsAmount) {
+                    this.goodsAmount = goodsAmount;
                 }
 
-                public int getMoney_paid() {
-                    return money_paid;
+                public int getMoneyPaid() {
+                    return moneyPaid;
                 }
 
-                public void setMoney_paid(int money_paid) {
-                    this.money_paid = money_paid;
+                public void setMoneyPaid(int moneyPaid) {
+                    this.moneyPaid = moneyPaid;
                 }
 
-                public int getOrder_amount() {
-                    return order_amount;
+                public int getOrderAmount() {
+                    return orderAmount;
                 }
 
-                public void setOrder_amount(int order_amount) {
-                    this.order_amount = order_amount;
+                public void setOrderAmount(int orderAmount) {
+                    this.orderAmount = orderAmount;
                 }
 
-                public long getAdd_time() {
-                    return add_time;
+                public long getAddTime() {
+                    return addTime;
                 }
 
-                public void setAdd_time(long add_time) {
-                    this.add_time = add_time;
+                public void setAddTime(long addTime) {
+                    this.addTime = addTime;
                 }
 
-                public long getPay_time() {
-                    return pay_time;
+                public long getPayTime() {
+                    return payTime;
                 }
 
-                public void setPay_time(long pay_time) {
-                    this.pay_time = pay_time;
+                public void setPayTime(long payTime) {
+                    this.payTime = payTime;
                 }
 
-                public long getConfirm_time() {
-                    return confirm_time;
+                public long getConfirmTime() {
+                    return confirmTime;
                 }
 
-                public void setConfirm_time(long confirm_time) {
-                    this.confirm_time = confirm_time;
+                public void setConfirmTime(long confirmTime) {
+                    this.confirmTime = confirmTime;
                 }
 
-                public long getShipping_time() {
-                    return shipping_time;
+                public long getShippingTime() {
+                    return shippingTime;
                 }
 
-                public void setShipping_time(long shipping_time) {
-                    this.shipping_time = shipping_time;
+                public void setShippingTime(long shippingTime) {
+                    this.shippingTime = shippingTime;
                 }
 
-                public long getShipping_time_end() {
-                    return shipping_time_end;
+                public long getShippingTimeEnd() {
+                    return shippingTimeEnd;
                 }
 
-                public void setShipping_time_end(long shipping_time_end) {
-                    this.shipping_time_end = shipping_time_end;
+                public void setShippingTimeEnd(long shippingTimeEnd) {
+                    this.shippingTimeEnd = shippingTimeEnd;
                 }
 
-                public String getTo_buyer() {
-                    return to_buyer;
+                public String getToBuyer() {
+                    return toBuyer;
                 }
 
-                public void setTo_buyer(String to_buyer) {
-                    this.to_buyer = to_buyer;
+                public void setToBuyer(String toBuyer) {
+                    this.toBuyer = toBuyer;
                 }
 
-                public String getPay_note() {
-                    return pay_note;
+                public String getPayNote() {
+                    return payNote;
                 }
 
-                public void setPay_note(String pay_note) {
-                    this.pay_note = pay_note;
+                public void setPayNote(String payNote) {
+                    this.payNote = payNote;
                 }
 
-                public int getSupplier_id() {
-                    return supplier_id;
+                public int getSupplierId() {
+                    return supplierId;
                 }
 
-                public void setSupplier_id(int supplier_id) {
-                    this.supplier_id = supplier_id;
+                public void setSupplierId(int supplierId) {
+                    this.supplierId = supplierId;
                 }
 
                 public String getFroms() {
@@ -441,135 +465,135 @@ public class MyOrderInfo {
 
             public static class OrderGoodsBean {
                 /**
-                 * rec_id : 231
-                 * order_id : 184
-                 * goods_id : 110
-                 * goods_name : 养生壶玻璃加厚分体保温电煎药壶全自动花茶壶隔水炖正品
-                 * goods_sn : ECS000110
-                 * goods_number : 2
-                 * market_price : 403
-                 * goods_price : 336
-                 * product_id : 0
-                 * goods_attr :
-                 * comment_state : 0
-                 * is_back : 0
-                 * costPrice : 0
-                 * cost_price : 336
-                 * promote_price : 0.00
-                 * goods_img : 49.122.47.185:8080/XJD/data/images/201507/thumb_img/110_thumb_G_1437523812526.jpg
+                 * recId : 249
+                 * orderId : 195
+                 * goodsId : 114
+                 * goodsName : 米酒机酸奶机全自动家用不锈钢正品包邮
+                 * goodsSn : ECS000114
+                 * goodsNumber : 1
+                 * marketPrice : 106.8
+                 * goodsPrice : 99
+                 * productId : 0
+                 * goodsAttrId :
+                 * commentState : 0
+                 * isBack : 0
+                 * costPrice : 99
+                 * promotePrice : 99
+                 * goodsAttr :
+                 * goodsImg : 10.10.140.231:81/shop/data/images/201507/thumb_img/114_thumb_G_1437524086723.jpg
                  */
 
-                public int rec_id;
-                public int order_id;
-                public int goods_id;
-                public String goods_name;
-                public String goods_sn;
-                public int goods_number;
-                public int market_price;
-                public int goods_price;
-                public int product_id;
-                public String goods_attr;
-                public int comment_state;
-                public int is_back;
+                public int recId;
+                public int orderId;
+                public int goodsId;
+                public String goodsName;
+                public String goodsSn;
+                public int goodsNumber;
+                public double marketPrice;
+                public int goodsPrice;
+                public int productId;
+                public String goodsAttrId;
+                public int commentState;
+                public int isBack;
                 public int costPrice;
-                public int cost_price;
-                public String promote_price;
-                public String goods_img;
+                public int promotePrice;
+                public String goodsAttr;
+                public String goodsImg;
 
-                public int getRec_id() {
-                    return rec_id;
+                public int getRecId() {
+                    return recId;
                 }
 
-                public void setRec_id(int rec_id) {
-                    this.rec_id = rec_id;
+                public void setRecId(int recId) {
+                    this.recId = recId;
                 }
 
-                public int getOrder_id() {
-                    return order_id;
+                public int getOrderId() {
+                    return orderId;
                 }
 
-                public void setOrder_id(int order_id) {
-                    this.order_id = order_id;
+                public void setOrderId(int orderId) {
+                    this.orderId = orderId;
                 }
 
-                public int getGoods_id() {
-                    return goods_id;
+                public int getGoodsId() {
+                    return goodsId;
                 }
 
-                public void setGoods_id(int goods_id) {
-                    this.goods_id = goods_id;
+                public void setGoodsId(int goodsId) {
+                    this.goodsId = goodsId;
                 }
 
-                public String getGoods_name() {
-                    return goods_name;
+                public String getGoodsName() {
+                    return goodsName;
                 }
 
-                public void setGoods_name(String goods_name) {
-                    this.goods_name = goods_name;
+                public void setGoodsName(String goodsName) {
+                    this.goodsName = goodsName;
                 }
 
-                public String getGoods_sn() {
-                    return goods_sn;
+                public String getGoodsSn() {
+                    return goodsSn;
                 }
 
-                public void setGoods_sn(String goods_sn) {
-                    this.goods_sn = goods_sn;
+                public void setGoodsSn(String goodsSn) {
+                    this.goodsSn = goodsSn;
                 }
 
-                public int getGoods_number() {
-                    return goods_number;
+                public int getGoodsNumber() {
+                    return goodsNumber;
                 }
 
-                public void setGoods_number(int goods_number) {
-                    this.goods_number = goods_number;
+                public void setGoodsNumber(int goodsNumber) {
+                    this.goodsNumber = goodsNumber;
                 }
 
-                public int getMarket_price() {
-                    return market_price;
+                public double getMarketPrice() {
+                    return marketPrice;
                 }
 
-                public void setMarket_price(int market_price) {
-                    this.market_price = market_price;
+                public void setMarketPrice(double marketPrice) {
+                    this.marketPrice = marketPrice;
                 }
 
-                public int getGoods_price() {
-                    return goods_price;
+                public int getGoodsPrice() {
+                    return goodsPrice;
                 }
 
-                public void setGoods_price(int goods_price) {
-                    this.goods_price = goods_price;
+                public void setGoodsPrice(int goodsPrice) {
+                    this.goodsPrice = goodsPrice;
                 }
 
-                public int getProduct_id() {
-                    return product_id;
+                public int getProductId() {
+                    return productId;
                 }
 
-                public void setProduct_id(int product_id) {
-                    this.product_id = product_id;
+                public void setProductId(int productId) {
+                    this.productId = productId;
                 }
 
-                public String getGoods_attr() {
-                    return goods_attr;
+                public String getGoodsAttrId() {
+                    return goodsAttrId;
                 }
 
-                public void setGoods_attr(String goods_attr) {
-                    this.goods_attr = goods_attr;
+                public void setGoodsAttrId(String goodsAttrId) {
+                    this.goodsAttrId = goodsAttrId;
                 }
 
-                public int getComment_state() {
-                    return comment_state;
+                public int getCommentState() {
+                    return commentState;
                 }
 
-                public void setComment_state(int comment_state) {
-                    this.comment_state = comment_state;
+                public void setCommentState(int commentState) {
+                    this.commentState = commentState;
                 }
 
-                public int getIs_back() {
-                    return is_back;
+                public int getIsBack() {
+                    return isBack;
                 }
 
-                public void setIs_back(int is_back) {
-                    this.is_back = is_back;
+                public void setIsBack(int isBack) {
+                    this.isBack = isBack;
                 }
 
                 public int getCostPrice() {
@@ -580,28 +604,28 @@ public class MyOrderInfo {
                     this.costPrice = costPrice;
                 }
 
-                public int getCost_price() {
-                    return cost_price;
+                public int getPromotePrice() {
+                    return promotePrice;
                 }
 
-                public void setCost_price(int cost_price) {
-                    this.cost_price = cost_price;
+                public void setPromotePrice(int promotePrice) {
+                    this.promotePrice = promotePrice;
                 }
 
-                public String getPromote_price() {
-                    return promote_price;
+                public String getGoodsAttr() {
+                    return goodsAttr;
                 }
 
-                public void setPromote_price(String promote_price) {
-                    this.promote_price = promote_price;
+                public void setGoodsAttr(String goodsAttr) {
+                    this.goodsAttr = goodsAttr;
                 }
 
-                public String getGoods_img() {
-                    return goods_img;
+                public String getGoodsImg() {
+                    return goodsImg;
                 }
 
-                public void setGoods_img(String goods_img) {
-                    this.goods_img = goods_img;
+                public void setGoodsImg(String goodsImg) {
+                    this.goodsImg = goodsImg;
                 }
             }
         }

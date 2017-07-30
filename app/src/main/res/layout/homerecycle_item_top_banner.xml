@@ -5,7 +5,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <com.sxjs.common.widget.autoscrollviewpager.BGABanner
+    <!--<com.sxjs.common.widget.autoscrollviewpager.BGABanner
         android:id="@+id/banner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,5 +15,14 @@
         app:banner_placeholderDrawable="@drawable/holder_img"
         app:banner_tipTextSize="12sp"
         app:banner_viewAspectRatio="2.32"
-        app:banner_transitionEffect="defaultEffect" />
+        app:banner_transitionEffect="defaultEffect" />-->
+    <ezy.ui.view.BannerView
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        app:bvAspectRatio="0.4"
+        app:bvIndicatorColor="#cccccc"
+        app:bvIndicatorColorSelected="@color/colorAccent"
+        app:bvIndicatorGravity="center"></ezy.ui.view.BannerView>
 </LinearLayout>

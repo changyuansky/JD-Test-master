@@ -8,6 +8,7 @@ import com.sxjs.common.bean.ClassFication;
 import com.sxjs.common.bean.HomeWares;
 import com.sxjs.common.bean.MyOrderInfo;
 import com.sxjs.common.bean.OrdergoodsInfo;
+import com.sxjs.common.bean.Region;
 import com.sxjs.common.bean.ShopCar;
 
 import java.util.concurrent.TimeUnit;
@@ -81,12 +82,29 @@ public interface CacheProvider {
     @LifeCache(duration = 3, timeUnit = TimeUnit.DAYS)
     Observable<HomeWares> getSearchSevletByKeywordsAndPageindex(Observable<HomeWares> searchObservable,
                                                                 DynamicKeyGroup keywords_pageindex,EvictProvider evictProvider);
-    //18 用户地址
-    @LifeCache(duration = 2, timeUnit = TimeUnit.DAYS)
-    Observable<Address> getUserAddressByUserId(Observable<Address> addressObservable,
-                                               DynamicKey userId,EvictProvider evictProvider);
+    //18 用户收货地址
+    @LifeCache(duration = 7, timeUnit = TimeUnit.DAYS)
+    Observable<Address> getShippingAddressByUserId(Observable<Address> shippingAddressObservable,
+                                                             DynamicKey userId, EvictProvider evictProvider);
     //19  待收货
-    @LifeCache(duration = 2, timeUnit = TimeUnit.DAYS)
+    @LifeCache(duration = 7, timeUnit = TimeUnit.DAYS)
     Observable<MyOrderInfo> getWaitShipOrderInfoByUserIdAndPageindex(Observable<MyOrderInfo> waitShipOrderObservable,
                                                                      DynamicKeyGroup userId_pageindex,EvictProvider evictProvider);
+    //20 删除订单
+    Observable<MyOrderInfo> getDeleteOrderInfoByOrderId(Observable<MyOrderInfo> waitShipOrderObservable,
+                                                        DynamicKey orderId,EvictProvider evictProvider);
+    //21 退货
+    @LifeCache(duration = 3, timeUnit = TimeUnit.DAYS)
+    Observable<MyOrderInfo> getBackOrderInfoByOrderIdAndPageindex(Observable<MyOrderInfo> backOrderObservable,
+                                                                  DynamicKeyGroup orderId_pageindex,EvictProvider evictProvider);
+    //24 地区
+    @LifeCache(duration = 15, timeUnit = TimeUnit.DAYS)
+    Observable<Region> getRegion(Observable<Region> regionObservable,
+                                 EvictProvider evictProvider);
+    //25 我的收货地址
+//    @LifeCache(duration = 7, timeUnit = TimeUnit.DAYS)
+//    Observable<ShippingAddress> getShippingAddressByUserId(Observable<ShippingAddress> shippingAddressObservable,
+//                                                           DynamicKey userId, EvictProvider evictProvider);
+
+
 }

@@ -16,7 +16,6 @@ public interface MainContract {
 }
 
  interface Presenter {
-    void getText();
 
     void destory();
 

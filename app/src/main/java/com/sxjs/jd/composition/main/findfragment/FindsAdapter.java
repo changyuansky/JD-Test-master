@@ -8,7 +8,7 @@ import com.sxjs.common.base.baseadapter.BaseQuickAdapter;
 import com.sxjs.common.base.baseadapter.BaseViewHolder;
 import com.sxjs.common.bean.HomeWares;
 import com.sxjs.jd.R;
-import com.sxjs.jd.composition.entities.FindsBean;
+
 
 /**
  * Created by admin on 2017/3/22.
@@ -24,14 +24,14 @@ public class FindsAdapter extends BaseQuickAdapter<HomeWares.ItemsBean.ItemListB
     @Override
     protected void convert(BaseViewHolder helper, final HomeWares.ItemsBean.ItemListBean bean ,int position) {
         //helper.setText(R.id.title_text,bean.getGoods_id());
-        helper.setText(R.id.content_text,bean.getGoods_brief());
-         helper.setText(R.id.author_name , bean.getGoods_name());
-        helper.setText(R.id.time_text , bean.getAdd_time());
-        helper.setText(R.id.page_view_count , ""+bean.getGoods_number());
+        helper.setText(R.id.content_text,bean.getGoodsBrief());
+         helper.setText(R.id.author_name , bean.getGoodsName());
+        helper.setText(R.id.time_text , bean.getAddTime()+"");
+        helper.setText(R.id.page_view_count , ""+bean.getGoodsNumber());
         SimpleDraweeView simpleDraweeView = helper.getView(R.id.content_img);
         SimpleDraweeView authorImg = helper.getView(R.id.author_img);
-        simpleDraweeView.setImageURI("http://"+bean.getGoods_img());
-        authorImg.setImageURI("http://"+bean.getGoods_img());
+        simpleDraweeView.setImageURI("http://"+bean.getGoodsImg());
+        authorImg.setImageURI("http://"+bean.getGoodsImg());
         helper.addOnClickListener(R.id.find_item_layout);
 
         setOnItemChildClickListener(new OnItemChildClickListener() {

@@ -8,6 +8,7 @@ import com.sxjs.common.bean.ClassFication;
 import com.sxjs.common.bean.HomeWares;
 import com.sxjs.common.bean.MyOrderInfo;
 import com.sxjs.common.bean.OrdergoodsInfo;
+import com.sxjs.common.bean.Region;
 import com.sxjs.common.bean.ShopCar;
 import com.sxjs.common.bean.UserInfo;
 import com.sxjs.common.cache.CacheProvider;
@@ -16,6 +17,7 @@ import com.sxjs.common.model.http.BaseApiService;
 import com.sxjs.common.model.http.HttpHelper;
 import com.sxjs.common.model.sp.SharePreferenceHelper;
 
+import java.util.List;
 import java.util.Map;
 
 import javax.inject.Inject;
@@ -56,19 +58,6 @@ public class DataManager {
         cacheProvider = httpHelper.getCacheProvider();
     }
 
-//    public Disposable getMainData(DisposableObserver<HomeWares> consumer){
-//        //在真实开发中此处需要被替换方可作为请求接口参数使用
-//        return changeIOToMainThread(httpHelper.getService(BaseApiService.class)
-//                .getHomeWares(oldPageindex),consumer);
-//
-//    }
-
-//    private Disposable changeIOToMainThread(Observable<HomeWares> observable ,DisposableObserver<HomeWares> consumer ){
-//        return observable.subscribeOn(Schedulers.io())
-//                .observeOn(AndroidSchedulers.mainThread())
-//                .subscribeWith(consumer);
-//    }
-
     public void saveSPData(String key , String value){
         sharePreferenceHelper.saveData(key , value);
     }
@@ -88,14 +77,6 @@ public class DataManager {
     public Map<String ,String> getSPMapData(){
         return sharePreferenceHelper.readData();
     }
-
-//    public List<String> getTypeOfNameData(){
-//        ArrayList<String> list = new ArrayList<>(20);
-//        for (int i = 0; i < 20; i++) {
-//            list.add("家用电器");
-//        }
-//        return list;
-//    }
 
 
     //1.1  推荐商品,分页功能，由pageindex传入   EvictDynamicKey：update决定是否时刻更新数据
@@ -133,14 +114,10 @@ public class DataManager {
                         new EvictProvider(update),new DynamicKeyGroup(catId,pageindex));
         toSubscribe(classGoodsInfoObservable,classGoodsInfoConsumer);
     }
-     //5.注册后获得用户信息
-    public void getRegistUserInfo(final DisposableObserver<UserInfo> userInfoConsumer,String mobile_phone ,String passwd, String vcode,RequestBody registUserInfo){
-//        UserInfo userInfo =new UserInfo();//RequestBody registUserInfo
-//        userInfo.getItems().get(0).setMobile_phone(mobile_phone);
-//        userInfo.getItems().get(0).setPassword(passwd);
-//        userInfo.getItems().get(0).setVcode(vcode);
-//        String registUserInfo = new Gson().toJson(userInfo);
-        Observable<UserInfo> registuserInfoObservable=getBaseApiService().postRegistUserInfo(registUserInfo);
+     //5.对象传入，注册后获得用户信息
+    public<T> void getRegistUserInfo(final DisposableObserver<UserInfo> userInfoConsumer,T registUserInfo){
+        RequestBody registUserInfobody = toRequestBody(registUserInfo);
+        Observable<UserInfo> registuserInfoObservable=getBaseApiService().postRegistUserInfo(registUserInfobody );
         toSubscribe(registuserInfoObservable,userInfoConsumer);
     }
     //6.获得主页特价商品
@@ -154,14 +131,19 @@ public class DataManager {
     /*
     *@ postLoginUserInfo 用户登录时需要上传的信息(注：用户信息需要转化为Json格式)
      */
-    public void getLoginUserInfo(DisposableObserver<UserInfo> loginConsumer ,RequestBody postLoginUserInfo){
-        Observable<UserInfo> loginuserInfoObservable=getBaseApiService().postLoginUserInfo(postLoginUserInfo);
+    public<T> void getLoginUserInfo(DisposableObserver<UserInfo> loginConsumer ,T postLoginUserInfo){
+        RequestBody body = toRequestBody(postLoginUserInfo);
+        Observable<UserInfo> loginuserInfoObservable=getBaseApiService().postLoginUserInfo(body);
         toSubscribe(loginuserInfoObservable,loginConsumer);
     }
 
     //8.根据手机号获取验证码
-    public void getVcode(DisposableObserver<String> vCodeConsumer, RequestBody phoneNum){
-        Observable<String> vCodeObservable=getBaseApiService().getVcode(phoneNum);
+    /*
+    * @ 返回值中只有code 和 msg ，验证码就在msg中
+    * */
+    public  void getVcode(DisposableObserver<UserInfo> vCodeConsumer, String mobilePhone){
+        //RequestBody body = toRequestBody(phoneNum);
+        Observable<UserInfo> vCodeObservable=getBaseApiService().getVcode(mobilePhone);
         toSubscribe(vCodeObservable,vCodeConsumer);
     }
 
@@ -190,28 +172,28 @@ public class DataManager {
     //12 未付款订单  getNoPayOrderInfoByUserIdAndPageindex
     public void getNoPayOrderInfoByUserIdAndPageindex(DisposableObserver<MyOrderInfo> noPayOrderInfoConsumer,int userId,int pageindex,boolean update){
         Observable<MyOrderInfo> orderObservable=cacheProvider.
-                getNoPayOrderInfoByUserIdAndPageindex(getBaseApiService().getNoPayOrderInfoByUserIdAndPageindex(userId,pageindex),
+                getNoPayOrderInfoByUserIdAndPageindex(getBaseApiService().getNoPayOrderInfoByUserIdAndPageindex(userId,pageindex,0),
                         new DynamicKeyGroup(userId,pageindex),new EvictProvider(update));
         toSubscribe(orderObservable,noPayOrderInfoConsumer);
     }
     //13. 待发货
     public void getShipNoOrderInfoByUserIdAndPageindex(DisposableObserver<MyOrderInfo> shipNoOrderInfoConsumer,int userId,int pageindex,boolean update){
         Observable<MyOrderInfo> orderObservable=cacheProvider.
-                getShipNoOrderInfoByUserIdAndPageindex(getBaseApiService().getShipNoOrderInfoByUserIdAndPageindex(userId,pageindex),
+                getShipNoOrderInfoByUserIdAndPageindex(getBaseApiService().getShipNoOrderInfoByUserIdAndPageindex(userId,pageindex,0,2),
                         new DynamicKeyGroup(userId,pageindex),new EvictProvider(update));
         toSubscribe(orderObservable,shipNoOrderInfoConsumer);
     }
     //14  已完成订单
     public void getHaveFinishedOrderInfoByUserIdAndPageindex(DisposableObserver<MyOrderInfo> haveFinishedOrderInfoConsumer,int userId,int pageindex,boolean update){
         Observable<MyOrderInfo> orderObservable=cacheProvider.
-                getHaveFinishedOrderInfoByUserIdAndPageindex(getBaseApiService().getHaveFinishedOrderInfoByUserIdAndPageindex(userId,pageindex),
+                getHaveFinishedOrderInfoByUserIdAndPageindex(getBaseApiService().getHaveFinishedOrderInfoByUserIdAndPageindex(userId,pageindex,2),
                         new DynamicKeyGroup(userId,pageindex),new EvictProvider(update));
         toSubscribe(orderObservable,haveFinishedOrderInfoConsumer);
     }
     //15.已取消订单getHaveCanceledOrderInfoByUserIdAndPageindex
     public void getHaveCanceledOrderInfoByUserIdAndPageindex(DisposableObserver<MyOrderInfo> haveCanceledOrderInfoConsumer,int userId,int pageindex,boolean update){
         Observable<MyOrderInfo> orderObservable=cacheProvider.
-                getHaveCanceledOrderInfoByUserIdAndPageindex(getBaseApiService().getHaveCanceledOrderInfoByUserIdAndPageindex(userId,pageindex),
+                getHaveCanceledOrderInfoByUserIdAndPageindex(getBaseApiService().getHaveCanceledOrderInfoByUserIdAndPageindex(userId,pageindex,2),
                         new DynamicKeyGroup(userId,pageindex),new EvictProvider(update));
         toSubscribe(orderObservable,haveCanceledOrderInfoConsumer);
     }
@@ -229,23 +211,70 @@ public class DataManager {
                         new DynamicKeyGroup(keywords,pageindex),new EvictProvider(update));
         toSubscribe(SearchObservable,searchConsumer);
     }
-    //18 用户地址
+    //18 用户收货地址
     public void getUserAddressByUserId(DisposableObserver<Address> userAddressByUserIdConsumer, int userId, boolean update){
         Observable<Address> goodsByOrderIdObservable=cacheProvider.
-                getUserAddressByUserId(getBaseApiService().getUserAddressByUserId(userId),
+                getShippingAddressByUserId(getBaseApiService().getAddressByUserId(userId),
                         new DynamicKey(userId),new EvictProvider(update));
         toSubscribe(goodsByOrderIdObservable,userAddressByUserIdConsumer);
     }
     //19  待收货
     public void getWaitShipOrderInfoByUserIdAndPageindex(DisposableObserver<MyOrderInfo> waitShipOrderInfoConsumer,int userId,int pageindex,boolean update){
         Observable<MyOrderInfo> orderObservable=cacheProvider.
-                getWaitShipOrderInfoByUserIdAndPageindex(getBaseApiService().getWaitShipOrderInfoByUserIdAndPageindex(userId,pageindex),
+                getWaitShipOrderInfoByUserIdAndPageindex(getBaseApiService().getWaitShipOrderInfoByUserIdAndPageindex(userId,pageindex,1),
                         new DynamicKeyGroup(userId,pageindex),new EvictProvider(update));
         toSubscribe(orderObservable,waitShipOrderInfoConsumer);
     }
+    //20 删除订单
+    public void getDeleteOrderInfoByOrderId(DisposableObserver<MyOrderInfo> deleteOrderInfoConsumer,int orderId,boolean update){
+        Observable<MyOrderInfo> orderObservable=cacheProvider.
+                getDeleteOrderInfoByOrderId(getBaseApiService().getDeleteOrderInfoByOrderId(orderId),
+                        new DynamicKey(orderId),new EvictProvider(update));
+        toSubscribe(orderObservable,deleteOrderInfoConsumer);
+    }
+    //21退货
+    public void getBackOrderInfoByOrderIdAndPageindex(DisposableObserver<MyOrderInfo> backOrderInfoConsumer,int orderId,int pageindex,boolean update){
+        Observable<MyOrderInfo> orderObservable=cacheProvider.
+                getBackOrderInfoByOrderIdAndPageindex(getBaseApiService().getBackOrderInfoByOrderIdAndPageindex(orderId,pageindex),
+                        new DynamicKeyGroup(orderId,pageindex),new EvictProvider(update));
+        toSubscribe(orderObservable,backOrderInfoConsumer);
+    }
+    //22 加入购物车
+    public<T> void postAddCar(DisposableObserver<ShopCar> addCarConsumer ,T addCarOrderInfo){
+        RequestBody body = toRequestBody(addCarOrderInfo);
+        Observable<ShopCar> addCarObservable=getBaseApiService().postAddCar(body);
+        toSubscribe(addCarObservable,addCarConsumer);
+    }
+    //23 删除购物车多个商品 POST 传集合List
+    public<T> void postDeleteCars(DisposableObserver<ShopCar> deleteCarsConsumer , List<Integer> shopCarDeleteList) {
+        RequestBody body = toRequestBody(shopCarDeleteList);
+        Observable<ShopCar> deleteCarsObservable=getBaseApiService().postAddCar(body);
+        toSubscribe(deleteCarsObservable,deleteCarsConsumer);
+    }
+    //24地区
+    public void getRegion(DisposableObserver<Region> regionConsumer,boolean update){
+        Observable<Region> regionObservable=cacheProvider.
+                getRegion(getBaseApiService().getRegion(),new EvictProvider(update));
+        toSubscribe(regionObservable,regionConsumer);
+    }
+    //25添加新地址
+    public<T> void  postNewAddress(DisposableObserver<Address> newAddressConsumer,T newAddressInfo){
+        RequestBody body = toRequestBody(newAddressConsumer);
+        Observable<Address> newAddressObservable=getBaseApiService().postNewAddress(body);
+        toSubscribe(newAddressObservable,newAddressConsumer);
+    }
+    //26 删除购物车，数量减少    getDeleteCarByRecId
+    public void getDeleteCarByRecId(DisposableObserver<ShopCar> deleteCarByRecIdConsumer,int recId){
+        Observable<ShopCar> deleteCarByRecIdObservable=getBaseApiService().getDeleteCarByRecId(recId);
+        toSubscribe(deleteCarByRecIdObservable,deleteCarByRecIdConsumer);
+    }
 
 
-
+    private<T> RequestBody toRequestBody(T t){
+        String info = new Gson().toJson(t);
+        RequestBody body = RequestBody.create(okhttp3.MediaType.parse("application/json;charset=UTF-8"),info);
+        return body;
+    }
      //BaseApiService实例
      private BaseApiService getBaseApiService(){
          return httpHelper.getService(BaseApiService.class);

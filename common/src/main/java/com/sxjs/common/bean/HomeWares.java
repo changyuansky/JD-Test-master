@@ -1,8 +1,5 @@
 package com.sxjs.common.bean;
 
-import com.sxjs.common.base.baseadapter.entity.MultiItemEntity;
-import com.sxjs.common.data.Constant;
-
 import java.util.List;
 
 /**
@@ -10,20 +7,18 @@ import java.util.List;
  */
 
 public class HomeWares  {
-
     /**
      * code : 200
      * msg : 访问成功
      * isOver : 0
-     * timstamp : 1500554645387
+     * timstamp : 1501295885276
      * pageindex : 1
-     * items : [{"itemType":"recommended_ware","module":"recommended","itemList":[{"goods_id":292,"cat_id":null,"goods_sn":null,"goods_name":"一加手机3T (A3010) 6GB+64GB 枪灰版 全网通 双卡双待 移动联通电信4G手机","goods_name_style":null,"click_count":null,"brand_id":null,"goods_weight":0,"goods_number":null,"market_price":0,"shop_price":2399,"promote_price":1111,"promote_start_date":null,"promoteEndDate":null,"keywords":null,"goods_brief":null,"goods_thumb":"49.122.47.185:8080/XJD/data/images/20170529/58343dc1Nbb3d4722.jpg","goods_img":"49.122.47.185:8080/XJD/data/images/20170529/58343dc1Nbb3d4722.jpg","add_time":null,"is_on_sale":null,"salenum":69764,"sort_order":null,"is_delete":null,"is_best":null,"is_new":null,"is_hot":1,"is_promote":0,"is_discount":null,"return_money":null,"last_update":null,"goods_type":null,"seller_note":null,"supplier_id":null,"supplier_status":null,"special_goods":null,"reuse_one":null,"reuse_two":null,"reuse_three":null},{"goods_id":291,"cat_id":null,"goods_sn":null,"goods_name":"女人志 新款灯笼袖中领毛衣+韩绒料口袋短裙套装送皮带2233","goods_name_style":null,"click_count":null,"brand_id":null,"goods_weight":0,"goods_number":null,"market_price":0,"shop_price":81,"promote_price":0,"promote_start_date":null,"promoteEndDate":null,"keywords":null,"goods_brief":null,"goods_thumb":"49.122.47.185:8080/XJD/data/images/201603/thumb_img/_thumb_P_1458307388786.jpg","goods_img":"49.122.47.185:8080/XJD/data/images/201603/goods_img/_P_1458307388302.jpg","add_time":null,"is_on_sale":null,"salenum":23,"sort_order":null,"is_delete":null,"is_best":null,"is_new":null,"is_hot":1,"is_promote":0,"is_discount":null,"return_money":null,"last_update":null,"goods_type":null,"seller_note":null,"supplier_id":null,"supplier_status":null,"special_goods":null,"reuse_one":null,"reuse_two":null,"reuse_three":null},{"goods_id":287,"cat_id":null,"goods_sn":null,"goods_name":"韩国原装进口lotte乐天 2%富足水蜜桃果汁饮料240ml听装 夏季饮料","goods_name_style":null,"click_count":null,"brand_id":null,"goods_weight":0,"goods_number":null,"market_price":0,"shop_price":5,"promote_price":0,"promote_start_date":null,"promoteEndDate":null,"keywords":null,"goods_brief":null,"goods_thumb":"49.122.47.185:8080/XJD/data/images/201603/thumb_img/287_thumb_G_1457592139010.jpg","goods_img":"49.122.47.185:8080/XJD/data/images/201603/goods_img/287_G_1457592139342.jpg","add_time":null,"is_on_sale":null,"salenum":333,"sort_order":null,"is_delete":null,"is_best":null,"is_new":null,"is_hot":1,"is_promote":0,"is_discount":null,"return_money":null,"last_update":null,"goods_type":null,"seller_note":null,"supplier_id":null,"supplier_status":null,"special_goods":null,"reuse_one":null,"reuse_two":null,"reuse_three":null},{"goods_id":286,"cat_id":null,"goods_sn":null,"goods_name":"永味堂红番石榴汁饮料960ml","goods_name_style":null,"click_count":null,"brand_id":null,"goods_weight":0,"goods_number":null,"market_price":0,"shop_price":13,"promote_price":0,"promote_start_date":null,"promoteEndDate":null,"keywords":null,"goods_brief":null,"goods_thumb":"49.122.47.185:8080/XJD/data/images/201603/thumb_img/286_thumb_G_1457592064813.jpg","goods_img":"49.122.47.185:8080/XJD/data/images/201603/goods_img/286_G_1457592064658.jpg","add_time":null,"is_on_sale":null,"salenum":454,"sort_order":null,"is_delete":null,"is_best":null,"is_new":null,"is_hot":1,"is_promote":0,"is_discount":null,"return_money":null,"last_update":null,"goods_type":null,"seller_note":null,"supplier_id":null,"supplier_status":null,"special_goods":null,"reuse_one":null,"reuse_two":null,"reuse_three":null},{"goods_id":285,"cat_id":null,"goods_sn":null,"goods_name":"LOTTE乐天 韩国原装进口 牛奶碳酸饮料 250ml","goods_name_style":null,"click_count":null,"brand_id":null,"goods_weight":0,"goods_number":null,"market_price":0,"shop_price":5,"promote_price":0,"promote_start_date":null,"promoteEndDate":null,"keywords":null,"goods_brief":null,"goods_thumb":"49.122.47.185:8080/XJD/data/images/201603/thumb_img/285_thumb_G_1457590792869.jpg","goods_img":"49.122.47.185:8080/XJD/data/images/201603/goods_img/285_G_1457590792383.jpg","add_time":null,"is_on_sale":null,"salenum":45,"sort_order":null,"is_delete":null,"is_best":null,"is_new":null,"is_hot":1,"is_promote":0,"is_discount":null,"return_money":null,"last_update":null,"goods_type":null,"seller_note":null,"supplier_id":null,"supplier_status":null,"special_goods":null,"reuse_one":null,"reuse_two":null,"reuse_three":null},{"goods_id":284,"cat_id":null,"goods_sn":null,"goods_name":"香蕉牛奶 韩国宾格瑞香蕉牛奶饮料200ml12支","goods_name_style":null,"click_count":null,"brand_id":null,"goods_weight":0,"goods_number":null,"market_price":0,"shop_price":59,"promote_price":0,"promote_start_date":null,"promoteEndDate":null,"keywords":null,"goods_brief":null,"goods_thumb":"49.122.47.185:8080/XJD/data/images/201603/thumb_img/284_thumb_G_1457590275784.jpg","goods_img":"49.122.47.185:8080/XJD/data/images/201603/goods_img/284_G_1457590275317.jpg","add_time":null,"is_on_sale":null,"salenum":0,"sort_order":null,"is_delete":null,"is_best":null,"is_new":null,"is_hot":1,"is_promote":0,"is_discount":null,"return_money":null,"last_update":null,"goods_type":null,"seller_note":null,"supplier_id":null,"supplier_status":null,"special_goods":null,"reuse_one":null,"reuse_two":null,"reuse_three":null},{"goods_id":283,"cat_id":null,"goods_sn":null,"goods_name":"好事达家用梯子四步梯加厚梯子折叠梯移动扶梯人字梯2766","goods_name_style":null,"click_count":null,"brand_id":null,"goods_weight":0,"goods_number":null,"market_price":0,"shop_price":2,"promote_price":0,"promote_start_date":null,"promoteEndDate":null,"keywords":null,"goods_brief":null,"goods_thumb":"49.122.47.185:8080/XJD/data/images/201603/thumb_img/_thumb_P_1457590880591.jpg","goods_img":"49.122.47.185:8080/XJD/data/images/201603/goods_img/_P_1457590880024.jpg","add_time":null,"is_on_sale":null,"salenum":0,"sort_order":null,"is_delete":null,"is_best":null,"is_new":null,"is_hot":1,"is_promote":0,"is_discount":null,"return_money":null,"last_update":null,"goods_type":null,"seller_note":null,"supplier_id":null,"supplier_status":null,"special_goods":null,"reuse_one":null,"reuse_two":null,"reuse_three":null},{"goods_id":282,"cat_id":null,"goods_sn":null,"goods_name":"超B级锁芯防伪升级版 防盗门锁芯 防锡纸开门37.5+32.5=70mm","goods_name_style":null,"click_count":null,"brand_id":null,"goods_weight":0,"goods_number":null,"market_price":0,"shop_price":129,"promote_price":0,"promote_start_date":null,"promoteEndDate":null,"keywords":null,"goods_brief":null,"goods_thumb":"49.122.47.185:8080/XJD/data/images/201602/thumb_img/282_thumb_G_1456454106731.jpg","goods_img":"49.122.47.185:8080/XJD/data/images/201602/goods_img/282_G_1456454106734.jpg","add_time":null,"is_on_sale":null,"salenum":0,"sort_order":null,"is_delete":null,"is_best":null,"is_new":null,"is_hot":1,"is_promote":0,"is_discount":null,"return_money":null,"last_update":null,"goods_type":null,"seller_note":null,"supplier_id":null,"supplier_status":null,"special_goods":null,"reuse_one":null,"reuse_two":null,"reuse_three":null},{"goods_id":281,"cat_id":null,"goods_sn":null,"goods_name":"卡贝 不锈钢户门吸15CM加长特长墙吸地碰门挡强磁现代家用五金 拉丝不锈钢","goods_name_style":null,"click_count":null,"brand_id":null,"goods_weight":0,"goods_number":null,"market_price":0,"shop_price":39,"promote_price":0,"promote_start_date":null,"promoteEndDate":null,"keywords":null,"goods_brief":null,"goods_thumb":"49.122.47.185:8080/XJD/data/images/201602/thumb_img/281_thumb_G_1456453972506.jpg","goods_img":"49.122.47.185:8080/XJD/data/images/201602/goods_img/281_G_1456453972612.jpg","add_time":null,"is_on_sale":null,"salenum":0,"sort_order":null,"is_delete":null,"is_best":null,"is_new":null,"is_hot":1,"is_promote":0,"is_discount":null,"return_money":null,"last_update":null,"goods_type":null,"seller_note":null,"supplier_id":null,"supplier_status":null,"special_goods":null,"reuse_one":null,"reuse_two":null,"reuse_three":null},{"goods_id":280,"cat_id":null,"goods_sn":null,"goods_name":"宝雕 欧式双舌静音象牙白室内房门锁M87457 象牙白宝雕","goods_name_style":null,"click_count":null,"brand_id":null,"goods_weight":0,"goods_number":null,"market_price":0,"shop_price":99,"promote_price":0,"promote_start_date":null,"promoteEndDate":null,"keywords":null,"goods_brief":null,"goods_thumb":"49.122.47.185:8080/XJD/data/images/201602/thumb_img/280_thumb_G_1456453887329.jpg","goods_img":"49.122.47.185:8080/XJD/data/images/201602/goods_img/280_G_1456453887069.jpg","add_time":null,"is_on_sale":null,"salenum":0,"sort_order":null,"is_delete":null,"is_best":null,"is_new":null,"is_hot":1,"is_promote":0,"is_discount":null,"return_money":null,"last_update":null,"goods_type":null,"seller_note":null,"supplier_id":null,"supplier_status":null,"special_goods":null,"reuse_one":null,"reuse_two":null,"reuse_three":null}]}]
+     * items : [{"itemType":"recommended_ware","module":"recommended","itemList":[{"goodsId":292,"catId":369,"goodsSn":"EN1232133600","goodsName":"一加手机3T (A3010) 6GB+64GB 枪灰版 全网通 双卡双待 移动联通电信4G手机","goodsNameStyle":"+","clickCount":999,"brandId":106,"goodsWeight":1,"goodsNumber":1000,"marketPrice":3333.13,"shopPrice":2399,"promotePrice":99,"promoteStartDate":1500451889000,"promoteEndDate":1500624696000,"keywords":"商品关键词商品关键词无敌手机","goodsBrief":"商品描述商品描述无敌手机无敌手机无敌手机无敌手机","goodsThumb":"10.10.140.231:81/shop/data/images/20170529/58343dc1Nbb3d4722.jpg","goodsImg":"10.10.140.231:81/shop/data/images/20170529/58343dc1Nbb3d4722.jpg","addTime":1496040309000,"isOnSale":1,"salenum":69764,"sortOrder":100,"isDelete":0,"isBest":1,"isNew":1,"isHot":1,"isPromote":1,"isDiscount":0,"returnMoney":2,"lastUpdate":1500517076000,"goodsType":0,"sellerNote":"商家描述商家描无敌手机","supplierId":0,"supplierStatus":1,"specialGoods":0,"reuseOne":null,"reuseTwo":null,"reuseThree":null},{"goodsId":291,"catId":63,"goodsSn":"ED23188167","goodsName":"女人志 新款灯笼袖中领毛衣+韩绒料口袋短裙套装送皮带2233","goodsNameStyle":"+","clickCount":13,"brandId":0,"goodsWeight":0,"goodsNumber":1000,"marketPrice":119,"shopPrice":81,"promotePrice":99,"promoteStartDate":1500451889000,"promoteEndDate":1500624696000,"keywords":"","goodsBrief":"","goodsThumb":"10.10.140.231:81/shop/data/images/201603/thumb_img/_thumb_P_1458307388786.jpg","goodsImg":"10.10.140.231:81/shop/data/images/201603/goods_img/_P_1458307388302.jpg","addTime":1495073415000,"isOnSale":1,"salenum":23,"sortOrder":100,"isDelete":0,"isBest":1,"isNew":1,"isHot":1,"isPromote":1,"isDiscount":0,"returnMoney":2,"lastUpdate":1500517076000,"goodsType":2,"sellerNote":"","supplierId":21,"supplierStatus":1,"specialGoods":0,"reuseOne":null,"reuseTwo":null,"reuseThree":null},{"goodsId":287,"catId":7,"goodsSn":"ECS000287","goodsName":"韩国原装进口lotte乐天 2%富足水蜜桃果汁饮料240ml听装 夏季饮料","goodsNameStyle":"+","clickCount":15,"brandId":0,"goodsWeight":0,"goodsNumber":1000,"marketPrice":6,"shopPrice":5.3,"promotePrice":99,"promoteStartDate":1500451889000,"promoteEndDate":1500624696000,"keywords":"","goodsBrief":"","goodsThumb":"10.10.140.231:81/shop/data/images/201603/thumb_img/287_thumb_G_1457592139010.jpg","goodsImg":"10.10.140.231:81/shop/data/images/201603/goods_img/287_G_1457592139342.jpg","addTime":1495073415000,"isOnSale":1,"salenum":333,"sortOrder":100,"isDelete":0,"isBest":1,"isNew":1,"isHot":1,"isPromote":1,"isDiscount":0,"returnMoney":2,"lastUpdate":1495073422000,"goodsType":0,"sellerNote":"","supplierId":18,"supplierStatus":1,"specialGoods":0,"reuseOne":null,"reuseTwo":null,"reuseThree":null},{"goodsId":286,"catId":7,"goodsSn":"ECS000286","goodsName":"永味堂红番石榴汁饮料960ml","goodsNameStyle":"+","clickCount":14,"brandId":0,"goodsWeight":0,"goodsNumber":1000,"marketPrice":16,"shopPrice":13.5,"promotePrice":99,"promoteStartDate":1500451889000,"promoteEndDate":1500624696000,"keywords":"","goodsBrief":"","goodsThumb":"10.10.140.231:81/shop/data/images/201603/thumb_img/286_thumb_G_1457592064813.jpg","goodsImg":"10.10.140.231:81/shop/data/images/201603/goods_img/286_G_1457592064658.jpg","addTime":1495073415000,"isOnSale":1,"salenum":454,"sortOrder":100,"isDelete":0,"isBest":1,"isNew":1,"isHot":1,"isPromote":1,"isDiscount":0,"returnMoney":2,"lastUpdate":1495073422000,"goodsType":0,"sellerNote":"","supplierId":18,"supplierStatus":1,"specialGoods":0,"reuseOne":null,"reuseTwo":null,"reuseThree":null},{"goodsId":285,"catId":7,"goodsSn":"ECS000285","goodsName":"LOTTE乐天 韩国原装进口 牛奶碳酸饮料 250ml","goodsNameStyle":"+","clickCount":8,"brandId":0,"goodsWeight":0,"goodsNumber":1000,"marketPrice":6,"shopPrice":5.2,"promotePrice":99,"promoteStartDate":1500451889000,"promoteEndDate":1500624696000,"keywords":"","goodsBrief":"","goodsThumb":"10.10.140.231:81/shop/data/images/201603/thumb_img/285_thumb_G_1457590792869.jpg","goodsImg":"10.10.140.231:81/shop/data/images/201603/goods_img/285_G_1457590792383.jpg","addTime":1495073415000,"isOnSale":1,"salenum":45,"sortOrder":100,"isDelete":0,"isBest":1,"isNew":1,"isHot":1,"isPromote":1,"isDiscount":0,"returnMoney":2,"lastUpdate":1495073422000,"goodsType":0,"sellerNote":"","supplierId":18,"supplierStatus":1,"specialGoods":0,"reuseOne":null,"reuseTwo":null,"reuseThree":null},{"goodsId":284,"catId":0,"goodsSn":"ECS000284","goodsName":"香蕉牛奶 韩国宾格瑞香蕉牛奶饮料200ml12支","goodsNameStyle":"+","clickCount":4,"brandId":0,"goodsWeight":0,"goodsNumber":1000,"marketPrice":70,"shopPrice":59,"promotePrice":99,"promoteStartDate":1500451889000,"promoteEndDate":1500624696000,"keywords":"","goodsBrief":"","goodsThumb":"10.10.140.231:81/shop/data/images/201603/thumb_img/284_thumb_G_1457590275784.jpg","goodsImg":"10.10.140.231:81/shop/data/images/201603/goods_img/284_G_1457590275317.jpg","addTime":1495073415000,"isOnSale":1,"salenum":0,"sortOrder":100,"isDelete":0,"isBest":1,"isNew":1,"isHot":1,"isPromote":1,"isDiscount":0,"returnMoney":2,"lastUpdate":1495073422000,"goodsType":0,"sellerNote":"","supplierId":18,"supplierStatus":1,"specialGoods":0,"reuseOne":null,"reuseTwo":null,"reuseThree":null},{"goodsId":283,"catId":182,"goodsSn":"ECS000283","goodsName":"好事达家用梯子四步梯加厚梯子折叠梯移动扶梯人字梯2766","goodsNameStyle":"+","clickCount":46,"brandId":0,"goodsWeight":0,"goodsNumber":1000,"marketPrice":2.4,"shopPrice":2,"promotePrice":99,"promoteStartDate":1500451889000,"promoteEndDate":1500624696000,"keywords":"","goodsBrief":"","goodsThumb":"10.10.140.231:81/shop/data/images/201603/thumb_img/_thumb_P_1457590880591.jpg","goodsImg":"10.10.140.231:81/shop/data/images/201603/goods_img/_P_1457590880024.jpg","addTime":1495073415000,"isOnSale":1,"salenum":0,"sortOrder":100,"isDelete":0,"isBest":0,"isNew":1,"isHot":1,"isPromote":1,"isDiscount":0,"returnMoney":2,"lastUpdate":1495073422000,"goodsType":2,"sellerNote":"","supplierId":0,"supplierStatus":1,"specialGoods":0,"reuseOne":null,"reuseTwo":null,"reuseThree":null},{"goodsId":282,"catId":218,"goodsSn":"ECS000282","goodsName":"超B级锁芯防伪升级版 防盗门锁芯 防锡纸开门37.5+32.5=70mm","goodsNameStyle":"+","clickCount":3,"brandId":0,"goodsWeight":0,"goodsNumber":997,"marketPrice":154,"shopPrice":129,"promotePrice":99,"promoteStartDate":1500451889000,"promoteEndDate":1500624696000,"keywords":"","goodsBrief":"","goodsThumb":"10.10.140.231:81/shop/data/images/201602/thumb_img/282_thumb_G_1456454106731.jpg","goodsImg":"10.10.140.231:81/shop/data/images/201602/goods_img/282_G_1456454106734.jpg","addTime":1495073415000,"isOnSale":1,"salenum":0,"sortOrder":100,"isDelete":0,"isBest":0,"isNew":1,"isHot":1,"isPromote":1,"isDiscount":0,"returnMoney":2,"lastUpdate":1501292359000,"goodsType":0,"sellerNote":"","supplierId":0,"supplierStatus":1,"specialGoods":0,"reuseOne":null,"reuseTwo":null,"reuseThree":null},{"goodsId":281,"catId":218,"goodsSn":"ECS000281","goodsName":"卡贝 不锈钢户门吸15CM加长特长墙吸地碰门挡强磁现代家用五金 拉丝不锈钢","goodsNameStyle":"+","clickCount":3,"brandId":0,"goodsWeight":0,"goodsNumber":1000,"marketPrice":46,"shopPrice":39,"promotePrice":99,"promoteStartDate":1500451889000,"promoteEndDate":1500624696000,"keywords":"","goodsBrief":"","goodsThumb":"10.10.140.231:81/shop/data/images/201602/thumb_img/281_thumb_G_1456453972506.jpg","goodsImg":"10.10.140.231:81/shop/data/images/201602/goods_img/281_G_1456453972612.jpg","addTime":1495073415000,"isOnSale":1,"salenum":0,"sortOrder":100,"isDelete":0,"isBest":0,"isNew":1,"isHot":1,"isPromote":1,"isDiscount":0,"returnMoney":2,"lastUpdate":1495073422000,"goodsType":0,"sellerNote":"","supplierId":0,"supplierStatus":1,"specialGoods":0,"reuseOne":null,"reuseTwo":null,"reuseThree":null},{"goodsId":280,"catId":218,"goodsSn":"ECS000280","goodsName":"宝雕 欧式双舌静音象牙白室内房门锁M87457 象牙白宝雕","goodsNameStyle":"+","clickCount":2,"brandId":0,"goodsWeight":0,"goodsNumber":1000,"marketPrice":118.8,"shopPrice":99,"promotePrice":99,"promoteStartDate":1500451889000,"promoteEndDate":1500624696000,"keywords":"","goodsBrief":"","goodsThumb":"10.10.140.231:81/shop/data/images/201602/thumb_img/280_thumb_G_1456453887329.jpg","goodsImg":"10.10.140.231:81/shop/data/images/201602/goods_img/280_G_1456453887069.jpg","addTime":1495073415000,"isOnSale":1,"salenum":0,"sortOrder":100,"isDelete":0,"isBest":0,"isNew":1,"isHot":1,"isPromote":1,"isDiscount":0,"returnMoney":2,"lastUpdate":1495073422000,"goodsType":0,"sellerNote":"","supplierId":0,"supplierStatus":1,"specialGoods":0,"reuseOne":null,"reuseTwo":null,"reuseThree":null}]}]
      */
-
     public String code;
     public String msg;
     public String isOver;
-    public long timstamp;
+    public String timstamp;
     public int pageindex;
     public List<ItemsBean> items;
 
@@ -51,11 +46,11 @@ public class HomeWares  {
         this.isOver = isOver;
     }
 
-    public long getTimstamp() {
+    public String getTimstamp() {
         return timstamp;
     }
 
-    public void setTimstamp(long timstamp) {
+    public void setTimstamp(String timstamp) {
         this.timstamp = timstamp;
     }
 
@@ -75,19 +70,24 @@ public class HomeWares  {
         this.items = items;
     }
 
-
-
-    public static class ItemsBean implements MultiItemEntity{
+    public static class ItemsBean {
         /**
          * itemType : recommended_ware
          * module : recommended
-         * itemList : [{"goods_id":292,"cat_id":null,"goods_sn":null,"goods_name":"一加手机3T (A3010) 6GB+64GB 枪灰版 全网通 双卡双待 移动联通电信4G手机","goods_name_style":null,"click_count":null,"brand_id":null,"goods_weight":0,"goods_number":null,"market_price":0,"shop_price":2399,"promote_price":1111,"promote_start_date":null,"promoteEndDate":null,"keywords":null,"goods_brief":null,"goods_thumb":"49.122.47.185:8080/XJD/data/images/20170529/58343dc1Nbb3d4722.jpg","goods_img":"49.122.47.185:8080/XJD/data/images/20170529/58343dc1Nbb3d4722.jpg","add_time":null,"is_on_sale":null,"salenum":69764,"sort_order":null,"is_delete":null,"is_best":null,"is_new":null,"is_hot":1,"is_promote":0,"is_discount":null,"return_money":null,"last_update":null,"goods_type":null,"seller_note":null,"supplier_id":null,"supplier_status":null,"special_goods":null,"reuse_one":null,"reuse_two":null,"reuse_three":null},{"goods_id":291,"cat_id":null,"goods_sn":null,"goods_name":"女人志 新款灯笼袖中领毛衣+韩绒料口袋短裙套装送皮带2233","goods_name_style":null,"click_count":null,"brand_id":null,"goods_weight":0,"goods_number":null,"market_price":0,"shop_price":81,"promote_price":0,"promote_start_date":null,"promoteEndDate":null,"keywords":null,"goods_brief":null,"goods_thumb":"49.122.47.185:8080/XJD/data/images/201603/thumb_img/_thumb_P_1458307388786.jpg","goods_img":"49.122.47.185:8080/XJD/data/images/201603/goods_img/_P_1458307388302.jpg","add_time":null,"is_on_sale":null,"salenum":23,"sort_order":null,"is_delete":null,"is_best":null,"is_new":null,"is_hot":1,"is_promote":0,"is_discount":null,"return_money":null,"last_update":null,"goods_type":null,"seller_note":null,"supplier_id":null,"supplier_status":null,"special_goods":null,"reuse_one":null,"reuse_two":null,"reuse_three":null},{"goods_id":287,"cat_id":null,"goods_sn":null,"goods_name":"韩国原装进口lotte乐天 2%富足水蜜桃果汁饮料240ml听装 夏季饮料","goods_name_style":null,"click_count":null,"brand_id":null,"goods_weight":0,"goods_number":null,"market_price":0,"shop_price":5,"promote_price":0,"promote_start_date":null,"promoteEndDate":null,"keywords":null,"goods_brief":null,"goods_thumb":"49.122.47.185:8080/XJD/data/images/201603/thumb_img/287_thumb_G_1457592139010.jpg","goods_img":"49.122.47.185:8080/XJD/data/images/201603/goods_img/287_G_1457592139342.jpg","add_time":null,"is_on_sale":null,"salenum":333,"sort_order":null,"is_delete":null,"is_best":null,"is_new":null,"is_hot":1,"is_promote":0,"is_discount":null,"return_money":null,"last_update":null,"goods_type":null,"seller_note":null,"supplier_id":null,"supplier_status":null,"special_goods":null,"reuse_one":null,"reuse_two":null,"reuse_three":null},{"goods_id":286,"cat_id":null,"goods_sn":null,"goods_name":"永味堂红番石榴汁饮料960ml","goods_name_style":null,"click_count":null,"brand_id":null,"goods_weight":0,"goods_number":null,"market_price":0,"shop_price":13,"promote_price":0,"promote_start_date":null,"promoteEndDate":null,"keywords":null,"goods_brief":null,"goods_thumb":"49.122.47.185:8080/XJD/data/images/201603/thumb_img/286_thumb_G_1457592064813.jpg","goods_img":"49.122.47.185:8080/XJD/data/images/201603/goods_img/286_G_1457592064658.jpg","add_time":null,"is_on_sale":null,"salenum":454,"sort_order":null,"is_delete":null,"is_best":null,"is_new":null,"is_hot":1,"is_promote":0,"is_discount":null,"return_money":null,"last_update":null,"goods_type":null,"seller_note":null,"supplier_id":null,"supplier_status":null,"special_goods":null,"reuse_one":null,"reuse_two":null,"reuse_three":null},{"goods_id":285,"cat_id":null,"goods_sn":null,"goods_name":"LOTTE乐天 韩国原装进口 牛奶碳酸饮料 250ml","goods_name_style":null,"click_count":null,"brand_id":null,"goods_weight":0,"goods_number":null,"market_price":0,"shop_price":5,"promote_price":0,"promote_start_date":null,"promoteEndDate":null,"keywords":null,"goods_brief":null,"goods_thumb":"49.122.47.185:8080/XJD/data/images/201603/thumb_img/285_thumb_G_1457590792869.jpg","goods_img":"49.122.47.185:8080/XJD/data/images/201603/goods_img/285_G_1457590792383.jpg","add_time":null,"is_on_sale":null,"salenum":45,"sort_order":null,"is_delete":null,"is_best":null,"is_new":null,"is_hot":1,"is_promote":0,"is_discount":null,"return_money":null,"last_update":null,"goods_type":null,"seller_note":null,"supplier_id":null,"supplier_status":null,"special_goods":null,"reuse_one":null,"reuse_two":null,"reuse_three":null},{"goods_id":284,"cat_id":null,"goods_sn":null,"goods_name":"香蕉牛奶 韩国宾格瑞香蕉牛奶饮料200ml12支","goods_name_style":null,"click_count":null,"brand_id":null,"goods_weight":0,"goods_number":null,"market_price":0,"shop_price":59,"promote_price":0,"promote_start_date":null,"promoteEndDate":null,"keywords":null,"goods_brief":null,"goods_thumb":"49.122.47.185:8080/XJD/data/images/201603/thumb_img/284_thumb_G_1457590275784.jpg","goods_img":"49.122.47.185:8080/XJD/data/images/201603/goods_img/284_G_1457590275317.jpg","add_time":null,"is_on_sale":null,"salenum":0,"sort_order":null,"is_delete":null,"is_best":null,"is_new":null,"is_hot":1,"is_promote":0,"is_discount":null,"return_money":null,"last_update":null,"goods_type":null,"seller_note":null,"supplier_id":null,"supplier_status":null,"special_goods":null,"reuse_one":null,"reuse_two":null,"reuse_three":null},{"goods_id":283,"cat_id":null,"goods_sn":null,"goods_name":"好事达家用梯子四步梯加厚梯子折叠梯移动扶梯人字梯2766","goods_name_style":null,"click_count":null,"brand_id":null,"goods_weight":0,"goods_number":null,"market_price":0,"shop_price":2,"promote_price":0,"promote_start_date":null,"promoteEndDate":null,"keywords":null,"goods_brief":null,"goods_thumb":"49.122.47.185:8080/XJD/data/images/201603/thumb_img/_thumb_P_1457590880591.jpg","goods_img":"49.122.47.185:8080/XJD/data/images/201603/goods_img/_P_1457590880024.jpg","add_time":null,"is_on_sale":null,"salenum":0,"sort_order":null,"is_delete":null,"is_best":null,"is_new":null,"is_hot":1,"is_promote":0,"is_discount":null,"return_money":null,"last_update":null,"goods_type":null,"seller_note":null,"supplier_id":null,"supplier_status":null,"special_goods":null,"reuse_one":null,"reuse_two":null,"reuse_three":null},{"goods_id":282,"cat_id":null,"goods_sn":null,"goods_name":"超B级锁芯防伪升级版 防盗门锁芯 防锡纸开门37.5+32.5=70mm","goods_name_style":null,"click_count":null,"brand_id":null,"goods_weight":0,"goods_number":null,"market_price":0,"shop_price":129,"promote_price":0,"promote_start_date":null,"promoteEndDate":null,"keywords":null,"goods_brief":null,"goods_thumb":"49.122.47.185:8080/XJD/data/images/201602/thumb_img/282_thumb_G_1456454106731.jpg","goods_img":"49.122.47.185:8080/XJD/data/images/201602/goods_img/282_G_1456454106734.jpg","add_time":null,"is_on_sale":null,"salenum":0,"sort_order":null,"is_delete":null,"is_best":null,"is_new":null,"is_hot":1,"is_promote":0,"is_discount":null,"return_money":null,"last_update":null,"goods_type":null,"seller_note":null,"supplier_id":null,"supplier_status":null,"special_goods":null,"reuse_one":null,"reuse_two":null,"reuse_three":null},{"goods_id":281,"cat_id":null,"goods_sn":null,"goods_name":"卡贝 不锈钢户门吸15CM加长特长墙吸地碰门挡强磁现代家用五金 拉丝不锈钢","goods_name_style":null,"click_count":null,"brand_id":null,"goods_weight":0,"goods_number":null,"market_price":0,"shop_price":39,"promote_price":0,"promote_start_date":null,"promoteEndDate":null,"keywords":null,"goods_brief":null,"goods_thumb":"49.122.47.185:8080/XJD/data/images/201602/thumb_img/281_thumb_G_1456453972506.jpg","goods_img":"49.122.47.185:8080/XJD/data/images/201602/goods_img/281_G_1456453972612.jpg","add_time":null,"is_on_sale":null,"salenum":0,"sort_order":null,"is_delete":null,"is_best":null,"is_new":null,"is_hot":1,"is_promote":0,"is_discount":null,"return_money":null,"last_update":null,"goods_type":null,"seller_note":null,"supplier_id":null,"supplier_status":null,"special_goods":null,"reuse_one":null,"reuse_two":null,"reuse_three":null},{"goods_id":280,"cat_id":null,"goods_sn":null,"goods_name":"宝雕 欧式双舌静音象牙白室内房门锁M87457 象牙白宝雕","goods_name_style":null,"click_count":null,"brand_id":null,"goods_weight":0,"goods_number":null,"market_price":0,"shop_price":99,"promote_price":0,"promote_start_date":null,"promoteEndDate":null,"keywords":null,"goods_brief":null,"goods_thumb":"49.122.47.185:8080/XJD/data/images/201602/thumb_img/280_thumb_G_1456453887329.jpg","goods_img":"49.122.47.185:8080/XJD/data/images/201602/goods_img/280_G_1456453887069.jpg","add_time":null,"is_on_sale":null,"salenum":0,"sort_order":null,"is_delete":null,"is_best":null,"is_new":null,"is_hot":1,"is_promote":0,"is_discount":null,"return_money":null,"last_update":null,"goods_type":null,"seller_note":null,"supplier_id":null,"supplier_status":null,"special_goods":null,"reuse_one":null,"reuse_two":null,"reuse_three":null}]
+         * itemList : [{"goodsId":292,"catId":369,"goodsSn":"EN1232133600","goodsName":"一加手机3T (A3010) 6GB+64GB 枪灰版 全网通 双卡双待 移动联通电信4G手机","goodsNameStyle":"+","clickCount":999,"brandId":106,"goodsWeight":1,"goodsNumber":1000,"marketPrice":3333.13,"shopPrice":2399,"promotePrice":99,"promoteStartDate":1500451889000,"promoteEndDate":1500624696000,"keywords":"商品关键词商品关键词无敌手机","goodsBrief":"商品描述商品描述无敌手机无敌手机无敌手机无敌手机","goodsThumb":"10.10.140.231:81/shop/data/images/20170529/58343dc1Nbb3d4722.jpg","goodsImg":"10.10.140.231:81/shop/data/images/20170529/58343dc1Nbb3d4722.jpg","addTime":1496040309000,"isOnSale":1,"salenum":69764,"sortOrder":100,"isDelete":0,"isBest":1,"isNew":1,"isHot":1,"isPromote":1,"isDiscount":0,"returnMoney":2,"lastUpdate":1500517076000,"goodsType":0,"sellerNote":"商家描述商家描无敌手机","supplierId":0,"supplierStatus":1,"specialGoods":0,"reuseOne":null,"reuseTwo":null,"reuseThree":null},{"goodsId":291,"catId":63,"goodsSn":"ED23188167","goodsName":"女人志 新款灯笼袖中领毛衣+韩绒料口袋短裙套装送皮带2233","goodsNameStyle":"+","clickCount":13,"brandId":0,"goodsWeight":0,"goodsNumber":1000,"marketPrice":119,"shopPrice":81,"promotePrice":99,"promoteStartDate":1500451889000,"promoteEndDate":1500624696000,"keywords":"","goodsBrief":"","goodsThumb":"10.10.140.231:81/shop/data/images/201603/thumb_img/_thumb_P_1458307388786.jpg","goodsImg":"10.10.140.231:81/shop/data/images/201603/goods_img/_P_1458307388302.jpg","addTime":1495073415000,"isOnSale":1,"salenum":23,"sortOrder":100,"isDelete":0,"isBest":1,"isNew":1,"isHot":1,"isPromote":1,"isDiscount":0,"returnMoney":2,"lastUpdate":1500517076000,"goodsType":2,"sellerNote":"","supplierId":21,"supplierStatus":1,"specialGoods":0,"reuseOne":null,"reuseTwo":null,"reuseThree":null},{"goodsId":287,"catId":7,"goodsSn":"ECS000287","goodsName":"韩国原装进口lotte乐天 2%富足水蜜桃果汁饮料240ml听装 夏季饮料","goodsNameStyle":"+","clickCount":15,"brandId":0,"goodsWeight":0,"goodsNumber":1000,"marketPrice":6,"shopPrice":5.3,"promotePrice":99,"promoteStartDate":1500451889000,"promoteEndDate":1500624696000,"keywords":"","goodsBrief":"","goodsThumb":"10.10.140.231:81/shop/data/images/201603/thumb_img/287_thumb_G_1457592139010.jpg","goodsImg":"10.10.140.231:81/shop/data/images/201603/goods_img/287_G_1457592139342.jpg","addTime":1495073415000,"isOnSale":1,"salenum":333,"sortOrder":100,"isDelete":0,"isBest":1,"isNew":1,"isHot":1,"isPromote":1,"isDiscount":0,"returnMoney":2,"lastUpdate":1495073422000,"goodsType":0,"sellerNote":"","supplierId":18,"supplierStatus":1,"specialGoods":0,"reuseOne":null,"reuseTwo":null,"reuseThree":null},{"goodsId":286,"catId":7,"goodsSn":"ECS000286","goodsName":"永味堂红番石榴汁饮料960ml","goodsNameStyle":"+","clickCount":14,"brandId":0,"goodsWeight":0,"goodsNumber":1000,"marketPrice":16,"shopPrice":13.5,"promotePrice":99,"promoteStartDate":1500451889000,"promoteEndDate":1500624696000,"keywords":"","goodsBrief":"","goodsThumb":"10.10.140.231:81/shop/data/images/201603/thumb_img/286_thumb_G_1457592064813.jpg","goodsImg":"10.10.140.231:81/shop/data/images/201603/goods_img/286_G_1457592064658.jpg","addTime":1495073415000,"isOnSale":1,"salenum":454,"sortOrder":100,"isDelete":0,"isBest":1,"isNew":1,"isHot":1,"isPromote":1,"isDiscount":0,"returnMoney":2,"lastUpdate":1495073422000,"goodsType":0,"sellerNote":"","supplierId":18,"supplierStatus":1,"specialGoods":0,"reuseOne":null,"reuseTwo":null,"reuseThree":null},{"goodsId":285,"catId":7,"goodsSn":"ECS000285","goodsName":"LOTTE乐天 韩国原装进口 牛奶碳酸饮料 250ml","goodsNameStyle":"+","clickCount":8,"brandId":0,"goodsWeight":0,"goodsNumber":1000,"marketPrice":6,"shopPrice":5.2,"promotePrice":99,"promoteStartDate":1500451889000,"promoteEndDate":1500624696000,"keywords":"","goodsBrief":"","goodsThumb":"10.10.140.231:81/shop/data/images/201603/thumb_img/285_thumb_G_1457590792869.jpg","goodsImg":"10.10.140.231:81/shop/data/images/201603/goods_img/285_G_1457590792383.jpg","addTime":1495073415000,"isOnSale":1,"salenum":45,"sortOrder":100,"isDelete":0,"isBest":1,"isNew":1,"isHot":1,"isPromote":1,"isDiscount":0,"returnMoney":2,"lastUpdate":1495073422000,"goodsType":0,"sellerNote":"","supplierId":18,"supplierStatus":1,"specialGoods":0,"reuseOne":null,"reuseTwo":null,"reuseThree":null},{"goodsId":284,"catId":0,"goodsSn":"ECS000284","goodsName":"香蕉牛奶 韩国宾格瑞香蕉牛奶饮料200ml12支","goodsNameStyle":"+","clickCount":4,"brandId":0,"goodsWeight":0,"goodsNumber":1000,"marketPrice":70,"shopPrice":59,"promotePrice":99,"promoteStartDate":1500451889000,"promoteEndDate":1500624696000,"keywords":"","goodsBrief":"","goodsThumb":"10.10.140.231:81/shop/data/images/201603/thumb_img/284_thumb_G_1457590275784.jpg","goodsImg":"10.10.140.231:81/shop/data/images/201603/goods_img/284_G_1457590275317.jpg","addTime":1495073415000,"isOnSale":1,"salenum":0,"sortOrder":100,"isDelete":0,"isBest":1,"isNew":1,"isHot":1,"isPromote":1,"isDiscount":0,"returnMoney":2,"lastUpdate":1495073422000,"goodsType":0,"sellerNote":"","supplierId":18,"supplierStatus":1,"specialGoods":0,"reuseOne":null,"reuseTwo":null,"reuseThree":null},{"goodsId":283,"catId":182,"goodsSn":"ECS000283","goodsName":"好事达家用梯子四步梯加厚梯子折叠梯移动扶梯人字梯2766","goodsNameStyle":"+","clickCount":46,"brandId":0,"goodsWeight":0,"goodsNumber":1000,"marketPrice":2.4,"shopPrice":2,"promotePrice":99,"promoteStartDate":1500451889000,"promoteEndDate":1500624696000,"keywords":"","goodsBrief":"","goodsThumb":"10.10.140.231:81/shop/data/images/201603/thumb_img/_thumb_P_1457590880591.jpg","goodsImg":"10.10.140.231:81/shop/data/images/201603/goods_img/_P_1457590880024.jpg","addTime":1495073415000,"isOnSale":1,"salenum":0,"sortOrder":100,"isDelete":0,"isBest":0,"isNew":1,"isHot":1,"isPromote":1,"isDiscount":0,"returnMoney":2,"lastUpdate":1495073422000,"goodsType":2,"sellerNote":"","supplierId":0,"supplierStatus":1,"specialGoods":0,"reuseOne":null,"reuseTwo":null,"reuseThree":null},{"goodsId":282,"catId":218,"goodsSn":"ECS000282","goodsName":"超B级锁芯防伪升级版 防盗门锁芯 防锡纸开门37.5+32.5=70mm","goodsNameStyle":"+","clickCount":3,"brandId":0,"goodsWeight":0,"goodsNumber":997,"marketPrice":154,"shopPrice":129,"promotePrice":99,"promoteStartDate":1500451889000,"promoteEndDate":1500624696000,"keywords":"","goodsBrief":"","goodsThumb":"10.10.140.231:81/shop/data/images/201602/thumb_img/282_thumb_G_1456454106731.jpg","goodsImg":"10.10.140.231:81/shop/data/images/201602/goods_img/282_G_1456454106734.jpg","addTime":1495073415000,"isOnSale":1,"salenum":0,"sortOrder":100,"isDelete":0,"isBest":0,"isNew":1,"isHot":1,"isPromote":1,"isDiscount":0,"returnMoney":2,"lastUpdate":1501292359000,"goodsType":0,"sellerNote":"","supplierId":0,"supplierStatus":1,"specialGoods":0,"reuseOne":null,"reuseTwo":null,"reuseThree":null},{"goodsId":281,"catId":218,"goodsSn":"ECS000281","goodsName":"卡贝 不锈钢户门吸15CM加长特长墙吸地碰门挡强磁现代家用五金 拉丝不锈钢","goodsNameStyle":"+","clickCount":3,"brandId":0,"goodsWeight":0,"goodsNumber":1000,"marketPrice":46,"shopPrice":39,"promotePrice":99,"promoteStartDate":1500451889000,"promoteEndDate":1500624696000,"keywords":"","goodsBrief":"","goodsThumb":"10.10.140.231:81/shop/data/images/201602/thumb_img/281_thumb_G_1456453972506.jpg","goodsImg":"10.10.140.231:81/shop/data/images/201602/goods_img/281_G_1456453972612.jpg","addTime":1495073415000,"isOnSale":1,"salenum":0,"sortOrder":100,"isDelete":0,"isBest":0,"isNew":1,"isHot":1,"isPromote":1,"isDiscount":0,"returnMoney":2,"lastUpdate":1495073422000,"goodsType":0,"sellerNote":"","supplierId":0,"supplierStatus":1,"specialGoods":0,"reuseOne":null,"reuseTwo":null,"reuseThree":null},{"goodsId":280,"catId":218,"goodsSn":"ECS000280","goodsName":"宝雕 欧式双舌静音象牙白室内房门锁M87457 象牙白宝雕","goodsNameStyle":"+","clickCount":2,"brandId":0,"goodsWeight":0,"goodsNumber":1000,"marketPrice":118.8,"shopPrice":99,"promotePrice":99,"promoteStartDate":1500451889000,"promoteEndDate":1500624696000,"keywords":"","goodsBrief":"","goodsThumb":"10.10.140.231:81/shop/data/images/201602/thumb_img/280_thumb_G_1456453887329.jpg","goodsImg":"10.10.140.231:81/shop/data/images/201602/goods_img/280_G_1456453887069.jpg","addTime":1495073415000,"isOnSale":1,"salenum":0,"sortOrder":100,"isDelete":0,"isBest":0,"isNew":1,"isHot":1,"isPromote":1,"isDiscount":0,"returnMoney":2,"lastUpdate":1495073422000,"goodsType":0,"sellerNote":"","supplierId":0,"supplierStatus":1,"specialGoods":0,"reuseOne":null,"reuseTwo":null,"reuseThree":null}]
          */
 
         public String itemType;
         public String module;
         public List<ItemListBean> itemList;
 
+        public String getItemType() {
+            return itemType;
+        }
+
+        public void setItemType(String itemType) {
+            this.itemType = itemType;
+        }
 
         public String getModule() {
             return module;
@@ -104,217 +104,313 @@ public class HomeWares  {
         public void setItemList(List<ItemListBean> itemList) {
             this.itemList = itemList;
         }
-        @Override
-        public int getItemType() {
-            if("goods".equals(itemType)){
-                return Constant.TYPE_JD_SPIKE_CONTENT;
-            }
-            else if("recommended_ware".equals(itemType)){
-                return Constant.TYPE_RECOMMENDED_WARE;
-            }else if ("topBanner".equals(itemType)){
-                return Constant.TYPE_TOP_BANNER;
-            }
-            return Constant.TYPE_RECOMMENDED_WARE;
-        }
-
-        public int getSpanSize() {
-
-            if("recommended_ware".equals(itemType)){
-                return 2;
-            }
-            return 4;
-        }
-
-
 
         public static class ItemListBean {
             /**
-             * goods_id : 292
-             * cat_id : null
-             * goods_sn : null
-             * goods_name : 一加手机3T (A3010) 6GB+64GB 枪灰版 全网通 双卡双待 移动联通电信4G手机
-             * goods_name_style : null
-             * click_count : null
-             * brand_id : null
-             * goods_weight : 0
-             * goods_number : null
-             * market_price : 0
-             * shop_price : 2399
-             * promote_price : 1111
-             * promote_start_date : null
-             * promoteEndDate : null
-             * keywords : null
-             * goods_brief : null
-             * goods_thumb : 49.122.47.185:8080/XJD/data/images/20170529/58343dc1Nbb3d4722.jpg
-             * goods_img : 49.122.47.185:8080/XJD/data/images/20170529/58343dc1Nbb3d4722.jpg
-             * add_time : null
-             * is_on_sale : null
+             * goodsId : 292
+             * catId : 369
+             * goodsSn : EN1232133600
+             * goodsName : 一加手机3T (A3010) 6GB+64GB 枪灰版 全网通 双卡双待 移动联通电信4G手机
+             * goodsNameStyle : +
+             * clickCount : 999
+             * brandId : 106
+             * goodsWeight : 1
+             * goodsNumber : 1000
+             * marketPrice : 3333.13
+             * shopPrice : 2399
+             * promotePrice : 99
+             * promoteStartDate : 1500451889000
+             * promoteEndDate : 1500624696000
+             * keywords : 商品关键词商品关键词无敌手机
+             * goodsBrief : 商品描述商品描述无敌手机无敌手机无敌手机无敌手机
+             * goodsThumb : 10.10.140.231:81/shop/data/images/20170529/58343dc1Nbb3d4722.jpg
+             * goodsImg : 10.10.140.231:81/shop/data/images/20170529/58343dc1Nbb3d4722.jpg
+             * addTime : 1496040309000
+             * isOnSale : 1
              * salenum : 69764
-             * sort_order : null
-             * is_delete : null
-             * is_best : null
-             * is_new : null
-             * is_hot : 1
-             * is_promote : 0
-             * is_discount : null
-             * return_money : null
-             * last_update : null
-             * goods_type : null
-             * seller_note : null
-             * supplier_id : null
-             * supplier_status : null
-             * special_goods : null
-             * reuse_one : null
-             * reuse_two : null
-             * reuse_three : null
+             * sortOrder : 100
+             * isDelete : 0
+             * isBest : 1
+             * isNew : 1
+             * isHot : 1
+             * isPromote : 1
+             * isDiscount : 0
+             * returnMoney : 2
+             * lastUpdate : 1500517076000
+             * goodsType : 0
+             * sellerNote : 商家描述商家描无敌手机
+             * supplierId : 0
+             * supplierStatus : 1
+             * specialGoods : 0
+             * reuseOne : null
+             * reuseTwo : null
+             * reuseThree : null
              */
 
-            public int goods_id;
-            public String cat_id;
-            public String goods_sn;
-            public String goods_name;
-            public String goods_name_style;
-            //public String click_count;
-            public String brand_id;
-            public int goods_weight;
-            public String goods_number;
-            public int market_price;
-            public int shop_price;
-            public int promote_price;
-            public String promote_start_date;
+            public int goodsId;
+            public int catId;
+            public String goodsSn;
+            public String goodsName;
+            public String goodsNameStyle;
+            public int clickCount;
+            public int brandId;
+            public int goodsWeight;
+            public int goodsNumber;
+            public String marketPrice;
+            public String shopPrice;
+            public String promotePrice;
+            public String promoteStartDate;
             public String promoteEndDate;
             public String keywords;
-            public String goods_brief;
-            public String goods_thumb;
-            public String goods_img;
-            public String add_time;
-            public String is_on_sale;
+            public String goodsBrief;
+            public String goodsThumb;
+            public String goodsImg;
+            public long addTime;
+            public int isOnSale;
             public int salenum;
-            public String sort_order;
-            public String is_delete;
-            public String is_best;
-            public String is_new;
-            public int is_hot;
-            public int is_promote;
-            public String is_discount;
-            public String return_money;
-            public String last_update;
-            public String goods_type;
-            public String seller_note;
-            public String supplier_id;
-            public String supplier_status;
-            public String special_goods;
-            public String reuse_one;
-            public String reuse_two;
-            public String reuse_three;
-            public int click_count;
+            public int sortOrder;
+            public int isDelete;
+            public int isBest;
+            public int isNew;
+            public int isHot;
+            public int isPromote;
+            public int isDiscount;
+            public int returnMoney;
+            public long lastUpdate;
+            public int goodsType;
+            public String sellerNote;
+            public int supplierId;
+            public int supplierStatus;
+            public int specialGoods;
+            public String reuseOne;
+            public String reuseTwo;
+            public String reuseThree;
+            /**
+             * adId : 90
+             * positionId : 65
+             * mediaType : 0
+             * adName : 首页幻灯片1
+             * adLink :
+             * startTime : 1496062234000
+             * endTime : 1496062238000
+             * linkMan :
+             * linkEmail :
+             * linkPhone :
+             * enabled : 1
+             * adCode : 10.10.140.231:81/shop/data/images/afficheimg/20150722uzphik.jpg
+             */
+
+            public int adId;
+            public int positionId;
+            public int mediaType;
+            public String adName;
+            public String adLink;
+            public long startTime;
+            public long endTime;
+            public String linkMan;
+            public String linkEmail;
+            public String linkPhone;
             public int enabled;
-            public int ad_id;
-            public int position_id;
-            public String media_type;
-            public String ad_name;
-            public String ad_link;
-            public String ad_code;
-            public long start_time;
-            public long end_time;
-            public String link_man;
-            public String link_email;
-            public String link_phone;
+            public String adCode;
 
-            public int getGoods_id() {
-                return goods_id;
+            public int getAdId() {
+                return adId;
             }
 
-            public void setGoods_id(int goods_id) {
-                this.goods_id = goods_id;
+            public void setAdId(int adId) {
+                this.adId = adId;
             }
 
-            public String getCat_id() {
-                return cat_id;
+            public int getPositionId() {
+                return positionId;
             }
 
-            public void setCat_id(String cat_id) {
-                this.cat_id = cat_id;
+            public void setPositionId(int positionId) {
+                this.positionId = positionId;
             }
 
-            public String getGoods_sn() {
-                return goods_sn;
+            public int getMediaType() {
+                return mediaType;
             }
 
-            public void setGoods_sn(String goods_sn) {
-                this.goods_sn = goods_sn;
+            public void setMediaType(int mediaType) {
+                this.mediaType = mediaType;
             }
 
-            public String getGoods_name() {
-                return goods_name;
+            public String getAdName() {
+                return adName;
             }
 
-            public void setGoods_name(String goods_name) {
-                this.goods_name = goods_name;
+            public void setAdName(String adName) {
+                this.adName = adName;
             }
 
-            public String getGoods_name_style() {
-                return goods_name_style;
+            public String getAdLink() {
+                return adLink;
             }
 
-            public void setGoods_name_style(String goods_name_style) {
-                this.goods_name_style = goods_name_style;
+            public void setAdLink(String adLink) {
+                this.adLink = adLink;
             }
 
-            public String getBrand_id() {
-                return brand_id;
+            public long getStartTime() {
+                return startTime;
             }
 
-            public void setBrand_id(String brand_id) {
-                this.brand_id = brand_id;
+            public void setStartTime(long startTime) {
+                this.startTime = startTime;
             }
 
-            public int getGoods_weight() {
-                return goods_weight;
+            public long getEndTime() {
+                return endTime;
             }
 
-            public void setGoods_weight(int goods_weight) {
-                this.goods_weight = goods_weight;
+            public void setEndTime(long endTime) {
+                this.endTime = endTime;
             }
 
-            public String getGoods_number() {
-                return goods_number;
+            public String getLinkMan() {
+                return linkMan;
             }
 
-            public void setGoods_number(String goods_number) {
-                this.goods_number = goods_number;
+            public void setLinkMan(String linkMan) {
+                this.linkMan = linkMan;
             }
 
-            public int getMarket_price() {
-                return market_price;
+            public String getLinkEmail() {
+                return linkEmail;
             }
 
-            public void setMarket_price(int market_price) {
-                this.market_price = market_price;
+            public void setLinkEmail(String linkEmail) {
+                this.linkEmail = linkEmail;
             }
 
-            public int getShop_price() {
-                return shop_price;
+            public String getLinkPhone() {
+                return linkPhone;
             }
 
-            public void setShop_price(int shop_price) {
-                this.shop_price = shop_price;
+            public void setLinkPhone(String linkPhone) {
+                this.linkPhone = linkPhone;
             }
 
-            public int getPromote_price() {
-                return promote_price;
+            public int getEnabled() {
+                return enabled;
             }
 
-            public void setPromote_price(int promote_price) {
-                this.promote_price = promote_price;
+            public void setEnabled(int enabled) {
+                this.enabled = enabled;
             }
 
-            public String getPromote_start_date() {
-                return promote_start_date;
+            public String getAdCode() {
+                return adCode;
             }
 
-            public void setPromote_start_date(String promote_start_date) {
-                this.promote_start_date = promote_start_date;
+            public void setAdCode(String adCode) {
+                this.adCode = adCode;
+            }
+
+            public int getGoodsId() {
+                return goodsId;
+            }
+
+            public void setGoodsId(int goodsId) {
+                this.goodsId = goodsId;
+            }
+
+            public int getCatId() {
+                return catId;
+            }
+
+            public void setCatId(int catId) {
+                this.catId = catId;
+            }
+
+            public String getGoodsSn() {
+                return goodsSn;
+            }
+
+            public void setGoodsSn(String goodsSn) {
+                this.goodsSn = goodsSn;
+            }
+
+            public String getGoodsName() {
+                return goodsName;
+            }
+
+            public void setGoodsName(String goodsName) {
+                this.goodsName = goodsName;
+            }
+
+            public String getGoodsNameStyle() {
+                return goodsNameStyle;
+            }
+
+            public void setGoodsNameStyle(String goodsNameStyle) {
+                this.goodsNameStyle = goodsNameStyle;
+            }
+
+            public int getClickCount() {
+                return clickCount;
+            }
+
+            public void setClickCount(int clickCount) {
+                this.clickCount = clickCount;
+            }
+
+            public int getBrandId() {
+                return brandId;
+            }
+
+            public void setBrandId(int brandId) {
+                this.brandId = brandId;
+            }
+
+            public int getGoodsWeight() {
+                return goodsWeight;
+            }
+
+            public void setGoodsWeight(int goodsWeight) {
+                this.goodsWeight = goodsWeight;
+            }
+
+            public int getGoodsNumber() {
+                return goodsNumber;
+            }
+
+            public void setGoodsNumber(int goodsNumber) {
+                this.goodsNumber = goodsNumber;
+            }
+
+            public String getMarketPrice() {
+                return marketPrice;
+            }
+
+            public void setMarketPrice(String marketPrice) {
+                this.marketPrice = marketPrice;
+            }
+
+            public String getShopPrice() {
+                return shopPrice;
+            }
+
+            public void setShopPrice(String shopPrice) {
+                this.shopPrice = shopPrice;
+            }
+
+            public String getPromotePrice() {
+                return promotePrice;
+            }
+
+            public void setPromotePrice(String promotePrice) {
+                this.promotePrice = promotePrice;
+            }
+
+            public String getPromoteStartDate() {
+                return promoteStartDate;
+            }
+
+            public void setPromoteStartDate(String promoteStartDate) {
+                this.promoteStartDate = promoteStartDate;
             }
 
             public String getPromoteEndDate() {
@@ -333,44 +429,44 @@ public class HomeWares  {
                 this.keywords = keywords;
             }
 
-            public String getGoods_brief() {
-                return goods_brief;
+            public String getGoodsBrief() {
+                return goodsBrief;
             }
 
-            public void setGoods_brief(String goods_brief) {
-                this.goods_brief = goods_brief;
+            public void setGoodsBrief(String goodsBrief) {
+                this.goodsBrief = goodsBrief;
             }
 
-            public String getGoods_thumb() {
-                return goods_thumb;
+            public String getGoodsThumb() {
+                return goodsThumb;
             }
 
-            public void setGoods_thumb(String goods_thumb) {
-                this.goods_thumb = goods_thumb;
+            public void setGoodsThumb(String goodsThumb) {
+                this.goodsThumb = goodsThumb;
             }
 
-            public String getGoods_img() {
-                return goods_img;
+            public String getGoodsImg() {
+                return goodsImg;
             }
 
-            public void setGoods_img(String goods_img) {
-                this.goods_img = goods_img;
+            public void setGoodsImg(String goodsImg) {
+                this.goodsImg = goodsImg;
             }
 
-            public String getAdd_time() {
-                return add_time;
+            public long getAddTime() {
+                return addTime;
             }
 
-            public void setAdd_time(String add_time) {
-                this.add_time = add_time;
+            public void setAddTime(long addTime) {
+                this.addTime = addTime;
             }
 
-            public String getIs_on_sale() {
-                return is_on_sale;
+            public int getIsOnSale() {
+                return isOnSale;
             }
 
-            public void setIs_on_sale(String is_on_sale) {
-                this.is_on_sale = is_on_sale;
+            public void setIsOnSale(int isOnSale) {
+                this.isOnSale = isOnSale;
             }
 
             public int getSalenum() {
@@ -381,245 +477,142 @@ public class HomeWares  {
                 this.salenum = salenum;
             }
 
-            public String getSort_order() {
-                return sort_order;
+            public int getSortOrder() {
+                return sortOrder;
             }
 
-            public void setSort_order(String sort_order) {
-                this.sort_order = sort_order;
+            public void setSortOrder(int sortOrder) {
+                this.sortOrder = sortOrder;
             }
 
-            public String getIs_delete() {
-                return is_delete;
+            public int getIsDelete() {
+                return isDelete;
             }
 
-            public void setIs_delete(String is_delete) {
-                this.is_delete = is_delete;
+            public void setIsDelete(int isDelete) {
+                this.isDelete = isDelete;
             }
 
-            public String getIs_best() {
-                return is_best;
+            public int getIsBest() {
+                return isBest;
             }
 
-            public void setIs_best(String is_best) {
-                this.is_best = is_best;
+            public void setIsBest(int isBest) {
+                this.isBest = isBest;
             }
 
-            public String getIs_new() {
-                return is_new;
+            public int getIsNew() {
+                return isNew;
             }
 
-            public void setIs_new(String is_new) {
-                this.is_new = is_new;
+            public void setIsNew(int isNew) {
+                this.isNew = isNew;
             }
 
-            public int getIs_hot() {
-                return is_hot;
+            public int getIsHot() {
+                return isHot;
             }
 
-            public void setIs_hot(int is_hot) {
-                this.is_hot = is_hot;
+            public void setIsHot(int isHot) {
+                this.isHot = isHot;
             }
 
-            public int getIs_promote() {
-                return is_promote;
+            public int getIsPromote() {
+                return isPromote;
             }
 
-            public void setIs_promote(int is_promote) {
-                this.is_promote = is_promote;
+            public void setIsPromote(int isPromote) {
+                this.isPromote = isPromote;
             }
 
-            public String getIs_discount() {
-                return is_discount;
+            public int getIsDiscount() {
+                return isDiscount;
             }
 
-            public void setIs_discount(String is_discount) {
-                this.is_discount = is_discount;
+            public void setIsDiscount(int isDiscount) {
+                this.isDiscount = isDiscount;
             }
 
-            public String getReturn_money() {
-                return return_money;
+            public int getReturnMoney() {
+                return returnMoney;
             }
 
-            public void setReturn_money(String return_money) {
-                this.return_money = return_money;
+            public void setReturnMoney(int returnMoney) {
+                this.returnMoney = returnMoney;
             }
 
-            public String getLast_update() {
-                return last_update;
+            public long getLastUpdate() {
+                return lastUpdate;
             }
 
-            public void setLast_update(String last_update) {
-                this.last_update = last_update;
+            public void setLastUpdate(long lastUpdate) {
+                this.lastUpdate = lastUpdate;
             }
 
-            public String getGoods_type() {
-                return goods_type;
+            public int getGoodsType() {
+                return goodsType;
             }
 
-            public void setGoods_type(String goods_type) {
-                this.goods_type = goods_type;
+            public void setGoodsType(int goodsType) {
+                this.goodsType = goodsType;
             }
 
-            public String getSeller_note() {
-                return seller_note;
+            public String getSellerNote() {
+                return sellerNote;
             }
 
-            public void setSeller_note(String seller_note) {
-                this.seller_note = seller_note;
+            public void setSellerNote(String sellerNote) {
+                this.sellerNote = sellerNote;
             }
 
-            public String getSupplier_id() {
-                return supplier_id;
+            public int getSupplierId() {
+                return supplierId;
             }
 
-            public void setSupplier_id(String supplier_id) {
-                this.supplier_id = supplier_id;
+            public void setSupplierId(int supplierId) {
+                this.supplierId = supplierId;
             }
 
-            public String getSupplier_status() {
-                return supplier_status;
+            public int getSupplierStatus() {
+                return supplierStatus;
             }
 
-            public void setSupplier_status(String supplier_status) {
-                this.supplier_status = supplier_status;
+            public void setSupplierStatus(int supplierStatus) {
+                this.supplierStatus = supplierStatus;
             }
 
-            public String getSpecial_goods() {
-                return special_goods;
+            public int getSpecialGoods() {
+                return specialGoods;
             }
 
-            public void setSpecial_goods(String special_goods) {
-                this.special_goods = special_goods;
+            public void setSpecialGoods(int specialGoods) {
+                this.specialGoods = specialGoods;
             }
 
-            public String getReuse_one() {
-                return reuse_one;
+            public String getReuseOne() {
+                return reuseOne;
             }
 
-            public void setReuse_one(String reuse_one) {
-                this.reuse_one = reuse_one;
+            public void setReuseOne(String reuseOne) {
+                this.reuseOne = reuseOne;
             }
 
-            public String getReuse_two() {
-                return reuse_two;
+            public String getReuseTwo() {
+                return reuseTwo;
             }
 
-            public void setReuse_two(String reuse_two) {
-                this.reuse_two = reuse_two;
+            public void setReuseTwo(String reuseTwo) {
+                this.reuseTwo = reuseTwo;
             }
 
-            public String getReuse_three() {
-                return reuse_three;
+            public String getReuseThree() {
+                return reuseThree;
             }
 
-            public void setReuse_three(String reuse_three) {
-                this.reuse_three = reuse_three;
-            }
-
-            public int getClick_count() {
-                return click_count;
-            }
-
-            public void setClick_count(int click_count) {
-                this.click_count = click_count;
-            }
-
-            public int getEnabled() {
-                return enabled;
-            }
-
-            public void setEnabled(int enabled) {
-                this.enabled = enabled;
-            }
-
-            public int getAd_id() {
-                return ad_id;
-            }
-
-            public void setAd_id(int ad_id) {
-                this.ad_id = ad_id;
-            }
-
-            public int getPosition_id() {
-                return position_id;
-            }
-
-            public void setPosition_id(int position_id) {
-                this.position_id = position_id;
-            }
-
-            public String getMedia_type() {
-                return media_type;
-            }
-
-            public void setMedia_type(String media_type) {
-                this.media_type = media_type;
-            }
-
-            public String getAd_name() {
-                return ad_name;
-            }
-
-            public void setAd_name(String ad_name) {
-                this.ad_name = ad_name;
-            }
-
-            public String getAd_link() {
-                return ad_link;
-            }
-
-            public void setAd_link(String ad_link) {
-                this.ad_link = ad_link;
-            }
-
-            public String getAd_code() {
-                return ad_code;
-            }
-
-            public void setAd_code(String ad_code) {
-                this.ad_code = ad_code;
-            }
-
-            public long getStart_time() {
-                return start_time;
-            }
-
-            public void setStart_time(long start_time) {
-                this.start_time = start_time;
-            }
-
-            public long getEnd_time() {
-                return end_time;
-            }
-
-            public void setEnd_time(long end_time) {
-                this.end_time = end_time;
-            }
-
-            public String getLink_man() {
-                return link_man;
-            }
-
-            public void setLink_man(String link_man) {
-                this.link_man = link_man;
-            }
-
-            public String getLink_email() {
-                return link_email;
-            }
-
-            public void setLink_email(String link_email) {
-                this.link_email = link_email;
-            }
-
-            public String getLink_phone() {
-                return link_phone;
-            }
-
-            public void setLink_phone(String link_phone) {
-                this.link_phone = link_phone;
+            public void setReuseThree(String reuseThree) {
+                this.reuseThree = reuseThree;
             }
         }
     }
+
 }

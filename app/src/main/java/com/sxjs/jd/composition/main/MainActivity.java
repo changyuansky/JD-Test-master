@@ -11,12 +11,11 @@ import com.sxjs.common.widget.bottomnavigation.BottomNavigationBar;
 import com.sxjs.common.widget.bottomnavigation.BottomNavigationItem;
 import com.sxjs.jd.R;
 import com.sxjs.common.base.BaseActivity;
-import com.sxjs.jd.composition.main.classificationfragment.ClassificationFragment;
+import com.sxjs.jd.composition.main.classicfragment.ClassificationFragment;
 import com.sxjs.jd.composition.main.findfragment.FindFragment;
-import com.sxjs.jd.composition.main.homefragment.HomePresenter;
 import com.sxjs.jd.composition.main.homefragment.MainHomeFragment;
-
-import javax.inject.Inject;
+import com.sxjs.jd.composition.main.mine.MyFragment;
+import com.sxjs.jd.composition.main.shopcar.ShopCarFragment;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -31,6 +30,8 @@ public class MainActivity extends BaseActivity implements MainContract.View, Bot
     FrameLayout mainContainer;
     private MainHomeFragment mMainHomeFragment;
     private ClassificationFragment mClassificationFragment;
+    private MyFragment myFragment;
+    private ShopCarFragment shopCarFragment;
     private FragmentManager mFragmentManager;
     private FindFragment mFindFragment;
     private DataManager mdataManager;
@@ -46,14 +47,14 @@ public class MainActivity extends BaseActivity implements MainContract.View, Bot
         mdataManager = getAppComponent().getDataManager();
         presenter=new MainPresenter(mdataManager,this);
         initView();
-        initData();
     }
 
     public void initView() {
         mMainHomeFragment = (MainHomeFragment) mFragmentManager.findFragmentByTag("home_fg");
         mClassificationFragment = (ClassificationFragment) mFragmentManager.findFragmentByTag("class_fg");
         mFindFragment = (FindFragment) mFragmentManager.findFragmentByTag("find_fg");
-
+        myFragment = (MyFragment) mFragmentManager.findFragmentByTag("mine_fg");
+        shopCarFragment = (ShopCarFragment) mFragmentManager.findFragmentByTag("shopcar_fg");
         if(mMainHomeFragment == null){
             mMainHomeFragment = MainHomeFragment.newInstance();
             addFragment(R.id.main_container, mMainHomeFragment, "home_fg");
@@ -67,7 +68,18 @@ public class MainActivity extends BaseActivity implements MainContract.View, Bot
             mFindFragment = FindFragment.newInstance();
             addFragment(R.id.main_container, mFindFragment, "find_fg");
         }
-        mFragmentManager.beginTransaction().show(mMainHomeFragment).hide(mClassificationFragment).hide(mFindFragment)
+
+        if(shopCarFragment == null){
+            shopCarFragment = ShopCarFragment.newInstance();
+            addFragment(R.id.main_container, shopCarFragment, "shopcar_fg");
+        }
+
+        if(myFragment == null){
+            myFragment = MyFragment.newInstance();
+            addFragment(R.id.main_container,myFragment, "mine_fg");
+        }
+
+        mFragmentManager.beginTransaction().show(mMainHomeFragment).hide(mClassificationFragment).hide(mFindFragment).hide(myFragment).hide(shopCarFragment)
                 .commitAllowingStateLoss();
 
         initBottomNavigation();
@@ -79,7 +91,7 @@ public class MainActivity extends BaseActivity implements MainContract.View, Bot
                 .setBorderWidth(4)
                 .setBackgroundColorResource(R.color.colorAccent)
                 .setText("99+")
-                .setHideOnSelect(false);
+                .setHideOnSelect(true);
 
         bottomNavigationBar.setMode(BottomNavigationBar.MODE_FIXED);
         //bottomNavigationBar.setMode(BottomNavigationBar.MODE_SHIFTING);
@@ -100,13 +112,8 @@ public class MainActivity extends BaseActivity implements MainContract.View, Bot
         bottomNavigationBar.setTabSelectedListener(this);
     }
 
-    private static final String TAG = "MainActivity";
+    private static final String TAG = "ClassificationFragment";
 
-
-    public void initData() {
-        //presenter.getText();
-        //mHomePresenter.getBargainGoods(false);
-    }
 
     private String text;
 
@@ -147,15 +154,23 @@ public class MainActivity extends BaseActivity implements MainContract.View, Bot
     @Override
     public void onTabSelected(int position) {
         if(position == 0){
-            mFragmentManager.beginTransaction().hide(mFindFragment).hide(mClassificationFragment).show(mMainHomeFragment)
+            mFragmentManager.beginTransaction().hide(mFindFragment).hide(mClassificationFragment).hide(shopCarFragment).hide(myFragment).show(mMainHomeFragment)
                     .commitAllowingStateLoss();
         }
         else if(position == 1){
-            mFragmentManager.beginTransaction().hide(mFindFragment).hide(mMainHomeFragment).show(mClassificationFragment)
+            mFragmentManager.beginTransaction().hide(mFindFragment).hide(mMainHomeFragment).hide(shopCarFragment).hide(myFragment).show(mClassificationFragment)
                     .commitAllowingStateLoss();
         }
         else if(position == 2){
-            mFragmentManager.beginTransaction().hide(mClassificationFragment).hide(mMainHomeFragment).show(mFindFragment)
+            mFragmentManager.beginTransaction().hide(mClassificationFragment).hide(mMainHomeFragment).hide(shopCarFragment).hide(myFragment).show(mFindFragment)
+                    .commitAllowingStateLoss();
+        }
+        else if(position == 3){
+            mFragmentManager.beginTransaction().hide(mFindFragment).hide(mMainHomeFragment).hide(myFragment).hide(mClassificationFragment).show(shopCarFragment)
+                    .commitAllowingStateLoss();
+        }
+        else if(position == 4){
+            mFragmentManager.beginTransaction().hide(mFindFragment).hide(mMainHomeFragment).hide(mMainHomeFragment).hide(shopCarFragment).show(myFragment)
                     .commitAllowingStateLoss();
         }
     }

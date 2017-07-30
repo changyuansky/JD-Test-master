@@ -24,7 +24,7 @@ import com.sxjs.common.widget.pulltorefresh.PtrHandler;
 import com.sxjs.jd.MyApplication;
 import com.sxjs.jd.R;
 import com.sxjs.common.base.BaseFragment;
-import com.sxjs.jd.composition.entities.FindsBean;
+
 
 import java.util.List;
 
@@ -79,7 +79,7 @@ public class FindFragment extends BaseFragment implements PtrHandler, BaseQuickA
     private static final String TAG = "FindFragment";
 
 
-    public void setFindData(FindsBean find) {
+    public void setFindData(Object find) {
         //adapter.addData(find.content);
     }
 
@@ -109,7 +109,6 @@ public class FindFragment extends BaseFragment implements PtrHandler, BaseQuickA
                     adapter.loadMoreEnd(false);
                 }
                 else{
-                    Log.d("yuan", "发现->加载更多触发");
                     mPresenter.getMoreFindData();
                 }
             }

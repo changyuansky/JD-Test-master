@@ -108,132 +108,142 @@ public class ShopCar {
         }
 
         public static class ItemListBean {
+
             /**
-             * rec_id : 4
-             * user_id : 7
-             * goods_id : 291
-             * goods_sn : ED23188167
-             * product_id : 55
-             * goods_name : 女人志 新款灯笼袖中领毛衣+韩绒料口袋短裙套装送皮带2233
-             * market_price : 119
-             * goods_price : 81
-             * goods_number : 1
-             * goods_attrId : null
-             * add_time : 1500349011000
-             * goods_attr : 尺码:S
-             * supplier_name : 小小旗舰店
-             * goods_Img : 49.122.47.185:8080/XJD/data/images/201603/thumb_img/_thumb_P_1458307388786.jpg
+             * recId : 13
+             * userId : 7
+             * goodsId : 232
+             * goodsSn : ECS000232
+             * productId : 0
+             * goodsName : 包邮 新款户外军迷阿帕奇T恤 纯棉男款短袖半袖特价宽松
+             * marketPrice : 328.8
+             * goodsPrice : 99
+             * goodsNumber : 1
+             * goodsAttrId :
+             * addTime : 1501122399000
+             * goodsAttr :
+             * supplier_name : 商城自营
+             * goodsImg : 10.10.140.231:81/shop/data/images/201507/thumb_img/_thumb_P_1438047501681.jpg
              */
 
-            public int rec_id;
-            public int user_id;
-            public int goods_id;
-            public String goods_sn;
-            public int product_id;
-            public String goods_name;
-            public int market_price;
-            public int goods_price;
-            public int goods_number;
-            public Object goods_attrId;
-            public long add_time;
-            public String goods_attr;
+            public int recId;
+            public int userId;
+            public int goodsId;
+            public String goodsSn;
+            public int productId;
+            public String goodsName;
+            public double marketPrice;
+            public int goodsPrice;
+            public int goodsNumber;
+            public String goodsAttrId;
+            public long addTime;
+            public String goodsAttr;
             public String supplier_name;
-            public String goods_Img;
+            public String goodsImg;
+            public boolean select=true;
 
-            public int getRec_id() {
-                return rec_id;
+            public boolean getIsSelect() {
+                return select;
             }
 
-            public void setRec_id(int rec_id) {
-                this.rec_id = rec_id;
+            public void setSelect(boolean slect) {
+                select = slect;
             }
 
-            public int getUser_id() {
-                return user_id;
+            public int getRecId() {
+                return recId;
             }
 
-            public void setUser_id(int user_id) {
-                this.user_id = user_id;
+            public void setRecId(int recId) {
+                this.recId = recId;
             }
 
-            public int getGoods_id() {
-                return goods_id;
+            public int getUserId() {
+                return userId;
             }
 
-            public void setGoods_id(int goods_id) {
-                this.goods_id = goods_id;
+            public void setUserId(int userId) {
+                this.userId = userId;
             }
 
-            public String getGoods_sn() {
-                return goods_sn;
+            public int getGoodsId() {
+                return goodsId;
             }
 
-            public void setGoods_sn(String goods_sn) {
-                this.goods_sn = goods_sn;
+            public void setGoodsId(int goodsId) {
+                this.goodsId = goodsId;
             }
 
-            public int getProduct_id() {
-                return product_id;
+            public String getGoodsSn() {
+                return goodsSn;
             }
 
-            public void setProduct_id(int product_id) {
-                this.product_id = product_id;
+            public void setGoodsSn(String goodsSn) {
+                this.goodsSn = goodsSn;
             }
 
-            public String getGoods_name() {
-                return goods_name;
+            public int getProductId() {
+                return productId;
             }
 
-            public void setGoods_name(String goods_name) {
-                this.goods_name = goods_name;
+            public void setProductId(int productId) {
+                this.productId = productId;
             }
 
-            public int getMarket_price() {
-                return market_price;
+            public String getGoodsName() {
+                return goodsName;
             }
 
-            public void setMarket_price(int market_price) {
-                this.market_price = market_price;
+            public void setGoodsName(String goodsName) {
+                this.goodsName = goodsName;
             }
 
-            public int getGoods_price() {
-                return goods_price;
+            public double getMarketPrice() {
+                return marketPrice;
             }
 
-            public void setGoods_price(int goods_price) {
-                this.goods_price = goods_price;
+            public void setMarketPrice(double marketPrice) {
+                this.marketPrice = marketPrice;
             }
 
-            public int getGoods_number() {
-                return goods_number;
+            public int getGoodsPrice() {
+                return goodsPrice;
             }
 
-            public void setGoods_number(int goods_number) {
-                this.goods_number = goods_number;
+            public void setGoodsPrice(int goodsPrice) {
+                this.goodsPrice = goodsPrice;
             }
 
-            public Object getGoods_attrId() {
-                return goods_attrId;
+            public int getGoodsNumber() {
+                return goodsNumber;
             }
 
-            public void setGoods_attrId(Object goods_attrId) {
-                this.goods_attrId = goods_attrId;
+            public void setGoodsNumber(int goodsNumber) {
+                this.goodsNumber = goodsNumber;
             }
 
-            public long getAdd_time() {
-                return add_time;
+            public String getGoodsAttrId() {
+                return goodsAttrId;
             }
 
-            public void setAdd_time(long add_time) {
-                this.add_time = add_time;
+            public void setGoodsAttrId(String goodsAttrId) {
+                this.goodsAttrId = goodsAttrId;
             }
 
-            public String getGoods_attr() {
-                return goods_attr;
+            public long getAddTime() {
+                return addTime;
             }
 
-            public void setGoods_attr(String goods_attr) {
-                this.goods_attr = goods_attr;
+            public void setAddTime(long addTime) {
+                this.addTime = addTime;
+            }
+
+            public String getGoodsAttr() {
+                return goodsAttr;
+            }
+
+            public void setGoodsAttr(String goodsAttr) {
+                this.goodsAttr = goodsAttr;
             }
 
             public String getSupplier_name() {
@@ -244,12 +254,12 @@ public class ShopCar {
                 this.supplier_name = supplier_name;
             }
 
-            public String getGoods_Img() {
-                return goods_Img;
+            public String getGoodsImg() {
+                return goodsImg;
             }
 
-            public void setGoods_Img(String goods_Img) {
-                this.goods_Img = goods_Img;
+            public void setGoodsImg(String goodsImg) {
+                this.goodsImg = goodsImg;
             }
         }
     }
