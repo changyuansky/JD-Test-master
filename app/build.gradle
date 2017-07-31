@@ -74,6 +74,5 @@ dependencies {
     compile 'com.android.support:design:26.+'
     compile 'com.github.bumptech.glide:glide:3.5.2'
     //如果使用了特殊的Header
-    compile project(':bannerelibrary')
     compile project(':common')
 }

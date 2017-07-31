@@ -172,7 +172,7 @@ public class DataManager {
     //12 未付款订单  getNoPayOrderInfoByUserIdAndPageindex
     public void getNoPayOrderInfoByUserIdAndPageindex(DisposableObserver<MyOrderInfo> noPayOrderInfoConsumer,int userId,int pageindex,boolean update){
         Observable<MyOrderInfo> orderObservable=cacheProvider.
-                getNoPayOrderInfoByUserIdAndPageindex(getBaseApiService().getNoPayOrderInfoByUserIdAndPageindex(userId,pageindex,0),
+                getNoPayOrderInfoByUserIdAndPageindex(getBaseApiService().getNoPayOrderInfoByUserIdAndPageindex(userId,pageindex,0,1),
                         new DynamicKeyGroup(userId,pageindex),new EvictProvider(update));
         toSubscribe(orderObservable,noPayOrderInfoConsumer);
     }

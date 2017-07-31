@@ -91,7 +91,7 @@ public interface BaseApiService {
 
     //12   待付款订单(有缓存)  http://localhost:81/shop/api/order/info?userId=7&pageindex=1&payStatus=0
     @GET("api/order/info")
-    Observable<MyOrderInfo> getNoPayOrderInfoByUserIdAndPageindex(@Query("userId") int userId,@Query("pageindex") int pageindex,@Query("payStatus") int payStatus);
+    Observable<MyOrderInfo> getNoPayOrderInfoByUserIdAndPageindex(@Query("userId") int userId, @Query("pageindex") int pageindex, @Query("payStatus") int payStatus,@Query("orderStatus") int orderStatus);
     // 13 . 待发货 http://localhost:81/shop/api/order/info?userId=7&pageindex=1&shippingStatus=0&payStatus=2
     @GET("api/order/info")
     Observable<MyOrderInfo> getShipNoOrderInfoByUserIdAndPageindex(@Query("userId") int userId,@Query("pageindex") int pageindex,
