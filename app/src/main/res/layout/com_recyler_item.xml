@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:orientation="vertical"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:id="@+id/com_recyler_item_L">
+<RelativeLayout
+    android:id="@+id/com_recyler_item_up"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:background="@color/white">
+    <ImageView
+        android:id="@+id/com_recyler_item_tag"
+       android:layout_centerVertical="true"
+       android:src="@mipmap/ana"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="7dp"
+        />
+    <TextView
+        android:id="@+id/com_recyler_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="你选定的商家名"
+        android:layout_centerVertical="true"
+        android:textColor="#FF0D0D0D"
+        android:gravity="center"
+        android:layout_toRightOf="@+id/com_recyler_item_tag"
+      />
+    <ImageView
+     android:id="@+id/com_recyler_item_go"
+        android:layout_margin="5dp"
+      android:src="@mipmap/axt"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/com_recyler_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_marginRight="10dp"
+        android:id="@+id/com_recyler_item_hint"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#dc0c0c"
+        android:text="已完成"/>
+    <ImageView
+        android:layout_toLeftOf="@+id/com_recyler_item_hint"
+        android:layout_margin="10dp"
+        android:id="@+id/com_recyler_item_delete"
+        android:layout_centerVertical="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/aav"/>
+</RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/com_recyler_item_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <android.support.v7.widget.RecyclerView
+            android:background="#f1eeee"
+            android:id="@+id/com_recyler_item_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            >
+        </android.support.v7.widget.RecyclerView>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/white">
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:id="@+id/com_recyler_item_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FF0D0D0D"
+                android:layout_margin="5dp"
+                android:text="￥%s"/>
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@+id/com_recyler_item_price"
+                android:id="@+id/com_recyler_item_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FF0D0D0D"
+                android:text="实付款："/>
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/com_recyler_item_pay"
+                android:id="@+id/com_recyler_item_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FF0D0D0D"
+                android:text="%d"/>
+
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_marginRight="5dp"
+                android:layout_toLeftOf="@+id/com_recyler_item_num"
+                android:id="@+id/com_recyler_item_numw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#FF0D0D0D"
+                android:text="数量："/>
+
+
+        </RelativeLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:src="#dddddd"/>
+        <RelativeLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="40dp">
+
+                <Button
+                    android:id="@+id/com_recyler_item_bzcgm"
+                    android:layout_marginRight="10dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_width="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_height="36dp"
+                    android:background="@drawable/buttonshape"
+                    android:textColor="#dc0c0c"
+                    android:visibility="gone"
+                    android:text="再次购买"/>
+            <Button
+                android:id="@+id/com_recyler_item_bqrsh"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_height="36dp"
+                android:visibility="gone"
+                android:background="@drawable/buttonshape"
+                android:textColor="#dc0c0c"
+                android:text="确认收货"/>
+            <Button
+                android:id="@+id/com_recyler_item_bqzf"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:layout_centerVertical="true"
+                android:layout_height="36dp"
+                android:background="@drawable/buttonshape"
+                android:textColor="#dc0c0c"
+                android:text="去支付"/>
+            <Button
+                android:id="@+id/com_recyler_item_btxfh"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:visibility="gone"
+                android:layout_centerVertical="true"
+                android:layout_height="36dp"
+                android:background="@drawable/buttonshape"
+                android:textColor="#dc0c0c"
+                android:text="提醒发货"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="8dp"
+        android:src="#dddddd"/>
+
+
+</LinearLayout>

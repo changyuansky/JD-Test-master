@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="660px"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="5px" />
+
+    //商品图片
+    <ImageView
+        android:id="@+id/goodsThumb"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="5px" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:orientation="vertical">
+
+        //商品名称
+        <TextView
+            android:layout_marginLeft="10px"
+            android:layout_marginRight="10px"
+            android:layout_gravity="center"
+            android:id="@+id/goodsName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:lines="1"
+            android:textColor="#000000"
+            android:text="非当年看哪儿可能你肯安徽人忽然我还如华为和人哈诶嘿汇入啊而" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="5px" />
+        //商品价格
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="10px"
+                android:layout_height="match_parent" />
+
+
+            <TextView
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="售价;"/>
+
+            <TextView
+                android:id="@+id/shopPrice"
+                android:textSize="15dp"
+                android:background="#ffffff"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="123"
+                android:textColor="#ff0033" />
+
+            <TextView
+                android:textColor="#000000"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="市场价;"/>
+
+            <TextView
+                android:id="@+id/market_price"
+                android:textSize="15dp"
+                android:background="#ffffff"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="200"
+                android:textColor="#ff0033" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="5px" />
+
+        <LinearLayout
+            android:layout_marginLeft="5px"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+
+            <TextView
+                android:background="#ffffff"
+                android:layout_width="10px"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/ispromote"
+                android:text="减价"
+                android:textColor="#ff0033"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:background="#ffffff"
+                android:layout_width="20px"
+                android:layout_height="match_parent" />
+
+            <TextView
+                android:id="@+id/isHot"
+                android:lines="1"
+                android:textColor="#ff0033"
+                android:text="热销"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

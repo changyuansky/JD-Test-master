@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="bannerview-1.0.0">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.android/build-cache/986c35b4b660384472095d4e57dd00292e4a8119/output/res" />
+      <root url="jar://$USER_HOME$/.android/build-cache/986c35b4b660384472095d4e57dd00292e4a8119/output/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.czy1121/bannerview/1.0.0/45d9469182c5a7e81a74caf9fc006f7ad90160b5/bannerview-1.0.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+       <ImageView
+           android:id="@+id/frag_recyler_item_reitemone_i"
+           android:layout_margin="10dp"
+           android:layout_width="60dp"
+           android:layout_height="60dp"
+           android:layout_centerVertical="true"/>
+    <TextView
+        android:id="@+id/frag_recyler_item_reitemone_t"
+        android:layout_gravity="center"
+        android:textColor="#FF0D0D0D"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:singleLine="true"
+        android:maxEms="6"
+        android:text="养生壶玻璃加厚分体保温电煎药壶全自动花茶壶隔水炖正品"
+        />
+
+
+
+</LinearLayout>

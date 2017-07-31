@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/head"
+    android:layout_width="match_parent"
+    android:layout_height="430dp"
+    android:orientation="vertical">
+    <!-- 头像, 用户名称等信息 -->
+    <include
+        android:id="@+id/person_head"
+        layout="@layout/person_head_slice"
+        android:layout_width="match_parent"
+        android:layout_height="140dip" />
+    <!--  分割线-->
+    <include layout="@layout/separator_line_margin_slice" />
+    <!-- 订单分类 -->
+    <include layout="@layout/person_order_category_slice" />
+    <!--钱包分类-->
+    <include
+        android:id="@+id/person_integrate_rlayout"
+        layout="@layout/person_integrate_row_slice"
+        android:layout_width="match_parent"
+        android:layout_height="60dip" />
+    <!--   分割线-->
+    <include layout="@layout/separator_line_margin_slice" />
+    <!-- 客户服务-->
+    <include layout="@layout/commodity_follow" />
+    <!-- 我的活动 -->
+    <include layout="@layout/me_activities" />
+
+
+    <ImageView
+        android:scaleType="fitXY"
+        android:id="@+id/memberplus"
+        android:layout_width="fill_parent"
+        android:layout_height="40dip"
+        android:src="@drawable/memberplus" />
+
+
+</LinearLayout>

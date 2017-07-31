@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.example.administrator.order.myviews.AutoListView
+        android:id="@+id/Dfh_Al1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+    </com.example.administrator.order.myviews.AutoListView>
+    <LinearLayout
+        android:id="@+id/Dfh_view_emp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/zd"/>
+        <TextView
+            android:layout_marginTop="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#717070"
+            android:textSize="20sp"
+            android:text="您还没有相关订单"/>
+
+    </LinearLayout>
+
+
+
+
+
+
+</RelativeLayout>

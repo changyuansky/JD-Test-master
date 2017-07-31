@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dip"
+    android:gravity="center_vertical"
+    android:background="#ffffffff">
+
+
+    <LinearLayout
+        android:id="@+id/me_activity"
+        android:layout_weight="1.0"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#f6f6f6"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_horizontal|center_vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="30dip"
+            android:src="@drawable/personal_order_purchased_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dip"
+            android:text="我的活动"
+            android:textSize="15dip"
+            android:textColor="@android:color/black"/>
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/community"
+        android:layout_weight="1.0"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#f6f6f6"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_horizontal|center_vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="30dip"
+            android:src="@drawable/personal_order_purchased_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dip"
+            android:text="社区"
+            android:textSize="15dip"
+            android:textColor="@android:color/black"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/jd_supermarket"
+        android:layout_weight="1.0"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#f6f6f6"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_horizontal|center_vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:src="@drawable/personal_order_returned_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dip"
+            android:text="京东超市"
+            android:textColor="@android:color/black"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ranking_list"
+        android:layout_weight="1.0"
+        android:layout_width="0dip"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#f6f6f6"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center_horizontal|center_vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="40dip"
+            android:src="@drawable/personal_order_returned_icon"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="20dip"
+            android:text="排行榜"
+            android:textColor="@android:color/black"/>
+    </LinearLayout>
+
+
+
+
+
+
+
+
+
+</LinearLayout>

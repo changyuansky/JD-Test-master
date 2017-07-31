@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/white"
+    android:layout_height="40dp">
+    <RadioGroup
+        android:layout_marginTop="10dp"
+        android:id="@+id/R1"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="40dp">
+        <RadioButton
+            android:id="@+id/r_qb"
+            style="@style/RadioButtonstyle"
+            android:drawableBottom="@drawable/selsector"
+            android:text="全部"/>
+        <RadioButton
+            android:id="@+id/r_dfk"
+            style="@style/RadioButtonstyle"
+            android:drawableBottom="@drawable/selsector"
+            android:text="待付款"/>
+        <RadioButton
+            android:id="@+id/r_dfh"
+            style="@style/RadioButtonstyle"
+            android:drawableBottom="@drawable/selsector"
+            android:text="待发货"/>
+        <RadioButton
+            android:id="@+id/r_dsh"
+            style="@style/RadioButtonstyle"
+            android:drawableBottom="@drawable/selsector"
+            android:text="待收货"/>
+        <RadioButton
+            android:id="@+id/r_ywc"
+            style="@style/RadioButtonstyle"
+            android:drawableBottom="@drawable/selsector"
+            android:text="已完成"/>
+        <RadioButton
+            android:id="@+id/r_yqx"
+            style="@style/RadioButtonstyle"
+            android:drawableBottom="@drawable/selsector"
+            android:text="已取消"/>
+    </RadioGroup>
+
+</LinearLayout>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sxjs.common.widget.aspect_ratio_layout.AspectRatioLinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:Layout_viewAspectRatio="3.53"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+        <com.sxjs.common.widget.percentlayout.PercentLinearLayout
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:background="@color/white"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="登录" />
+
+            <TextView
+                android:id="@+id/gwck"
+                android:layout_width="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_centerVertical="true"
+                android:layout_height="20dp"
+                android:text="     登录后同步电脑与手机购物车中的商品"
+                />
+        </com.sxjs.common.widget.percentlayout.PercentLinearLayout>
+    <View
+        android:id="@+id/type1111_item_one_line"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_above="@+id/gz"
+        android:background="@color/lineColor" />
+
+<include layout="@layout/carrecycle_item_null"/>
+</com.sxjs.common.widget.aspect_ratio_layout.AspectRatioLinearLayout>

@@ -24,6 +24,7 @@ import com.sxjs.common.base.rxjava.ErrorDisposableObserver;
 import com.sxjs.common.bean.HomeBannerImg;
 import com.sxjs.common.bean.HomeWares;
 import com.sxjs.common.model.DataManager;
+import com.sxjs.common.util.NetworkUtil;
 import com.sxjs.common.util.ScreenUtil;
 import com.sxjs.common.widget.headerview.JDHeaderView;
 import com.sxjs.common.widget.pulltorefresh.PtrFrameLayout;
@@ -66,6 +67,7 @@ public class MainHomeFragment extends BaseFragment {
     private int pageindex=1;
     private int pageindextemp=1;
     private boolean logswitch=true;
+    private View mNonetView;
     public static MainHomeFragment newInstance() {
         return new MainHomeFragment();
     }
@@ -156,14 +158,17 @@ public class MainHomeFragment extends BaseFragment {
         context = GlobalAppComponent.getAppComponent().getContext();
         mDataManager = GlobalAppComponent.getAppComponent().getDataManager();
         refreshLayout = (RefreshLayout) rootView.findViewById(R.id.refreshLayout);
+        mNonetView = (View) rootView.findViewById(R.id.carrecycle_nonet);//无网络布局
         homerecyclerView.addItemDecoration(new RecommenderItemDecoration(context));
         setSmartRecyclerRefreshAndLoadMore();
-        getHomeBannerImgAndBargainGoods(false);
+        if (NetworkUtil.isNetworkAvailable(context)){
+            getHomeBannerImgAndBargainGoods(false);
+        }
         homeAdapter = new MyHomeAdapter(context);
         onRecommendWaresItemClick();
     }
     //获取特价商品和轮播图
-    public void getHomeBannerImgAndBargainGoods(boolean update) {
+    private void getHomeBannerImgAndBargainGoods(boolean update) {
         activity.showProgressDialogView();
         mDataManager.getHomeBannerImgAndBargainGoods(new ErrorDisposableObserver<HomeWares>() {
             @Override
@@ -193,6 +198,7 @@ public class MainHomeFragment extends BaseFragment {
             @Override
             public void onError(Throwable e) {
                 super.onError(e);
+                Toast.makeText(activity, "获取数据失败", Toast.LENGTH_SHORT).show();
                 if (logswitch)
                     Log.d("yuan", "HomePresenter---getHomeBannerImgAndBargainGoods错误: " + e.getMessage());
             }
@@ -207,7 +213,7 @@ public class MainHomeFragment extends BaseFragment {
         }, update);
     }
 
-    private void   getMoreRecommendedWares(boolean update)
+    private void getMoreRecommendedWares(boolean update)
     {
         pageindextemp=pageindex;
         pageindextemp++;
@@ -234,6 +240,8 @@ public class MainHomeFragment extends BaseFragment {
                 if (CommonConfig.SUCCESS_CODE.equals(homeWares.getCode())&&homeWares.getPageindex()>1) {
                     if (homeWares.getIsOver().equals(CommonConfig.HAVE_NEXT_PAGE)||homeWares.getIsOver().equals(CommonConfig.LAST_PAGE)) {
                         setMoreRecommendedWares(homeWares.getItems().get(0).getItemList());
+                    }else {
+                        Toast.makeText(activity, "没有更多数据了", Toast.LENGTH_SHORT).show();
                     }
                     pageindex=homeWares.getPageindex();
                 }
@@ -279,12 +287,14 @@ public class MainHomeFragment extends BaseFragment {
         refreshLayout.setOnRefreshListener(new OnRefreshListener() {
             @Override
             public void onRefresh(RefreshLayout refreshlayout) {
+                isConnectNet();
                 getUpdateRecommendedWares(true);
             }
         });
         refreshLayout.setOnLoadmoreListener(new OnLoadmoreListener() {
             @Override
             public void onLoadmore(RefreshLayout refreshlayout) {
+                isConnectNet();
                 getMoreRecommendedWares(false);
             }
         });
@@ -302,7 +312,6 @@ public class MainHomeFragment extends BaseFragment {
             }
         }
     }
-
     private void onRecommendWaresItemClick(){
         homeAdapter.setOnItemClickListener(new MyHomeAdapter.OnItemClickListener(){
             @Override
@@ -311,4 +320,19 @@ public class MainHomeFragment extends BaseFragment {
             }
         });
     }
+    //网络连接与否
+    private void isConnectNet() {
+
+        if (!NetworkUtil.isNetworkAvailable(context)) {
+            mNonetView.setVisibility(View.VISIBLE);
+            mEmtryView.setVisibility(View.GONE);
+            mItemView.setVisibility(View.GONE);
+        }
+        else {
+            //从服务器获取数据
+            initData();
+        }
+
+    }
+
 }
