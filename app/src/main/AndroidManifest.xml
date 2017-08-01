@@ -30,10 +30,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity android:name=".composition.login.LoginActivity"/>
-        <activity android:name=".composition.main.Order.MainActivity"></activity>
-        <activity android:name=".composition.main.Order.OrderActivity"></activity>
+        <activity android:name=".composition.main.Order_cn.MainActivity"></activity>
+        <activity android:name=".composition.main.Order_cn.OrderActivity"></activity>
+        <activity android:name=".composition.main.classifyicon_zy.ClassifyIconActivity"></activity>
+        <activity android:name=".composition.main.goodsinfo_xqs.MainFragmentActivity"></activity>
+
         <!-- 配置APP ID -->
         <meta-data
             android:name="BUGLY_APPID"
@@ -52,6 +54,13 @@
             android:value="true" />
         //支持超过16:9的纵横比设备
         <meta-data android:name="android.max_aspect" android:value="2.1" />
+
+        //设计尺寸
+        <meta-data android:name="design_width" android:value="1080">
+        </meta-data>
+        <meta-data android:name="design_height" android:value="1920">
+        </meta-data>
+
     </application>
 
 </manifest>

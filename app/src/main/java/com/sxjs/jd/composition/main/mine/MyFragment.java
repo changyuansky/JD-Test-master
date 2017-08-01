@@ -12,10 +12,12 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.sxjs.common.GlobalAppComponent;
 import com.sxjs.common.base.BaseFragment;
 import com.sxjs.common.bean.HomeWares;
+import com.sxjs.common.model.DataManager;
 import com.sxjs.jd.R;
 import com.sxjs.jd.composition.main.mine.RecyclerViewUtils.MyAdapter;
 import com.sxjs.jd.composition.main.mine.RecyclerViewUtils.MyDecoration;
@@ -31,7 +33,6 @@ import static com.bumptech.glide.gifdecoder.GifHeaderParser.TAG;
 /**
  * Created by Administrator on 2017/7/30.
  */
-
 public class MyFragment extends BaseFragment {
 
     private RecyclerView recyclerView;
@@ -43,7 +44,7 @@ public class MyFragment extends BaseFragment {
     public static MyFragment newInstance() {
         return new MyFragment();
     }
-
+    private  DataManager dataManager;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -55,33 +56,48 @@ public class MyFragment extends BaseFragment {
     @Override
     public void onStart() {
         super.onStart();
-
+        dataManager = GlobalAppComponent.getAppComponent().getDataManager();
         //recyclerview 的
         recyclerView = (RecyclerView) getView().findViewById(R.id.Recyclerview);
         layoutManager = new GridLayoutManager(getActivity(),2);
         decoration = new MyDecoration(getActivity());
         Log.d(TAG, "onCreate: 初始化完成");
+        getData(false);
+        layoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
+            @Override
+            public int getSpanSize(int position) {
+                switch (adapter.getItemViewType(position)){
+                    case 0:
+                        return 2;
+                    case 1:
+                        return 1;
+                    default:
+                        return -1;
+                }
+            }
+        });
 
-        GlobalAppComponent.getAppComponent().getDataManager().getHomeWares(new DisposableObserver<HomeWares>() {
+        //新功能
+        refreshLayout = (SwipeRefreshLayout) getView().findViewById(R.id.swipeRefreshLayout);
+        refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                //数据重新加载完成后，提示数据发生改变，并且设置现在不在刷新
+                refreshLayout.setRefreshing(false);
+                updateData();
+                Toast.makeText(getActivity(),"刷新成功",Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+    private void getData(boolean update){
+        dataManager.getHomeWares(new DisposableObserver<HomeWares>() {
             @Override
             public void onNext(HomeWares homeWares) {
 
-                Log.d(TAG, "onNext: 数据申请成功");
+            Log.d(TAG, "onNext: 数据申请成功");
 
                 adapter = new MyAdapter(getActivity(),homeWares.getItems().get(0).getItemList());
-                layoutManager.setSpanSizeLookup(new GridLayoutManager.SpanSizeLookup() {
-                    @Override
-                    public int getSpanSize(int position) {
-                        switch (adapter.getItemViewType(position)){
-                            case 0:
-                                return 2;
-                            case 1:
-                                return 1;
-                            default:
-                                return -1;
-                        }
-                    }
-                });
+
                 recyclerView.addOnScrollListener(new MyOnScrollListener(getActivity(),adapter));
                 recyclerView.setAdapter(adapter);
                 recyclerView.addItemDecoration(decoration);
@@ -90,30 +106,22 @@ public class MyFragment extends BaseFragment {
                 Log.d(TAG, "onNext: 商品列表成功");
             }
 
-            @Override
-            public void onError(Throwable e) {
-                Log.d(TAG, "onError: 网络访问出错");
+        @Override
+        public void onError(Throwable e) {
+            Log.d(TAG, "onError: 网络访问出错");
+        }
+
+        @Override
+        public void onComplete() {
+
             }
-
-            @Override
-            public void onComplete() {
-
-            }
-        }, 1, false);
-
-        //新功能
-        refreshLayout = (SwipeRefreshLayout) getView().findViewById(R.id.swipeRefreshLayout);
-        refreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
-            @Override
-            public void onRefresh() {
-                //数据重新加载完成后，提示数据发生改变，并且设置现在不在刷新
-                adapter.notifyDataSetChanged();
-                refreshLayout.setRefreshing(false);
-
-                Toast.makeText(getActivity(),"刷新成功",Toast.LENGTH_SHORT).show();
-            }
-        });
+        },1, update);
     }
+    private void updateData(){
+        getData(true);
+    }
+
+
 
 //    @OnClick({R.id.personal_order_oder,R.id.person_head_person})
 //    public void imagclick(View view1) {

@@ -55,9 +55,6 @@ public class MyOnScrollListener extends RecyclerView.OnScrollListener {
 
 
     public void loagmore(int page ){
-
-
-
         GlobalAppComponent.getAppComponent().getDataManager().getHomeWares(new DisposableObserver<HomeWares>() {
             @Override
             public void onNext(HomeWares homeWares) {

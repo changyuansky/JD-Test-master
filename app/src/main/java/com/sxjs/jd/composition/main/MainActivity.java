@@ -11,7 +11,7 @@ import com.sxjs.common.widget.bottomnavigation.BottomNavigationBar;
 import com.sxjs.common.widget.bottomnavigation.BottomNavigationItem;
 import com.sxjs.jd.R;
 import com.sxjs.common.base.BaseActivity;
-import com.sxjs.jd.composition.main.classicfragment.ClassificationFragment;
+import com.sxjs.jd.composition.main.classicfragment_lry.ClassificationFragment;
 import com.sxjs.jd.composition.main.findfragment.FindFragment;
 import com.sxjs.jd.composition.main.homefragment.MainHomeFragment;
 import com.sxjs.jd.composition.main.mine.MyFragment;
@@ -103,7 +103,7 @@ public class MainActivity extends BaseActivity implements MainContract.View, Bot
         bottomNavigationBar
                 .addItem(new BottomNavigationItem(R.drawable.axh, "").setInactiveIconResource(R.drawable.axg).setActiveColorResource(R.color.colorAccent))
                 .addItem(new BottomNavigationItem(R.drawable.axd, "").setInactiveIconResource(R.drawable.axc).setActiveColorResource(R.color.colorAccent))
-                .addItem(new BottomNavigationItem(R.drawable.axf, "").setInactiveIconResource(R.drawable.axe).setActiveColorResource(R.color.colorAccent))
+                .addItem(new BottomNavigationItem(R.drawable.library_red1, "").setInactiveIconResource(R.drawable.library_gray).setActiveColorResource(R.color.colorAccent))
                 .addItem(new BottomNavigationItem(R.drawable.axb, "").setInactiveIconResource(R.drawable.axa).setActiveColorResource(R.color.colorAccent).setBadgeItem(numberBadgeItem))
                 .addItem(new BottomNavigationItem(R.drawable.axj, "").setInactiveIconResource(R.drawable.axi).setActiveColorResource(R.color.colorAccent))
                 .setFirstSelectedPosition(0)

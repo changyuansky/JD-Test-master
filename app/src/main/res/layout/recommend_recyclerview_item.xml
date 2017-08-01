@@ -6,9 +6,7 @@
     android:background="#ffffff"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="5px" />
+
 
     //商品图片
     <ImageView
@@ -18,9 +16,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="5px" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -39,11 +34,9 @@
             android:layout_weight="1"
             android:lines="1"
             android:textColor="#000000"
-            android:text="非当年看哪儿可能你肯安徽人忽然我还如华为和人哈诶嘿汇入啊而" />
+              />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="5px" />
+
         //商品价格
 
         <LinearLayout
@@ -90,9 +83,7 @@
 
         </LinearLayout>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="5px" />
+
 
         <LinearLayout
             android:layout_marginLeft="5px"

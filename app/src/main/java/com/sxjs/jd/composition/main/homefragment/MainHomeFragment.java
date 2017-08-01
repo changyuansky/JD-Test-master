@@ -1,6 +1,7 @@
 package com.sxjs.jd.composition.main.homefragment;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
@@ -13,6 +14,8 @@ import android.view.ViewGroup;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.Toast;
+
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.scwang.smartrefresh.layout.api.RefreshLayout;
 import com.scwang.smartrefresh.layout.listener.OnLoadmoreListener;
 import com.scwang.smartrefresh.layout.listener.OnRefreshListener;
@@ -23,9 +26,12 @@ import com.sxjs.common.bean.HomeWares;
 import com.sxjs.common.model.DataManager;
 import com.sxjs.common.util.NetworkUtil;
 import com.sxjs.common.util.ScreenUtil;
+import com.sxjs.common.widget.imageview.ExpandImageView;
 import com.sxjs.jd.R;
 import com.sxjs.common.base.BaseFragment;
 import com.sxjs.jd.composition.main.MainActivity;
+import com.sxjs.jd.composition.main.goodsinfo_xqs.Fragments.PinFragment;
+
 import java.util.List;
 
 
@@ -325,7 +331,12 @@ public class MainHomeFragment extends BaseFragment {
         homeAdapter.setOnItemClickListener(new MyHomeAdapter.OnItemClickListener(){
             @Override
             public void onItemClick(View view , int position){
-                Toast.makeText(activity, ""+position, Toast.LENGTH_SHORT).show();
+               //Toast.makeText(activity, ""+position, Toast.LENGTH_SHORT).show();
+                List<HomeWares.ItemsBean.ItemListBean> recommendWareData = homeAdapter.getRecommendWareData();
+                int goodsId = recommendWareData.get(position).getGoodsId();
+                ARouter.getInstance().build("/xqs/mainfragmentactivity")
+                        .withInt(CommonConfig.GOODSINFO_KEY,goodsId)
+                        .navigation();
             }
         });
     }
@@ -335,6 +346,39 @@ public class MainHomeFragment extends BaseFragment {
             return true;
         }else return false;
     }
+
+
+
+    //8个iconList的点击事件
+    public void onItemChildClick(ExpandImageView view) {
+        switch (view.getId()) {
+            case R.id.icon_list_one:
+                ARouter.getInstance().build("/test1/activity").navigation(view.getContext());
+                break;
+            case R.id.icon_list_two:
+                ARouter.getInstance().build("/test1/activity").navigation(view.getContext());
+                break;
+            case R.id.icon_list_three:
+                ARouter.getInstance().build("/test1/activity").navigation(view.getContext());
+                break;
+            case R.id.icon_list_four:
+                ARouter.getInstance().build("/test1/activity").navigation(view.getContext());
+                break;
+            case R.id.icon_list_six:
+                ARouter.getInstance().build("/test1/activity").navigation(view.getContext());
+                break;
+            case R.id.icon_list_seven:
+                ARouter.getInstance().build("/test1/activity").navigation(view.getContext());
+                break;
+            case R.id.icon_list_eight:
+                ARouter.getInstance().build("/test1/activity").navigation(view.getContext());
+                break;
+            case R.id.icon_list_nine:
+                ARouter.getInstance().build("/test1/activity").navigation(view.getContext());
+                break;
+        }
+    }
+
 
     @Override
     public void onDestroyView() {

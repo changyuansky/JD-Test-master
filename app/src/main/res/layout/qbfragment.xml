@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:cube_ptr="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <com.example.administrator.order.myviews.AutoListView
+    <com.sxjs.jd.composition.main.Order_cn.myviews.AutoListView
         android:id="@+id/Qb_Al1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        >
-    </com.example.administrator.order.myviews.AutoListView>
+        android:layout_height="match_parent">
+    </com.sxjs.jd.composition.main.Order_cn.myviews.AutoListView>
     <LinearLayout
         android:id="@+id/Qb_view_emp"
         android:layout_width="match_parent"
