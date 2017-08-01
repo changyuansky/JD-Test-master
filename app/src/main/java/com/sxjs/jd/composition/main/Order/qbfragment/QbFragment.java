@@ -54,9 +54,7 @@ public class QbFragment extends BaseFragment implements AutoListView.OnRefreshLi
 
     public void initData() {
         Log.d(tag,"initData");
-
         getdata(1);
-
     }
     public void getdata(int pageindex){
         Log.d(tag,"getdata");
@@ -120,21 +118,16 @@ public class QbFragment extends BaseFragment implements AutoListView.OnRefreshLi
         autoListView.onRefreshComplete();
         autoListView.onLoadComplete();
     }
-
     @Override
     public void onRefresh() {
         Log.d(tag,"onRefresh");
         getdata(1);
     }
-
     @Override
     public void onLoad() {
         Log.d(tag,"onLoad");
         int p=Pageindex+1;
         getdata(p);
     }
-
-
-
 }
 

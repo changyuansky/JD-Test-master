@@ -32,6 +32,8 @@
         </activity>
 
         <activity android:name=".composition.login.LoginActivity"/>
+        <activity android:name=".composition.main.Order.MainActivity"></activity>
+        <activity android:name=".composition.main.Order.OrderActivity"></activity>
         <!-- 配置APP ID -->
         <meta-data
             android:name="BUGLY_APPID"

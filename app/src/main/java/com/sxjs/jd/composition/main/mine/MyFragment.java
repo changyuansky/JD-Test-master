@@ -9,8 +9,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.sxjs.common.GlobalAppComponent;
 import com.sxjs.common.base.BaseFragment;
 import com.sxjs.common.bean.HomeWares;
@@ -19,6 +21,9 @@ import com.sxjs.jd.composition.main.mine.RecyclerViewUtils.MyAdapter;
 import com.sxjs.jd.composition.main.mine.RecyclerViewUtils.MyDecoration;
 import com.sxjs.jd.composition.main.mine.RecyclerViewUtils.MyOnScrollListener;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 import io.reactivex.observers.DisposableObserver;
 
 import static com.bumptech.glide.gifdecoder.GifHeaderParser.TAG;
@@ -42,7 +47,8 @@ public class MyFragment extends BaseFragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-          view = inflater.inflate(R.layout.activity_mine,container,false);
+        view = inflater.inflate(R.layout.activity_mine,container,false);
+         ButterKnife.bind(this, view);
         return view;
     }
 
@@ -108,6 +114,17 @@ public class MyFragment extends BaseFragment {
             }
         });
     }
+
+//    @OnClick({R.id.personal_order_oder,R.id.person_head_person})
+//    public void imagclick(View view1) {
+//        switch (view1.getId()) {
+//            case R.id.personal_order_oder:
+//                Log.d("33333", "imagclick: 跳转订单");
+//                ARouter.getInstance().build("/order/OrderActivity").navigation();
+//                break;
+//        }
+//
+//    }
 
     public void recommend(View view){
         switch (view.getId()){

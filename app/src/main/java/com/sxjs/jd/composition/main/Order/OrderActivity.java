@@ -9,6 +9,7 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+import com.alibaba.android.arouter.facade.annotation.Route;
 import com.alibaba.android.arouter.launcher.ARouter;
 //import com.example.administrator.order.dfhfragment.DfhAdapter;
 //import com.example.administrator.order.dfhfragment.DfhFragment;
@@ -30,7 +31,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-
+@Route(path = "/order/OrderActivity")
 public class OrderActivity extends BaseActivity {
 
 

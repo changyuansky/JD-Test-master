@@ -188,7 +188,6 @@ public class MainActivity extends BaseActivity implements MainContract.View, Bot
     @Override
     protected void onStart() {
         super.onStart();
-
     }
     @Override
     protected void onDestroy() {
@@ -196,8 +195,6 @@ public class MainActivity extends BaseActivity implements MainContract.View, Bot
         if (presenter != null) {
             presenter.destory();
         }
-
-
     }
 
 }

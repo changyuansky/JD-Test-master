@@ -1,6 +1,8 @@
 package com.sxjs.common.model.http;
 
 import android.content.Context;
+import android.util.Log;
+import android.widget.Toast;
 
 import com.sxjs.common.CommonConfig;
 import com.sxjs.common.cache.CacheProvider;
@@ -68,7 +70,12 @@ public class HttpHelper {
                 .addInterceptor(new BaseInterceptor<>(null,context))
                 .build();
         mRetrofitClient = createRetrofitClient(httpClient);
-
+        if (httpClient.readTimeoutMillis()/1000>CommonConfig.HTTP_READ_TIME_OUT){
+            Toast.makeText(context, "读取数据超时", Toast.LENGTH_SHORT).show();
+        }
+        if (httpClient.connectTimeoutMillis()/1000>CommonConfig.HTTP_READ_TIME_OUT){
+            Toast.makeText(context, "连接超时", Toast.LENGTH_SHORT).show();
+        }
     }
 
     private Retrofit createRetrofitClient(OkHttpClient httpClient) {
