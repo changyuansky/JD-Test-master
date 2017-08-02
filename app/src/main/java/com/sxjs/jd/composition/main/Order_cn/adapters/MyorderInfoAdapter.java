@@ -24,11 +24,22 @@ import java.util.List;
  * Created by Administrator on 2017/7/20 0020.
  */
 
-public class MyorderInfoAdapter extends RecyclerView.Adapter<MyorderInfoAdapter.ViewHolder> {
+public class MyorderInfoAdapter extends RecyclerView.Adapter<MyorderInfoAdapter.ViewHolder>  {
     Context mContext;
     List<MyOrderInfo.ItemsBean.ItemListBean.OrderGoodsBean>  itemlist;
+    private OnItemClickListener mOnItemClickListener;
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener){
+        this.mOnItemClickListener=onItemClickListener;
+    }
+    public List<MyOrderInfo.ItemsBean.ItemListBean.OrderGoodsBean> getData(){
+         return itemlist;
+    }
+
+    public interface OnItemClickListener{
+        void OnItemClick(View view,int position,MyOrderInfo.ItemsBean.ItemListBean.OrderGoodsBean orderGoodsBean);
+    }
     public MyorderInfoAdapter(Context mContext,  List<MyOrderInfo.ItemsBean.ItemListBean.OrderGoodsBean>  items){
-       this.mContext=mContext;
+        this.mContext=mContext;
         this.itemlist=items;
         Log.d("aa", "MyorderInfoAdapter: "+items.size());
     }
@@ -45,6 +56,7 @@ public class MyorderInfoAdapter extends RecyclerView.Adapter<MyorderInfoAdapter.
 
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
+        Log.d("aa", "onBindViewHolder: 位置："+position);
         String imageUrl="http://"+itemlist.get(position).getGoodsImg();
         Glide.with(mContext).load(imageUrl).priority( Priority.HIGH).into(holder.goods_img);
         holder.goods_name.setText(itemlist.get(position).getGoodsName());
@@ -54,6 +66,15 @@ public class MyorderInfoAdapter extends RecyclerView.Adapter<MyorderInfoAdapter.
         holder.goods_price.setText("￥："+itemlist.get(position).getGoodsPrice()+"");
         Log.d("aa",itemlist.get(position).getGoodsPrice()+"");
         OnItemClick(holder);
+        ((ViewHolder)holder).itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (mOnItemClickListener!=null){
+                    MyOrderInfo.ItemsBean.ItemListBean.OrderGoodsBean orderGoodsBean=itemlist.get(position);
+                    mOnItemClickListener.OnItemClick(view,position,orderGoodsBean);
+                }
+            }
+        });
     }
 
     @Override
@@ -62,9 +83,9 @@ public class MyorderInfoAdapter extends RecyclerView.Adapter<MyorderInfoAdapter.
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-       TextView goods_name;TextView goods_number;
+        TextView goods_name;TextView goods_number;
         TextView goods_price;ImageView goods_img;
-    Button car;
+        Button car;
         public ViewHolder(View itemView) {
             super(itemView);
             car=itemView.findViewById(R.id.add);

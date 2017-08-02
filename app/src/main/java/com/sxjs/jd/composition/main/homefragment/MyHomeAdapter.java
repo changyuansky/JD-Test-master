@@ -250,15 +250,15 @@ public class MyHomeAdapter extends RecyclerView.Adapter implements View.OnClickL
         spikerHolder.icon_list_eight.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myToast.showToast("跳转到“我的”");
-                //ARouter.getInstance().build("/order/orderactivity").navigation();
+                myToast.showToast("跳转到“登录”界面测试使用");
+                ARouter.getInstance().build("/test/orderactivity_ylj").navigation();
             }
         });
         spikerHolder.icon_list_nine.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                myToast.showToast("跳转到“收藏”");
-//                ARouter.getInstance().build("/order/orderactivity").navigation();
+                myToast.showToast("跳转到“商品列表”测试");
+                ARouter.getInstance().build("/iconlist/classifyiconactivity_zy").navigation();
             }
         });
     }

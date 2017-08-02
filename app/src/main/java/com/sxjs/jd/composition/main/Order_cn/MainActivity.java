@@ -14,7 +14,10 @@ import android.widget.Toast;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
 
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.google.gson.Gson;
+import com.sxjs.common.CommonConfig;
+import com.sxjs.common.base.BaseActivity;
 import com.sxjs.common.bean.MyOrderInfo;
 import com.sxjs.jd.R;
 import com.sxjs.jd.composition.main.Order_cn.adapters.MyorderInfoAdapter;
@@ -24,7 +27,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 @Route(path = "/test/1")
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends BaseActivity  {
     @BindView(R.id.del) Button btn_del;
 @BindView(R.id.rebuy) Button btn_rebuy;
     @BindView(R.id.apply) Button btn_apply;
@@ -52,6 +55,15 @@ public class MainActivity extends AppCompatActivity{
 //        Log.d("aa",";;;;"+detail.getInfos().getSupplierName());
         mAdapter=new MyorderInfoAdapter(MainActivity.this,detail.getGoodslist());
         mRecyclerView.setAdapter(mAdapter);
+        mAdapter.setOnItemClickListener(new MyorderInfoAdapter.OnItemClickListener() {
+            @Override
+            public void OnItemClick(View view, int position, MyOrderInfo.ItemsBean.ItemListBean.OrderGoodsBean orderGoodsBean) {
+                int goodsId = mAdapter.getData().get(position).getGoodsId();
+                ARouter.getInstance().build("/xqs/mainfragmentactivity")
+                        .withInt(CommonConfig.GOODSINFO_KEY,goodsId)
+                        .navigation();
+            }
+        });
     }
     public void initView(MyOrderInfo.ItemsBean.ItemListBean.OrderInfosBean orderInfosBean){
         Log.d("aa","initView");
@@ -194,4 +206,5 @@ public class MainActivity extends AppCompatActivity{
     }
 
     }
+
 }

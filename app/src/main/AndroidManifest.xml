@@ -35,6 +35,9 @@
         <activity android:name=".composition.main.Order_cn.OrderActivity"></activity>
         <activity android:name=".composition.main.classifyicon_zy.ClassifyIconActivity"></activity>
         <activity android:name=".composition.main.goodsinfo_xqs.MainFragmentActivity"></activity>
+        <activity android:name=".composition.main.regist_login_ylj.FindpwdActivity" />
+        <activity android:name=".composition.main.regist_login_ylj.RegisterActivity"></activity>
+        <activity android:name=".composition.main.regist_login_ylj.OrderActivity"></activity>
 
         <!-- 配置APP ID -->
         <meta-data

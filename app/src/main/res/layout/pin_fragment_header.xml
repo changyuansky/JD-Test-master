@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+            <android.support.v4.view.ViewPager
+                android:id="@+id/pin_VP"
+                android:layout_width="match_parent"
+                android:layout_height="450dp">
+            </android.support.v4.view.ViewPager>
+            <com.viewpagerindicator.CirclePageIndicator
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:id="@+id/Indicator"
+                android:layout_alignBottom="@+id/pin_VP"/>
+</RelativeLayout>

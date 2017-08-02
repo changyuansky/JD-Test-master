@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">京东</string>
+    <string name="app_name">图书京东</string>
     <string name="shopstreetName">推荐商品</string>
     <string name="icon_list_one_title">购书分类</string>
     <string name="icon_list_two_title">借书分类</string>
