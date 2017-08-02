@@ -3,7 +3,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-
     <com.scwang.smartrefresh.layout.SmartRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:orientation="vertical"
@@ -29,22 +28,7 @@
         <com.scwang.smartrefresh.layout.footer.ClassicsFooter
             android:layout_width="match_parent"
             android:layout_height="25dp"/>
-
     </com.scwang.smartrefresh.layout.SmartRefreshLayout>
-
-    <!--<com.scwang.smartrefresh.layout.SmartRefreshLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/refreshLayout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:overScrollMode="never"
-        android:scrollbars="none" />
-    </com.scwang.smartrefresh.layout.SmartRefreshLayout> -->
     <FrameLayout
         android:id="@+id/home_title_bar_layout"
         android:layout_width="match_parent"
@@ -102,8 +86,10 @@
                     android:textSize="15sp"
                     android:lines="1"
                     android:ellipsize="end"
-                    android:text="运动户外超级品牌类日 跨店铺跨店铺"
+                    android:imeOptions="actionSearch"
+                    android:hint="运动户外超级品牌类日 跨店铺跨店铺"
                     />
+                <!--把Enter键设置为Search键，并把点击Enter键的动作设为actionSearch-->
                 <ImageView
                     android:layout_marginRight="5dp"
                     android:layout_width="15dp"

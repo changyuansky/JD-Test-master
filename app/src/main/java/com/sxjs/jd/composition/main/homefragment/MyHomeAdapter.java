@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +12,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.alibaba.android.arouter.launcher.ARouter;
 import com.bumptech.glide.Glide;
+import com.sxjs.common.CommonConfig;
 import com.sxjs.common.bean.HomeWares;
 import com.sxjs.common.data.Constant;
 import com.sxjs.common.widget.imageview.ExpandImageView;
@@ -74,6 +77,9 @@ public class MyHomeAdapter extends RecyclerView.Adapter implements View.OnClickL
     public void setHomeBannerImgAndBargainGoods(List<HomeWares.ItemsBean.ItemListBean> hBi_Bg){
         this.hBi_Bg=hBi_Bg;
     }
+    public List<HomeWares.ItemsBean.ItemListBean> getRecommendWareData(){
+        return this.itemListBeanList;
+    }
 
     @Override
     public int getItemViewType(int position) {
@@ -111,6 +117,7 @@ public class MyHomeAdapter extends RecyclerView.Adapter implements View.OnClickL
             bannerHolder.banner.start();
         }else if (position ==1){
             SpikerHolder spikerHolder =(SpikerHolder) holder;
+            iconListOnclick(spikerHolder);
             spikerHolder.spikeRecyvlerView.addItemDecoration(new SpikeDividerItemDecoration(context, HORIZONTAL_LIST));
             spikerHolder.spikeRecyvlerView.setLayoutManager(new LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false));
             MySpikeAdapter spikerAdapter = new MySpikeAdapter(context,BargainitemListBeanList);
@@ -118,7 +125,11 @@ public class MyHomeAdapter extends RecyclerView.Adapter implements View.OnClickL
             spikerAdapter.setOnItemClickListener(new MySpikeAdapter.OnItemClickListener() {
                 @Override
                 public void onItemClick(View view, int position) {
-                    Toast.makeText(context, "热卖商品位置="+position, Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(context, "热卖商品位置="+position, Toast.LENGTH_SHORT).show();
+                    int goodsId = BargainitemListBeanList.get(position).getGoodsId();
+                    ARouter.getInstance().build("/xqs/mainfragmentactivity")
+                            .withInt(CommonConfig.GOODSINFO_KEY,goodsId)
+                            .navigation();
                 }
             });
         }else {
@@ -154,6 +165,22 @@ public class MyHomeAdapter extends RecyclerView.Adapter implements View.OnClickL
     class SpikerHolder extends RecyclerView.ViewHolder{
         @BindView(R.id.spike_content_view)
         RecyclerView spikeRecyvlerView;
+        @BindView(R.id.icon_list_one)
+        ExpandImageView icon_list_one ;
+        @BindView(R.id.icon_list_two)
+        ExpandImageView icon_list_two ;
+        @BindView(R.id.icon_list_three)
+        ExpandImageView icon_list_three;
+        @BindView(R.id.icon_list_four)
+        ExpandImageView icon_list_four;
+        @BindView(R.id.icon_list_six)
+        ExpandImageView icon_list_six ;
+        @BindView(R.id.icon_list_seven)
+        ExpandImageView icon_list_seven;
+        @BindView(R.id.icon_list_eight)
+        ExpandImageView icon_list_eight;
+        @BindView(R.id.icon_list_nine)
+        ExpandImageView icon_list_nine;
         public SpikerHolder(View itemView) {
             super(itemView);
             ButterKnife.bind(this,itemView);
@@ -176,5 +203,63 @@ public class MyHomeAdapter extends RecyclerView.Adapter implements View.OnClickL
     }
     public void setOnItemClickListener(OnItemClickListener listener) {
         this.mOnItemClickListener = listener;
+    }
+
+    private void iconListOnclick(SpikerHolder spikerHolder){
+        final MyToast myToast = new MyToast(context);
+        spikerHolder.icon_list_one.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ARouter.getInstance().build("/test1/activity").navigation(view.getContext());
+            }
+        });
+        spikerHolder.icon_list_two.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myToast.showToast("--登录界面--");
+                ARouter.getInstance().build("/test/login").navigation();
+            }
+        });
+        spikerHolder.icon_list_three.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myToast.showToast("购书车");
+//                ARouter.getInstance().build("/order/orderactivity").navigation();
+            }
+        });
+        spikerHolder.icon_list_four.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myToast.showToast("借书车");
+//                ARouter.getInstance().build("/order/orderactivity").navigation();
+            }
+        });
+        spikerHolder.icon_list_six.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myToast.showToast("图书馆");
+//                ARouter.getInstance().build("/order/orderactivity").navigation();
+            }
+        });
+        spikerHolder.icon_list_seven.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                ARouter.getInstance().build("/order/orderactivity").navigation();
+            }
+        });
+        spikerHolder.icon_list_eight.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myToast.showToast("跳转到“登录”界面测试使用");
+                ARouter.getInstance().build("/test/orderactivity_ylj").navigation();
+            }
+        });
+        spikerHolder.icon_list_nine.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                myToast.showToast("跳转到“商品列表”测试");
+                ARouter.getInstance().build("/iconlist/classifyiconactivity_zy").navigation();
+            }
+        });
     }
 }

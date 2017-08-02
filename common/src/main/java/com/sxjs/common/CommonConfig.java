@@ -14,4 +14,5 @@ public class CommonConfig {
     public static boolean DEBUG = true;
     public static String SHARE_PREFERENCE_FILE_NAME = "diantudaikuan";
     public static boolean LOGIN = true;
+    public static String GOODSINFO_KEY="goodsId";
 }

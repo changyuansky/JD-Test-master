@@ -1,15 +1,14 @@
 <resources>
-    <string name="app_name">京东</string>
-    <string name="shopstreetName">特价商品</string>
-    <string name="icon_list_one_title">京东超市</string>
-    <string name="icon_list_two_title">222</string>
-    <string name="icon_list_three_title">333</string>
-    <string name="icon_list_four_title">444</string>
-
-    <string name="icon_list_six_title">666</string>
-    <string name="icon_list_seven_title">777</string>
-    <string name="icon_list_eight_title">888</string>
-    <string name="icon_list_nine_title">999</string>
+    <string name="app_name">图书京东</string>
+    <string name="shopstreetName">推荐商品</string>
+    <string name="icon_list_one_title">购书分类</string>
+    <string name="icon_list_two_title">借书分类</string>
+    <string name="icon_list_three_title">购书车</string>
+    <string name="icon_list_four_title">借书车</string>
+    <string name="icon_list_six_title">图书馆</string>
+    <string name="icon_list_seven_title">订单中心</string>
+    <string name="icon_list_eight_title">我的</string>
+    <string name="icon_list_nine_title">收藏</string>
 
     <!-- 自定义组件 -->
     <string name="pull_to_refresh">下拉可以刷新</string>

@@ -1,1 +1,1 @@
-include ':app', ':testmodule', ':bannerelibrary', ':common'
+include ':app', ':testmodule', ':bannerelibrary', ':common', ':circlepageindicatorlibrary'

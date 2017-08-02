@@ -110,7 +110,4 @@ public abstract class BaseActivity extends AppCompatActivity {
             receiver = null;
         }
     }
-
-
-
 }

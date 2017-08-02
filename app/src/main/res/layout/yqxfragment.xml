@@ -4,13 +4,13 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <com.example.administrator.order.myviews.AutoListView
+    <com.sxjs.jd.composition.main.Order_cn.myviews.AutoListView
         android:id="@+id/Yqx_Al1"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         >
 
-    </com.example.administrator.order.myviews.AutoListView>
+    </com.sxjs.jd.composition.main.Order_cn.myviews.AutoListView>
     <LinearLayout
         android:id="@+id/Yqx_view_emp"
         android:layout_width="match_parent"

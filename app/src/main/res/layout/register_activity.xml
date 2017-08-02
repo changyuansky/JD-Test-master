@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.sxjs.common.widget.aspect_ratio_layout.AspectRatioFrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:Layout_viewAspectRatio="2.5">m
+    <com.sxjs.common.widget.percentlayout.PercentRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <EditText
+            android:id="@+id/login_input_phone_et"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="107dp"
+            android:hint="请输入手机号"
+            android:ems="10"/>
+        <EditText
+            android:id="@+id/login_input_phone_pwd"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="44dp"
+            android:hint="请输入密码"
+            android:layout_below="@+id/login_input_phone_et"
+            android:ems="10"
+            />
+
+        <EditText
+            android:id="@+id/login_input_code_et"
+            android:layout_width="170dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="43dp"
+            android:hint="请输入验证码"
+            android:inputType="textPassword"
+            android:layout_below="@+id/login_input_phone_pwd"
+            android:layout_alignLeft="@+id/login_input_phone_pwd"
+            android:layout_alignStart="@+id/login_input_phone_pwd">
+        </EditText>
+
+        <Button
+            android:id="@+id/login_request_code_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/login_input_phone_pwd"
+            android:layout_alignTop="@+id/login_input_code_et"
+            android:text="获取验证码" />
+
+        <Button
+            android:id="@+id/login_commit_btn"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/login_input_code_et"
+            android:layout_below="@+id/login_input_code_et"
+            android:layout_marginTop="44dp"
+            android:text="注册" />
+
+
+    </com.sxjs.common.widget.percentlayout.PercentRelativeLayout>
+</com.sxjs.common.widget.aspect_ratio_layout.AspectRatioFrameLayout>
