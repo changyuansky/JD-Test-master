@@ -268,7 +268,11 @@ public class DataManager {
         Observable<ShopCar> deleteCarByRecIdObservable=getBaseApiService().getDeleteCarByRecId(recId);
         toSubscribe(deleteCarByRecIdObservable,deleteCarByRecIdConsumer);
     }
-
+    //27 签到
+    public void getSignByUserId(DisposableObserver<UserInfo> signByUserIdConsumer,int userId){
+        Observable<UserInfo> signByUserIdObservable=getBaseApiService().getSignByUserId(userId);
+        toSubscribe(signByUserIdObservable,signByUserIdConsumer);
+    }
 
     private<T> RequestBody toRequestBody(T t){
         String info = new Gson().toJson(t);

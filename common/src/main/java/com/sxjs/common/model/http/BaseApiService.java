@@ -145,7 +145,9 @@ public interface BaseApiService {
     //26 删除购物车，数量减少(无缓存)
     @GET("api/car/reduce")
     Observable<ShopCar> getDeleteCarByRecId (@Query("recId") int recId);
-
+    //27签到  （无缓存）
+    @GET("api/car/reduce")
+    Observable<UserInfo> getSignByUserId (@Query("userId") int userId);
 }
 
 
