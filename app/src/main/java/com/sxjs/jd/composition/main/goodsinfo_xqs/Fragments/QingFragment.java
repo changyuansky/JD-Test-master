@@ -39,7 +39,9 @@ private static final String TAG = "HomeFragment";
     private View mView;
     private GestureDetector mGestureDetector;
     private int verticalMinistance = 100;            //水平最小识别距离
-    private int minVelocity = 10;            //最小识别速度
+    private int minVelocity = 10;
+    String url;
+    //最小识别速度
     private void initViews() {
         mGestureDetector = new GestureDetector(getActivity(), new LearnGestureListener());
         //为fragment添加OnTouchListener监听器

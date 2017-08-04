@@ -56,7 +56,6 @@ public class PinFragment extends BaseFragment implements GoodsInfoInterface_pin 
       //手势识别器
     private  GestureDetector mDetector;
     private int goodsId;
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -105,7 +104,6 @@ public class PinFragment extends BaseFragment implements GoodsInfoInterface_pin 
     public void getgoodsinfo_pin(HomeWares goodsPinInfo) {
         GoodsInfoList=new ArrayList<>();
         GoodsInfoList=goodsPinInfo.getItems().get(0).getItemList();
-
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(new PinRecyclerAdapter(getActivity(), imageViews,GoodsInfoList));
     }
